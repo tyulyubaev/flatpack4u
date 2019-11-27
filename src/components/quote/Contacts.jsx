@@ -55,7 +55,7 @@ export default class Contacts extends React.Component {
             <div className="form-group row">
               <label className="col-sm-4 col-form-label text-right">Note:</label>
               <div className="col-sm-8">
-                <textarea className="form-control" id="inputNote" rows="2"></textarea>
+                <textarea className="form-control" id="inputNote" rows="3"></textarea>
               </div>
             </div>
           </div>

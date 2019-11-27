@@ -3,6 +3,12 @@ import { CheckData} from "../DataValidation";
 import Contacts from './Contacts';
 import ProductTable from './ProductTable';
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 class Quote extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +26,19 @@ class Quote extends React.Component {
     this.handleAddEvent = this.handleAddEvent.bind(this);
     this.handleRowDel = this.handleRowDel.bind(this);
     this.handleProductTable = this.handleProductTable.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    // e.preventDefault();
+  };
 
   dataUpdate() {
     this.setState(this.state.contact);
@@ -79,7 +97,7 @@ class Quote extends React.Component {
               <Contacts />
               <div className="col-4 mx-auto pt-5">
                 <button
-                  type="button"
+                  type="submit"
                   className="btn btn-success btn-lg btn-block"
                   onClick={() => {
                     this.state.contact = {
@@ -90,10 +108,11 @@ class Quote extends React.Component {
                       postcode: document.getElementById("inputPostcode").value,
                       note: document.getElementById("inputNote").value
                     };
-                    CheckData(this.state.contact)                    
+                    CheckData(this.state.contact);
+                    this.handleSubmit();
                   }}
                 >
-                  Send
+                  Submit
                 </button>
               </div>
             </div>
