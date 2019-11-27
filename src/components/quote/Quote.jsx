@@ -7,8 +7,8 @@ const encode = (data) => {
   const message = Object.keys(data)
   .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
   .join("&");
-  console.log(message)
-  // return 
+  // console.log(message)
+  return message
 }
 
 class Quote extends React.Component {
