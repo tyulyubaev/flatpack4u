@@ -33,7 +33,7 @@ class Quote extends React.Component {
   }
 
   ItemsToString=()=>{
-    const  link = this.state.products.map(product => `Link: ${product.link} Qty: ${product.qty}`).join("\r\n")
+    const  link = this.state.products.map(product => `${product.link} - qty: ${product.qty}`).join("\r\n")
     this.state.contact.link = link    
   }
 
@@ -112,7 +112,7 @@ class Quote extends React.Component {
                   className="btn btn-success btn-lg btn-block"
                   onClick={() => {
                     this.state.contact = {
-                      client: document.getElementById("inputName").value,
+                      name: document.getElementById("inputName").value,
                       email: document.getElementById("inputEmail").value,
                       phone: document.getElementById("inputPhone").value,
                       date: document.getElementById("inputDate").value,
