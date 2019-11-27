@@ -1,0 +1,26 @@
+.round{
+    background-color: #84CEEB;
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.color-red{
+    background-color: #FFB48F;
+}
+.color-yellow{
+    background-color: #FCCD04;
+}
+.color-purpur{
+    background-color: #AFD275
+}
+
+.textInCircle{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 400%
+}
