@@ -29,12 +29,14 @@
   <body>
 
       <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-          <input type="text" name="subject" value="Hello" />
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <input type="email" name="number" />
-          <input type="date" name="date" />          
-          <textarea name="note"></textarea>
+          <input type="text" name="subject"/>
+          <input id="fromName" type="text" name="name" />
+          <input id="fromEmail" type="email" name="email" />
+          <input id="fromPhone" type="number" name="phone" />
+          <input id="formDate" type="date" name="date" />          
+          <textarea id="fromNote" name="note"></textarea>
+          <input type="text" name="link" />  
+          <input type="number" name="link" />  
         </form>  
 
     <noscript>You need to enable JavaScript to run this app.</noscript>

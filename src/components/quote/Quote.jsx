@@ -4,9 +4,11 @@ import Contacts from './Contacts';
 import ProductTable from './ProductTable';
 
 const encode = (data) => {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
+  const message = Object.keys(data)
+  .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+  .join("&");
+  console.log(message)
+  // return 
 }
 
 class Quote extends React.Component {
@@ -27,12 +29,20 @@ class Quote extends React.Component {
     this.handleRowDel = this.handleRowDel.bind(this);
     this.handleProductTable = this.handleProductTable.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.ItemsToString = this.ItemsToString.bind(this);
   }
+
+  ItemsToString=()=>{
+    const  link = this.state.products.map(product => `Link: ${product.link} Qty: ${product.qty}`).join("\r\n")
+    this.state.contact.link = link    
+  }
+
+
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+      body: encode({ "form-name": "contact", ...this.state.contact})
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -42,6 +52,7 @@ class Quote extends React.Component {
 
   dataUpdate() {
     this.setState(this.state.contact);
+    console.log(this.state)
   }
   handleRowDel(product) {
     let index = this.state.products.indexOf(product);
@@ -109,6 +120,8 @@ class Quote extends React.Component {
                       note: document.getElementById("inputNote").value
                     };
                     CheckData(this.state.contact);
+                    this.ItemsToString()
+                    this.dataUpdate()                    
                     this.handleSubmit();
                   }}
                 >
