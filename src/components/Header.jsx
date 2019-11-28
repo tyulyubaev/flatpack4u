@@ -109,8 +109,7 @@ class Header extends Component {
               </a>
             </form>
           </div>
-        </nav>
-        <a>Last update{document.lastModified}</a>
+        </nav>        
         <div
           className="alert alert-danger text-center font-weight-bold"
           role="alert"

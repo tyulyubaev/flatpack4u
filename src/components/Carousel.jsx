@@ -5,7 +5,7 @@ class Carousel extends Component {
   };
   render() {
     return (
-      <div style={{ position: 'relative', zIndex: '1' }}  className="container d-block p-4 ">
+      <div className="container d-block p-4 ">
         <div id="myCarousel" className="carousel slide" data-ride="carousel" >
           <ol className="carousel-indicators ">
             <li data-target="#myCarousel" data-slide-to="0" className=""></li>

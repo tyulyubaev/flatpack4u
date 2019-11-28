@@ -121,7 +121,7 @@ class Quote extends React.Component {
                       date: document.getElementById("inputDate").value,
                       postcode: document.getElementById("inputPostcode").value,
                       parking: document.getElementById("parkingCheck").checked,
-                      lift: document.getElementById("liftCheck").checked,
+                      nocarry: document.getElementById("liftCheck").checked,
                       note: document.getElementById("inputNote").value
                     };                    
                     CheckData(this.state.contact);
