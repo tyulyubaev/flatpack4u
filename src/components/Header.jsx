@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { CheckPostcode } from "./DataValidation";
 import logo from "../logo.png";
+import Version from "./Version"
 
 class Header extends Component {
   constructor(props) {
@@ -109,7 +110,10 @@ class Header extends Component {
               </a>
             </form>
           </div>
-        </nav>        
+        </nav>    
+        <div>
+          <Version />
+        </div>    
         <div
           className="alert alert-danger text-center font-weight-bold"
           role="alert"
