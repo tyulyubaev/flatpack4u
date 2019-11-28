@@ -26,7 +26,8 @@ class App extends Component {
               <Main {...props} />
             )}/>
           <Route path="/prices" component={Prices} />
-          <Route path="/quote" component={Quote} />          
+          <Route path="/quote" component={Quote} />    
+          <Route path="/" component={Main}/>      
         </Switch>
         <Footer />
       </BrowserRouter>

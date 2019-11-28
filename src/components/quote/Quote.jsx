@@ -109,7 +109,7 @@ class Quote extends React.Component {
               />
               <h4 className="pt-5 pb-3">Contact details</h4>
               <Contacts />
-              <div className="col-4 mx-auto pt-5">
+              <div className="mx-auto pt-5">
                 <button
                   type="submit"
                   className="btn btn-success btn-lg"
@@ -127,7 +127,7 @@ class Quote extends React.Component {
                     CheckData(this.state.contact);
                     this.ItemsToString();
                     this.dataUpdate();
-                    // this.handleSubmit();
+                    this.handleSubmit();
                   }}
                 >
                   Submit

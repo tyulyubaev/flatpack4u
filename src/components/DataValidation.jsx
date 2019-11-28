@@ -52,6 +52,7 @@ export function webValidation(id, link) {
 const redBorder = id => {
   if (document.getElementById(id) != null){
     document.getElementById(id).style.border = "medium solid #dc3545";
+    document.getElementById(id).scrollIntoView();
   }
 };
 
