@@ -125,9 +125,13 @@ class Quote extends React.Component {
                       note: document.getElementById("inputNote").value
                     };                    
                     CheckData(this.state.contact);
-                    this.ItemsToString();
-                    this.dataUpdate();
-                    this.handleSubmit();
+                    
+                    if (CheckData(this.state.contact)!==false){
+                      this.ItemsToString();
+                      this.dataUpdate();
+                      this.handleSubmit();
+                      }
+                    
                   }}
                 >
                   Submit

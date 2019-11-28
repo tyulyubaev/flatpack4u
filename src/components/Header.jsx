@@ -24,13 +24,13 @@ class Header extends Component {
   }
 
   render() {
-    return (
+    return (      
       <header>
         <nav
           className="navbar navbar-expand-lg navbar-light"
           style={{ backgroundColor: "#84CEEB" }}
         >
-          <div className="container ">
+          <div className="container ">          
             <a className="navbar-brand" href="/">
               <img
                 src={logo}
@@ -85,7 +85,7 @@ class Header extends Component {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div>            
             <form className="form-inline mx-auto">
               <input
                 className="form-control mr-sm-1 mx-auto w-50"
@@ -110,6 +110,7 @@ class Header extends Component {
             </form>
           </div>
         </nav>
+        <a>Last update{document.lastModified}</a>
         <div
           className="alert alert-danger text-center font-weight-bold"
           role="alert"

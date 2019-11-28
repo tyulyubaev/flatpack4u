@@ -26,16 +26,19 @@ export function CheckPostcode(postcode) {
 export function CheckData(contact) {
   if (contact.name === "") {
     redBorder("inputName");
+    return false
   } else {
     greenBorder("inputName");
   }
   if (contact.email.search("@") === -1) {
     redBorder("inputEmail");
+    return false
   } else {
     greenBorder("inputEmail");
   }
   if (contact.phone === "") {
     redBorder("inputPhone");
+    return false
   } else {
     greenBorder("inputPhone");
   }
