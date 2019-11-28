@@ -24,7 +24,7 @@ export function CheckPostcode(postcode) {
 }
 
 export function CheckData(contact) {
-  if (contact.client === "") {
+  if (contact.name === "") {
     redBorder("inputName");
   } else {
     greenBorder("inputName");

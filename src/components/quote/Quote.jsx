@@ -1,15 +1,15 @@
 import React from "react";
-import { CheckData} from "../DataValidation";
-import Contacts from './Contacts';
-import ProductTable from './ProductTable';
+import { CheckData } from "../DataValidation";
+import Contacts from "./Contacts";
+import ProductTable from "./ProductTable";
 
-const encode = (data) => {
+const encode = data => {
   const message = Object.keys(data)
-  .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-  .join("&");
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
   // console.log(message)
-  return message
-}
+  return message;
+};
 
 class Quote extends React.Component {
   constructor(props) {
@@ -32,17 +32,21 @@ class Quote extends React.Component {
     this.ItemsToString = this.ItemsToString.bind(this);
   }
 
-  ItemsToString=()=>{
-    const  link = this.state.products.map(product => `${product.link} - qty: ${product.qty}`).join("\r\n")
-    this.state.contact.link = link    
-  }
-
+  ItemsToString = () => {
+    const link = this.state.products
+      .map(product => `${product.link} - qty: ${product.qty}`)
+      .join("\r\n");
+    this.state.contact.link = link;
+  };
 
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state.contact})
+      body: encode({
+        "form-name": "contact",        
+        ...this.state.contact
+      })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -51,15 +55,14 @@ class Quote extends React.Component {
   };
 
   dataUpdate() {
-    this.setState(this.state.contact);
-    console.log(this.state)
+    this.setState(this.state.contact);    
   }
   handleRowDel(product) {
     let index = this.state.products.indexOf(product);
     this.state.products.splice(index, 1);
     this.setState(this.state.products);
   }
-  handleAddEvent() {    
+  handleAddEvent() {
     let product = {
       id: "",
       link: "",
@@ -69,25 +72,25 @@ class Quote extends React.Component {
     this.setState(this.state.products);
   }
   handleProductTable(evt) {
-    let item = {      
+    let item = {
       id: evt.target.id,
       name: evt.target.name,
       value: evt.target.value
     };
-    let products = this.state.products;    
+    let products = this.state.products;
     let newProducts = products.map(product => {
-      for (let key in product) {                
+      for (let key in product) {
         if (key === item.name && product.id === item.id) {
           product[key] = item.value;
         }
       }
       return product;
     });
-    
-    this.setState({ products: newProducts });    
+
+    this.setState({ products: newProducts });
   }
 
-  render() {    
+  render() {
     return (
       <div className="container">
         <div className="row">
@@ -95,7 +98,7 @@ class Quote extends React.Component {
             id="modal"
             className="col-10 mx-auto col-md-10 col-lg-10 text-center"
           >
-            <div className="p-4"  >
+            <div className="p-4">
               <h2 className="p-3">Get a Quote</h2>
               <ProductTable
                 onProductTableUpdate={this.handleProductTable}
@@ -109,7 +112,7 @@ class Quote extends React.Component {
               <div className="col-4 mx-auto pt-5">
                 <button
                   type="submit"
-                  className="btn btn-success btn-lg btn-block"
+                  className="btn btn-success btn-lg"
                   onClick={() => {
                     this.state.contact = {
                       name: document.getElementById("inputName").value,
@@ -117,12 +120,14 @@ class Quote extends React.Component {
                       phone: document.getElementById("inputPhone").value,
                       date: document.getElementById("inputDate").value,
                       postcode: document.getElementById("inputPostcode").value,
+                      parking: document.getElementById("parkingCheck").checked,
+                      lift: document.getElementById("liftCheck").checked,
                       note: document.getElementById("inputNote").value
-                    };
+                    };                    
                     CheckData(this.state.contact);
-                    this.ItemsToString()
-                    this.dataUpdate()                    
-                    this.handleSubmit();
+                    this.ItemsToString();
+                    this.dataUpdate();
+                    // this.handleSubmit();
                   }}
                 >
                   Submit

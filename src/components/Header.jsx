@@ -17,8 +17,9 @@ class Header extends Component {
       Message("show");
     } else {
       greenBorder();
-      Message("hide");      
+      Message("hide");
       this.props.history.push('/quote')
+      
     }
   }
 
