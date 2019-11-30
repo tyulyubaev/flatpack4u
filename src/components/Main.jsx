@@ -3,6 +3,7 @@ import Carousel from './Carousel';
 import Figures from './Figures';
 import FeaturetteLeft from './FeaturetteLeft';
 import FeaturetteRight from './FeaturetteRight';
+
 const {Content} = require('./Content');
 
 class main extends Component {

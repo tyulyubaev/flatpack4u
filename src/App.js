@@ -8,7 +8,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import Prices from "./components/Prices";
-import Quote from "./components/quote/Quote";
+import Reviews from "./components/reviews/reviews";
 
 class App extends Component {
   constructor(props){
@@ -26,7 +26,7 @@ class App extends Component {
               <Main {...props} />
             )}/>
           <Route path="/prices" component={Prices} />
-          <Route path="/quote" component={Quote} />    
+          <Route path="/reviews" component={Reviews} />    
           <Route path="/" component={Main}/>      
         </Switch>
         <Footer />
