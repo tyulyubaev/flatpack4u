@@ -29,13 +29,15 @@ class App extends Component {
       link:"",
       parking:"No",
       carry:"No",
-      note:""
+      note:"",
+      submit:false
     };
 
     this.addItem = this.addItem.bind(this);
     this.addProduct = this.addProduct.bind(this);
     this.updateContactsDetails = this.updateContactsDetails.bind(this);
     this.handleContactsChange = this.handleContactsChange.bind(this);   
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   addItem = item => {
     this.state.items.push(item);
@@ -57,14 +59,30 @@ class App extends Component {
     this.updateContactsDetails(e.target.name, e.target.value) 
   };  
 
-  updateContactsDetails = (name, value)=> {
+  updateContactsDetails = (name, value)=> {    
     this.setState(prevState => ({
       contacts: {
         ...prevState.contacts,
         [name]: value
       }
-    }));
-    console.log(this.state.contacts)
+    })); 
+  };
+
+  componentDidUpdate(){    
+    if (this.state.contacts.submit==true){this.handleSubmit()}
+  }
+
+  handleSubmit = () => { 
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "contact",
+        ...this.state.contacts
+      })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));    
   };
 
   render() {
@@ -87,6 +105,7 @@ class App extends Component {
                 addContacts={this.addContacts}
                 handleContactsChange={this.handleContactsChange}
                 updateContactsDetails={this.updateContactsDetails}
+                handleSubmit={this.handleSubmit}
               />
             )}
           />
@@ -100,3 +119,10 @@ class App extends Component {
   }
 }
 export default App;
+
+const encode = data => {
+  const message = Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");  
+  // return message;
+};

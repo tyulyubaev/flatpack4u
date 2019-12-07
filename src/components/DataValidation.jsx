@@ -43,6 +43,13 @@ export function CheckData(contact) {
   } else {
     greenBorder("inputPhone");
   }
+  if (contact.postcode === "") {
+    redBorder("inputPhone");
+    return false
+  } else {
+    // CheckPostcode(contact.postcode)
+    greenBorder("inputPhone");
+  }
 }
 
 export function webValidation(id, link) {

@@ -4,7 +4,7 @@ export default class Version extends Component {
     render() {
         return (
             <div>
-                8:26
+                07122019857
             </div>
         )
     }

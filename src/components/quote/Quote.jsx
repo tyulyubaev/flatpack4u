@@ -10,8 +10,7 @@ class Quote extends React.Component {
     this.state.products = [];        
     this.handleAddEvent = this.handleAddEvent.bind(this);
     this.handleRowDel = this.handleRowDel.bind(this);
-    this.handleProductTable = this.handleProductTable.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleProductTable = this.handleProductTable.bind(this);    
     this.ItemsToString = this.ItemsToString.bind(this);
 
     if (this.props.data.products.length !== 0) {
@@ -30,28 +29,12 @@ class Quote extends React.Component {
     window.scrollTo(0, 0);
   }
   ItemsToString = () => {
-    const link = this.state.products
+    const link = this.state.products    
       .map(product => `${product.link} - qty: ${product.qty}`)
       .join("\r\n");    
-    this.props.updateContactsDetails("link", link)    
-  };
-
-  handleSubmit = () => {
-    // console.log(encode({
-    //   "form-name": "contact",
-    //   ...this.props.data.contacts
-    // }))
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
-        ...this.props.data.contacts
-      })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));    
-  };
+    this.props.updateContactsDetails("link", link)
+    this.props.updateContactsDetails("submit", true)
+  };  
 
   handleRowDel(product) {
     let index = this.state.products.indexOf(product);
@@ -122,11 +105,10 @@ class Quote extends React.Component {
                 <button
                   type="submit"
                   className="btn btn-success btn-lg"
-                  onClick={() => {
-                    console.log(this.props.data.contacts)                    
-                    if (CheckData(this.props.data.contacts) !== false) {
+                  onClick={() => {   
+                                                                    
+                    if (CheckData(this.props.data.contacts) !== false) {   
                       this.ItemsToString();                      
-                      this.handleSubmit();
                     }
                   }}
                 >
@@ -142,10 +124,4 @@ class Quote extends React.Component {
 }
 export default Quote;
 
-const encode = data => {
-  const message = Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-  // console.log(message)
-  return message;
-};
+
