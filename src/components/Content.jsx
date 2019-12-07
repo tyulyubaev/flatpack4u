@@ -1,5 +1,5 @@
 const baseNumber = ((+new Date())/100/60/60/24).toString().slice(3);
-const customersNumber=Math.floor(baseNumber*1.87);
+const customersNumber=Math.floor(baseNumber)+103;
 const ordersNumber=Math.floor(customersNumber*1.37);
 const furnitureNumber=Math.floor(ordersNumber*1.22);
 
@@ -50,6 +50,10 @@ export const Content = {
       lead: "3 Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."
     }
   ],
+  Prices:{
+    hourlyRate: 25
+  },
+
   Reviews: [
     {
       name: "Alev Ibrahim",

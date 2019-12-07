@@ -6,7 +6,7 @@ class ProductTable extends React.Component {
       let onProductTableUpdate = this.props.onProductTableUpdate;
       let rowDel = this.props.onRowDel;
       let product = this.props.products.map(product => {
-        return (
+        return (          
           <ProductRow
             onProductTableUpdate={onProductTableUpdate}
             product={product}
@@ -17,15 +17,26 @@ class ProductTable extends React.Component {
       });
       return (
         <div>
+          {/* <div className="row" >
+            <div className="col-1 mx-2">
+              <p className="">ID</p>
+            </div>
+            <div className="col-8 mx-2 text-left">
+              <p className="">Product</p>
+            </div>
+            <div className="col-2">
+              <p className="">Quantity</p>
+            </div>
+          </div> */}
           {product}
           <button
             type="button"
             onClick={() => {
               this.props.onRowAdd();            
             }}
-            className="btn pull-right btn-outline-secondary"
+            className="btn pull-right btn-outline-secondary px-5"
           >
-            Add More Items
+            Add Item
           </button>
         </div>
       );

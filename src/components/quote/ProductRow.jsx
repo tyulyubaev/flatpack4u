@@ -3,9 +3,11 @@ import { webValidation } from "../DataValidation";
 
 class ProductRow extends React.Component {
     render() {
-      // console.log(this.props.product)
       return (
         <div className="form-row" >
+          <div className="form-group col-1">
+            <p className="form-control">{this.props.product.id}</p>
+          </div>
           <div className="form-group col-sm-9"> 
             <input
               type="text"
@@ -18,7 +20,7 @@ class ProductRow extends React.Component {
             //   onBlur={webValidation(this.props.product.id, this.props.product.link)}
             />
           </div>
-          <div className="form-group col-sm-3">
+          <div className="form-group col-sm-2">
             <div className="input-group">
               <input                
                 type="number"

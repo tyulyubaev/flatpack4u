@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, NavLink } from "react-router-dom";
 import { CheckPostcode } from "./DataValidation";
 import logo from "../logo.png";
 import Version from "./Version"
@@ -16,15 +16,17 @@ class Header extends Component {
     } else if (valid === false) {
       redBorder();
       Message("show");
-    } else {
+    } else {      
       greenBorder();
       Message("hide");
+      this.props.updateContactsDetails("postcode", postcode)
       this.props.history.push('/quote')
       
     }
   }
 
   render() {
+    
     return (      
       <header>
         <nav
@@ -55,35 +57,56 @@ class Header extends Component {
             </button>
             <div className="collapse navbar-collapse" id="navbarsExample07">
               <ul className="navbar-nav mr-auto my-lg-0">
-                <li className="nav-item active">
-                  <a className="nav-link" href="/">
-                    Home <span className="sr-only">(current)</span>
-                  </a>
-                </li>
-                <li className="nav-item active">
-                  <a className="nav-link" href="/quote">
-                    Quote <span className="sr-only">(current)</span>
-                  </a>
+
+                <li className="nav-item">
+                    <NavLink
+                      exact
+                      activeClassName="nav-link active"
+                      className="nav-link"
+                      to="/"                                
+                  >
+                    Home
+                  </NavLink>                
+                </li>                
+                <li className="nav-item">                  
+                    <NavLink
+                        exact
+                        activeClassName="nav-link active"
+                        className="nav-link"
+                        to="/prices"                                
+                  >
+                    Prices 
+                    </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="prices">
-                    Prices
-                  </a>
+                  <NavLink
+                        exact
+                        activeClassName="nav-link active"
+                        className="nav-link"
+                        to="/reviews"                                
+                  >
+                    Reviews 
+                    </NavLink>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="reviews">
-                    Reviews
-                  </a>
+                <li className="nav-item">                  
+                  <NavLink
+                        exact
+                        activeClassName="nav-link active"
+                        className="nav-link"
+                        to="/gallery"                                
+                  >
+                    Gallery 
+                    </NavLink>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="galary">
-                    Galary
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="about">
-                    About Us
-                  </a>
+                <li className="nav-item">                  
+                  <NavLink
+                        exact
+                        activeClassName="nav-link active"
+                        className="nav-link"
+                        to="/about"                                
+                  >
+                    About us 
+                    </NavLink>
                 </li>
               </ul>
             </div>            

@@ -51,9 +51,16 @@ export default class leaveReview extends Component {
       }
     };
     return (
-      <div className="container">
-        <div className="row justify-content-md-center">
-          <div className="col-md-6">
+      <div className="container" id="leaveReview">
+          <div className="row justify-content-md-center text-center">
+          <div className="col-6 pt-5 pb-3">
+            <h3>Leave a Review</h3>
+          </div>
+          </div>
+          
+          
+        <div className="row justify-content-md-center ">        
+          <div className="col-md-6">              
             <div>
               <h5>Name</h5>
               <input

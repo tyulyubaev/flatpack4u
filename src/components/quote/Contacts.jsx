@@ -3,76 +3,100 @@ import React from "react";
 export default class Contacts extends React.Component {
   render() {
     return (
-      <div className="col-lg-6 mx-auto">
+      <div className="col-lg-6 mx-auto text-left">
         <div className="form-group row">
-          {/* <label className="col-sm-4 col-form-label">Name:</label> */}
+          <label className="col-sm-3 col-form-label ">Name:</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control col"
             id="inputName"
             placeholder="Name"
+            name="name"
+            onChange={this.props.handleContactsChange}
           />
         </div>
 
         <div className="form-group row ">
-          {/* <label className="col-sm-4 col-form-label">Email:</label> */}
+          <label className="col-sm-3 col-form-label">Email:</label>
           <input
             type="email"
-            className="form-control"
+            className="form-control col"
             id="inputEmail"
             placeholder="Email"
+            name="email"
+            onChange={this.props.handleContactsChange}
           />
         </div>
 
         <div className="form-group row">
-          {/* <label className="col-sm-4 col-form-label">Phone:</label> */}
+          <label className="col-sm-3 col-form-label">Phone:</label>
           <input
             type="number"
-            className="form-control"
+            className="form-control col"
             id="inputPhone"
             placeholder="Phone number"
+            name="phone"
+            onChange={this.props.handleContactsChange}
+          />
+        </div>
+        <div className="form-group row">
+          <label className="col-sm-3 col-form-label">Postcode:</label>
+          <input
+            type="text"
+            className="form-control col"
+            id="postcodeValue"
+            placeholder="Postcode"
+            defaultValue={this.props.data.contacts.postcode}
+            name="postcode"
+            onChange={this.props.handleContactsChange}
           />
         </div>
 
         <div className="form-group row">
-          {/* <label className="col-sm-4 col-form-label">
-                Date of visit:
-              </label> */}
+          <label className="col-sm-3 col-form-label">Date of visit</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control col"
             id="inputDate"
             placeholder="Date of visit"
+            name="date"
+            onChange={this.props.handleContactsChange}
           />
         </div>
-        <div className="form-check m-3 text-left">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            id="parkingCheck"
-          />
-          <label className="form-check-label" style={{ color: "#6c757d" }}>
+        {/* Parking */}
+        <div className="form-group row">
+          <label
+            className="col-sm-8 col-form-label"
+            htmlFor="parking"
+          >
             Parking space available
-          </label>
-          <br/>
-          <label className="form-check-label" style={{ color: "#6c757d" }}>
+            <br />
             (Save up to £5 an hour)
           </label>
+          <select className="form-control col" id="parking" name="parking"
+            onChange={this.props.handleContactsChange}>
+            <option>No</option>
+            <option>Yes</option>
+          </select>
         </div>
-        <div className="form-check m-3 text-left">
-          <input
-            className="form-check-input"
-            type="checkbox"
-            id="liftCheck"            
-          />
-          <label className="form-check-label" style={{ color: "#6c757d" }}>
-            Don't need to carry items upstairs
-          </label>
-          <br/>
-          <label className="form-check-label" style={{ color: "#6c757d" }}>
+
+        {/* Carry items */}
+        <div className="form-group row">
+          <label
+            className="col-sm-8 col-form-label"
+            htmlFor="carry"
+          >
+            Need to carry items upstairs
+            <br />
             (Save up to £20)
           </label>
-        </div>
+          <select className="form-control col" id="carry" name="carry"
+            onChange={this.props.handleContactsChange}>
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>        
+
         <div className="form-group row">
           {/* <label className="col-sm-4 col-form-label">Note:</label> */}
           <textarea
@@ -80,6 +104,8 @@ export default class Contacts extends React.Component {
             className="form-control"
             id="inputNote"
             rows="3"
+            name="note"
+            onChange={this.props.handleContactsChange}
           ></textarea>
         </div>
       </div>

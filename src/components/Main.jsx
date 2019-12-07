@@ -8,7 +8,7 @@ const {Content} = require('./Content');
 
 class main extends Component {
 
-    render() {          
+    render() {                
         return (                  
             <main role="main">                       
                 <Carousel content={Content.Carousel}/>
