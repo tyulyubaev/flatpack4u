@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter, NavLink } from "react-router-dom";
-import { CheckPostcode } from "./DataValidation";
+import {CheckPostcode} from "./DataValidation";
 import logo from "../logo.png";
 import Version from "./Version"
 
@@ -10,25 +10,20 @@ class Header extends Component {
     this.routeChange = this.routeChange.bind(this);
   }
   routeChange(postcode) {
-    const valid = CheckPostcode(postcode);
-    if (valid === "none") {
-      redBorder();
-    } else if (valid === false) {
-      redBorder();
-      Message("show");
-    } else {      
-      greenBorder();
-      Message("hide");
+    const id="inputPostcode" 
+    const valid = CheckPostcode(postcode, id);
+    if (valid){      
+      this.props.alert(false)
       this.props.updateContactsDetails("postcode", postcode)
-      this.props.history.push('/quote')
-      
+      this.props.history.push('/quote')      
+    }else{
+      this.props.alert(true)
     }
-  }
 
-  render() {
-    
+  }
+  render() {    
     return (      
-      <header>
+      <header>        
         <nav
           className="navbar navbar-expand-lg navbar-light"
           style={{ backgroundColor: "#84CEEB" }}
@@ -137,15 +132,6 @@ class Header extends Component {
         <div>
           <Version />
         </div>    
-        <div
-          className="alert alert-danger text-center font-weight-bold"
-          role="alert"
-          id="message"
-          style={{ display: "none" }}
-        >
-          We are very sorry! Unfortunatly we do not cover your area at the
-          moment!
-        </div>
       </header>
     );
   }
@@ -153,19 +139,5 @@ class Header extends Component {
 
 export default withRouter(Header);
 
-const Message = message => {
-  const x = document.getElementById("message");
-  if (message === "show") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-};
 
-const redBorder = () => {
-  document.getElementById("inputPostcode").style.border = "medium solid #dc3545";
-};
 
-const greenBorder = () => {
-  document.getElementById("inputPostcode").style.border = "medium solid #28a745";
-};

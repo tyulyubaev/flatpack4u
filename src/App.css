@@ -1,22 +1,55 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
 .App-link {
   color: #09d3ac;
+}
+
+.btn-info {
+  background-color: #FFB48F !important;
+  border-color: #FFB48F !important;
+  border-width: 2px !important;  
+}
+.btn-info:hover {
+  background-color: white !important;
+  border-color: #FFB48F !important;  
+  color: #FFB48F !important;;
+}
+
+.btn-handy {
+  background-color: #AFD275!important;
+  border-color: #AFD275 !important;
+  border-width: 2px !important;
+  color: white !important
+  
+}
+.btn-handy:hover {
+  background-color: white !important;
+  border-color: #AFD275 !important;  
+  color: #AFD275 !important;
+}
+
+.round{
+  background-color: #84CEEB;
+  width: 10rem;
+  height: 10rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.color-red{
+  background-color: #FFB48F;
+}
+.color-yellow{
+  background-color: #FCCD04;
+}
+.color-purpur{
+  background-color: #AFD275
+}
+
+.textInCircle{
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  font-size: 400%
 }

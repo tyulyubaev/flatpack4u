@@ -1,45 +1,77 @@
 import React, { Component } from "react";
-import Wardrobe from './wardrobe'
+import Wardrobe from "./wardrobe";
+import Chest from "./chestOfDrawers";
+import Bed from "./bed";
+import Handyman from "./handyman";
+import RowButtons from "./RowButtons"
+
 
 export default class Prices extends Component {
-  showWardrobe=true  
+  constructor() {
+    super();    
+    this.state = {};
+    this.state.color="white"
+    this.state.elements = {
+      showWardrobe: false,
+      showChest: false,
+      showBed: false,
+      showHandyman: false
+    };
 
-  addItem = (item) =>{    
-    this.props.addItem(item)
-  }
-  showType = () => {     
-    this.showWardrobe=true
+    this.Visibility = this.Visibility.bind(this);
+    this.addItem = this.addItem.bind(this);
+    this.showType = this.showType.bind(this);
   }
 
-  render() {        
+  Visibility = value => {
+    const array = Object.keys(this.state.elements)    
+    const newarray = array.map(key=>(this.state.elements[key]=value))   
+    this.setState(this.state.elements)       
+  };
+
+  addItem = item => {
+    this.props.addItem(item);
+  };
+
+  showType = type => {
+    this.Visibility(false);
+    console.log(type)
+    switch (type) {
+      case "wardrobe":
+        this.state.elements.showWardrobe = true;
+        this.setState(this.state.elements)  
+        break;
+      case "chest":        
+        this.state.elements.showChest = true;
+        this.setState(this.state.elements)  
+        break;
+      case "bed":        
+        this.state.elements.showBed = true;
+        this.setState(this.state.elements)  
+        break;
+      case "handyman":        
+        this.state.elements.showHandyman = true;
+        this.setState(this.state.elements)  
+        break;
+    }
+  };
+
+  render() {
+    this.state.elements.showHandyman = true;
     return (
-      <div className="container">
+      <div className="container pb-5">
         <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">
           Prices
         </h2>
-        <hr className="mt-2 mb-4" />
-        <div className="row">
-          <div className="col">
-            <a href="#" className="btn btn-secondary btn-lg active text-capitalize col p-3" role="button" aria-pressed="true" onClick={this.showType}>Wardrobe</a>            
-          </div>
-          <div className="col">
-            <a href="#" className="btn btn-secondary btn-lg active text-capitalize col p-3" role="button" aria-pressed="true">Chest of drawers</a>
-          </div>
-          <div className="col">
-            <a href="#" className="btn btn-secondary btn-lg active text-capitalize col p-3" role="button" aria-pressed="true">Bed</a>
-          </div>
-          <div className="col">
-            <a href="#" className="btn btn-secondary btn-lg active text-capitalize col p-3" role="button" aria-pressed="true">Other</a>
-          </div>
-
+        <hr className="mt-2 mb-4" />        
+          <RowButtons showType={this.showType}/>         
+        <div>
+          {this.state.elements.showWardrobe && <Wardrobe addItem={this.addItem} />}
+          {this.state.elements.showChest && <Chest addItem={this.addItem} />}
+          {this.state.elements.showBed && <Bed addItem={this.addItem} />}
+          {this.state.elements.showHandyman && <Handyman addItem={this.addItem} />}
         </div>
-        <div  id="wardrobe" style={{ display: "block" }}>
-          {this.showWardrobe && <Wardrobe addItem={this.addItem}/>}
-          
-        </div>
-                  
       </div>
-      
     );
   }
 }

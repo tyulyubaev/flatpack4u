@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 class footer extends Component {
+
   render() {
     return (
-      <footer className="bd-footer py-2" style={{ backgroundColor: "#F2F2F2" }}>
-        <div className="container">
+      <footer className="mt-auto pt-3"        
+        style={{
+          backgroundColor: "#F2F2F2",          
+        }}        
+      >
+        <div className="container" id="footer">
           <p className="float-right">
             <a href="#">Back to top</a>
           </p>
@@ -15,6 +20,7 @@ class footer extends Component {
             </a>{" "}
             Tel: <a href="tel:07380268355">073 8026 8355</a>
           </p>
+          {/* <button onClick={()=>>height</button> */}
         </div>
       </footer>
     );

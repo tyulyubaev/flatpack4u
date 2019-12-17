@@ -4,9 +4,9 @@ import Figures from './Figures';
 import FeaturetteLeft from './FeaturetteLeft';
 import FeaturetteRight from './FeaturetteRight';
 
-const {Content} = require('./Content');
+const {Content} = require('../Content');
 
-class main extends Component {
+class main extends Component {   
 
     render() {                
         return (                  

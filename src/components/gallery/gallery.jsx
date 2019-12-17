@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ItemImage from './itemImage'
 
 export default class Gallery extends Component {
+    
     render() {
         function importAll(r) {           
             return r.keys();

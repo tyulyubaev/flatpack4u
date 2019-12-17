@@ -25,9 +25,7 @@ class Quote extends React.Component {
       ];
     }
   }
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
+  
   ItemsToString = () => {
     const link = this.state.products    
       .map(product => `${product.link} - qty: ${product.qty}`)
@@ -100,11 +98,11 @@ class Quote extends React.Component {
               <h4 className="pt-5 pb-3 font-weight-light">
                 Contact information
               </h4>
-              <Contacts data={this.props.data} handleContactsChange={this.props.handleContactsChange}/>
+              <Contacts data={this.props.data} handleContactsChange={this.props.handleContactsChange} alert={this.props.alert}/>
               <div className="mx-auto pt-3 mb-5">
                 <button
                   type="submit"
-                  className="btn btn-success btn-lg"
+                  className="btn btn-success px-5"
                   onClick={() => {   
                                                                     
                     if (CheckData(this.props.data.contacts) !== false) {   

@@ -5,6 +5,32 @@ const furnitureNumber=Math.floor(ordersNumber*1.22);
 
 
 export const Content = {
+  Prices:{
+    hourlyRate: 25,
+    holeCost: 4.8,
+
+    mirrorUpTo50cm: 15,
+    mirrorUpTo100cm: 35,
+    mirrorUpTo200cm: 65,
+
+    shelfUpTo50cm: 20,
+    shelfUpTo100cm: 30,
+    shelfUpTo200cm: 35,
+
+    pictureUpTo50cm: 10,
+    pictureUpTo100cm: 15,
+    pictureUpTo200cm: 20,
+
+  },
+
+  TVPrices:[
+    {size: 32, price:39},
+    {size: 43, price:49},
+    {size: 55, price:59},
+    {size: 65, price:69},
+    {size: 75, price:79},   
+    {size: 1000, price:99} 
+  ],
 
   Carousel: {
     title: ["Title 1", "Title 2", "Title 3"],
@@ -50,9 +76,6 @@ export const Content = {
       lead: "3 Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo."
     }
   ],
-  Prices:{
-    hourlyRate: 25
-  },
 
   Reviews: [
     {

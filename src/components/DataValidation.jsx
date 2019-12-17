@@ -1,4 +1,19 @@
-export function CheckPostcode(postcode) {
+
+export function CheckPostcode(postcode, id) {
+  const valid = postcodeValidation(postcode);     
+  if (valid === "none") {
+    redBorder(id);    
+  } else if (valid === false) {
+    redBorder(id);
+    return false;
+  } else {      
+    greenBorder(id);
+    return true;    
+  }
+}
+
+
+function postcodeValidation(postcode) {
   if (postcode === "") {
     return "none";
   } else {
@@ -60,16 +75,16 @@ export function webValidation(id, link) {
   }
 }  
 
-const redBorder = id => {
+export function redBorder(id){
   if (document.getElementById(id) != null){
     document.getElementById(id).style.border = "medium solid #dc3545";
     document.getElementById(id).scrollIntoView();
   }
 };
 
-const greenBorder = id => {
+export function greenBorder(id){
   if (document.getElementById(id) != null){
     document.getElementById(id).style.border = "medium solid #28a745";
-  }
-  
+  }  
 };
+

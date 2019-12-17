@@ -21,8 +21,7 @@ export default class wardrobe extends Component {
       lights: "",
       price: ""
     };
-    this.showPrice = true
-
+    this.showPrice = false
     this.handleChange = this.handleChange.bind(this);
     this.calculations = this.calculations.bind(this);        
   }
@@ -102,7 +101,7 @@ export default class wardrobe extends Component {
     } = this.state;
     return (
       <div className="container">
-        <h4 className="font-weight-light pt-5" id="itemName">Wardrobe</h4>
+        <h4 className="font-weight-light pt-5" id="wardrobe">Wardrobe</h4>
         <div className="row pt-4">
           <div className="col-md-3">
             <label>Dimensions, cm</label>
