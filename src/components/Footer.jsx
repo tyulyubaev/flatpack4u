@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 class footer extends Component {
-
   render() {
     return (
-      <footer className="mt-auto pt-3"        
+      <footer
+        className="mt-auto pt-3"
         style={{
-          backgroundColor: "#F2F2F2",          
-        }}        
+          backgroundColor: "#F2F2F2"
+        }}
       >
         <div className="container" id="footer">
           <p className="float-right">
             <a href="#">Back to top</a>
           </p>
           <p className="text-left">
-            © 2019 FlatPack4U <br />
+            <a href="#" className="font-weight-light text-secondary">*Terms and Conditions and minimum charges apply</a>
+            
+            <br/>
+            © 2019 FlatPack4U
+            <br />
             Email:{" "}
             <a href="mailto: quote@flatpack4u.co.uk">
               quote@flatpack4u.co.uk

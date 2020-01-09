@@ -4,8 +4,7 @@ import {
   WardrobePicture,
   ChestPicture,
   BedPicture,
-  DrillPicture,
-  TVMounting
+  DrillPicture
 } from "../../assets/icons/FurnitureIcons";
 
 export default class RowButtons extends Component {

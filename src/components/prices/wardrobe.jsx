@@ -1,19 +1,18 @@
 import React, { Component } from "react";
-import AddToOrder from './addToOrder'
+import AddToOrder from "./addToOrder";
 const { Content } = require("../Content");
-
 
 export default class wardrobe extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      item:"",
+      item: "",
       height: "",
       width: "",
       depth: "",
       type: "",
-      qtyDoors: 1,
-      wall: "no",
+      qtyDoors: "",
+      wall: "",
       drawers: "",
       baskets: "",
       rails: "",
@@ -21,13 +20,34 @@ export default class wardrobe extends Component {
       lights: "",
       price: ""
     };
-    this.showPrice = false
+    this.state.validStyle = "";
+    this.showPrice = false;
+
     this.handleChange = this.handleChange.bind(this);
-    this.calculations = this.calculations.bind(this);        
+    this.calculations = this.calculations.bind(this);
+    this.verification = this.verification.bind(this);
   }
   handleChange = e => {
     // console.log(e.target.name, e.target.value);
     this.setState({ [e.target.name]: e.target.value });
+  };
+  verification = () => {
+    let param = Object.keys(this.state);
+    let count = 0;
+    param = param.splice(1, 11);
+    param.forEach(value => {
+      const valueCapitalize = value.replace(/\b\w/g, l => l.toUpperCase());
+      const VerValue = `Ver${valueCapitalize}`;
+      if (this.state[value] == "") {
+        this.setState({ [VerValue]: "border border-danger" });
+        count += 1;
+      } else {
+        this.setState({ [VerValue]: "" });
+      }
+    });
+    if (count == 0) {
+      this.calculations();
+    }
   };
   calculations = () => {
     const rate = Content.Prices.hourlyRate;
@@ -76,21 +96,22 @@ export default class wardrobe extends Component {
     const railsTime = 10 * rails;
     const shelvesTime = 10 * shelves;
     const lightsTime = 15 * lights;
-    const totalInternal  = drawersTime+basketsTime+railsTime+shelvesTime+lightsTime
+    const totalInternal =
+      drawersTime + basketsTime + railsTime + shelvesTime + lightsTime;
 
-    totalTime = unpackingTime + frameTime + doorTime+totalInternal;
-    const totalCost = Math.floor(totalTime * rate /60)+0.99;
+    totalTime = unpackingTime + frameTime + doorTime + totalInternal;
+    const totalCost = Math.floor((totalTime * rate) / 60) + 0.99;
 
-    const itemName = "Wardrobe"
-    this.setState({price: totalCost, item: itemName});
-    this.showPrice=true
+    const itemName = "Wardrobe";
+    this.setState({ price: totalCost, item: itemName });
+    this.showPrice = true;
   };
 
   render() {
-    const {      
+    const {
       height,
       width,
-      depth,      
+      depth,
       qtyDoors,
       wall,
       drawers,
@@ -101,35 +122,37 @@ export default class wardrobe extends Component {
     } = this.state;
     return (
       <div className="container">
-        <h4 className="font-weight-light pt-5" id="wardrobe">Wardrobe</h4>
+        <h4 className="font-weight-light pt-5" id="wardrobe">
+          Wardrobe
+        </h4>
         <div className="row pt-4">
-          <div className="col-md-3">
+          <div className="col-md-3 my-auto">
             <label>Dimensions, cm</label>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 my-2 my-sm-0">
             <input
               type="number"
-              className="form-control"
+              className={`form-control ${this.state.VerHeight}`}
               placeholder="Height in cm"
               name="height"
               value={height}
               onChange={this.handleChange}
             />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 my-2 my-sm-0">
             <input
               type="number"
-              className="form-control"
+              className={`form-control ${this.state.VerWidth}`}
               placeholder="Width in cm"
               name="width"
               value={width}
               onChange={this.handleChange}
             />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 my-2 my-sm-0">
             <input
               type="number"
-              className="form-control"
+              className={`form-control ${this.state.VerDepth}`}
               placeholder="Depth in cm"
               name="depth"
               value={depth}
@@ -137,47 +160,54 @@ export default class wardrobe extends Component {
             />
           </div>
         </div>
-        <div className="row pt-4">
-          <div className="col-md-3">
+        <div className="row pt-4 ">
+          <div className="col-md-3  my-auto">
             <label>Type of the doors</label>
           </div>
-          <div className="col-md-2 px-5">
-            <input
-              className="form-check-input"
-              type="radio"
-              id="exampleRadios1"
-              value="sliding"
-              name="type"
-              onChange={this.handleChange}
-            />
-            <label className="form-check-label" htmlFor="exampleRadios1">
-              Sliding
-            </label>
-          </div>
-          <div className="col-md-2  px-5">
-            <input
-              className="form-check-input"
-              type="radio"
-              name="type"
-              id="exampleRadios2"
-              value="hinged"
-              onChange={this.handleChange}
-            />
-            <label className="form-check-label" htmlFor="exampleRadios2">
-              Hinged
-            </label>
+          <div
+            className={`col d-flex form-control border mx-3 ${this.state.VerType}`}
+          >
+            <div className="col-6">
+              <input
+                className="form-check-input"
+                type="radio"
+                id="exampleRadios1"
+                value="sliding"
+                name="type"
+                onChange={this.handleChange}
+              />
+              <label
+                className="form-check-label"
+                name="type"
+                htmlFor="exampleRadios1"
+              >
+                Sliding
+              </label>
+            </div>
+            <div className="col-6">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="type"
+                id="exampleRadios2"
+                value="hinged"
+                onChange={this.handleChange}
+              />
+              <label className="form-check-label " htmlFor="exampleRadios2">
+                Hinged
+              </label>
+            </div>
           </div>
         </div>
         <div className="row pt-4">
-          <div className="col-md-3">
+          <div className="col-md-3  my-auto">
             <label>Quantity of the doors</label>
           </div>
           <div className="col-md-3">
             <input
-              className="form-control"
+              className={`form-control ${this.state.VerQtyDoors}`}
               type="number"
-              placeholder="Quantity"
-              min="0"
+              placeholder="Quantity"              
               name="qtyDoors"
               value={qtyDoors}
               onChange={this.handleChange}
@@ -185,34 +215,36 @@ export default class wardrobe extends Component {
           </div>
         </div>
         <div className="row pt-4">
-          <div className="col-md-3">
+          <div className="col-md-3  my-auto">
             <label>Secure to the wall</label>
           </div>
-          <div className="col-md-2 px-5">
-            <input
-              className="form-check-input"
-              type="radio"
-              id="wallyes"
-              value="yes"
-              name="wall"
-              onChange={this.handleChange}
-            />
-            <label className="form-check-label" htmlFor="wallyes">
-              Yes
-            </label>
-          </div>
-          <div className="col-md-2  px-5">
-            <input
-              className="form-check-input"
-              type="radio"
-              name="wall"
-              id="wallno"
-              value="no"
-              onChange={this.handleChange}
-            />
-            <label className="form-check-label" htmlFor="wallno">
-              No
-            </label>
+          <div className={`col d-flex form-control border mx-3 ${this.state.VerWall}`}>
+            <div className="col-6">
+              <input
+                className="form-check-input"
+                type="radio"
+                id="wallyes"
+                value="yes"
+                name="wall"
+                onChange={this.handleChange}
+              />
+              <label className="form-check-label" htmlFor="wallyes">
+                Yes
+              </label>
+            </div>
+            <div className="col-6">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="wall"
+                id="wallno"
+                value="no"
+                onChange={this.handleChange}
+              />
+              <label className="form-check-label" htmlFor="wallno">
+                No
+              </label>
+            </div>
           </div>
         </div>
         <div className="row pt-4">
@@ -223,12 +255,13 @@ export default class wardrobe extends Component {
           </div>
         </div>
         <div className="row py-1">
-          <div className="col-md-3 text-md-right">
+          <div className="col-md-3 text-md-right my-auto">
             <label className="">Drawers</label>
           </div>
-          <div className="col-md-7">
+          <div className="col-md-3">
             <input
               type="number"
+              className={`form-control ${this.state.VerDrawers}`}
               placeholder="Quantity"
               min="0"
               name="drawers"
@@ -238,11 +271,12 @@ export default class wardrobe extends Component {
           </div>
         </div>
         <div className="row py-1">
-          <div className="col-md-3 text-md-right">
+          <div className="col-md-3 text-md-right  my-auto">
             <label className="">Baskets</label>
           </div>
-          <div className="col-md-7">
+          <div className="col-md-3">
             <input
+              className={`form-control ${this.state.VerBaskets}`}
               type="number"
               placeholder="Quantity"
               min="0"
@@ -253,11 +287,12 @@ export default class wardrobe extends Component {
           </div>
         </div>
         <div className="row py-1">
-          <div className="col-md-3 text-md-right">
+          <div className="col-md-3 text-md-right  my-auto">
             <label className="">Rails</label>
           </div>
-          <div className="col-md-7">
+          <div className="col-md-3">
             <input
+              className={`form-control ${this.state.VerRails}`}
               type="number"
               placeholder="Quantity"
               min="0"
@@ -268,11 +303,12 @@ export default class wardrobe extends Component {
           </div>
         </div>
         <div className="row py-1">
-          <div className="col-md-3 text-md-right">
+          <div className="col-md-3 text-md-right  my-auto">
             <label className="">Shelves</label>
           </div>
-          <div className="col-md-7">
+          <div className="col-md-3">
             <input
+              className={`form-control ${this.state.VerShelves}`}
               type="number"
               placeholder="Quantity"
               min="0"
@@ -283,11 +319,12 @@ export default class wardrobe extends Component {
           </div>
         </div>
         <div className="row py-1">
-          <div className="col-md-3 text-md-right">
+          <div className="col-md-3 text-md-right  my-auto">
             <label className="">Lights</label>
           </div>
-          <div className="col-md-7">
+          <div className="col-md-3">
             <input
+              className={`form-control ${this.state.VerLights}`}
               type="number"
               placeholder="Quantity"
               min="0"
@@ -300,12 +337,14 @@ export default class wardrobe extends Component {
         <div className="row py-4">
           <button
             className="btn btn-secondary d-block mx-auto px-5"
-            onClick={this.calculations}
+            onClick={this.verification}
           >
             Get the Price
           </button>
         </div>
-        {this.showPrice && <AddToOrder content={this.state} addItem={this.props.addItem}/>}        
+        {this.showPrice && (
+          <AddToOrder content={this.state} addItem={this.props.addItem} />
+        )}
       </div>
     );
   }

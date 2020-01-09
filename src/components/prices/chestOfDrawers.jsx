@@ -7,15 +7,20 @@ export default class chestOfDrawers extends Component {
     super(props);
     this.state = {
       item: "",
-      qty: "",
-      price: ""
+      qty: "",      
+      price: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.calculations = this.calculations.bind(this);
+    this.verification = this.verification.bind(this)
   }
   handleChange = e => {    
     this.setState({ [e.target.name]: e.target.value });
   };
+  verification = () =>{
+    if (this.state.qty ==""){this.setState({qtyVal: false})} else {this.setState({qtyVal: true})};
+    if (this.state.qty!==""){this.calculations()}
+  }
   calculations = () => {    
     const rate = Content.Prices.hourlyRate;
     const qty = this.state.qty;
@@ -44,7 +49,8 @@ export default class chestOfDrawers extends Component {
           <div className="col my-auto4">
             <input
               type="number"
-              className="form-control"
+              className={this.state.qtyVal==false ? "form-control border border-danger" : "form-control"}
+              
               placeholder="Qty"
               name="qty"
               value={this.state.qty}
@@ -55,17 +61,16 @@ export default class chestOfDrawers extends Component {
         <div className="row py-4">
           <button
             className="btn btn-secondary d-block mx-auto px-5"
-            onClick={this.calculations}
+            onClick={this.verification}
           >
             Get the Price
           </button>
+        </div>     
+          </div>
         </div>
         {this.showPrice && (
           <AddToOrder content={this.state} addItem={this.props.addItem} />
         )}
-
-          </div>
-        </div>
       </div>
     );
   }

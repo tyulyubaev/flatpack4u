@@ -23,12 +23,12 @@ class Header extends Component {
   }
   render() {    
     return (      
-      <header>        
+      <header className="mb-5">        
         <nav
           className="navbar navbar-expand-lg navbar-light"
           style={{ backgroundColor: "#84CEEB" }}
         >
-          <div className="container ">          
+          <div className="container">          
             <a className="navbar-brand" href="/">
               <img
                 src={logo}
@@ -129,9 +129,9 @@ class Header extends Component {
             </form>
           </div>
         </nav>    
-        <div>
+        {/* <div>
           <Version />
-        </div>    
+        </div>     */}
       </header>
     );
   }

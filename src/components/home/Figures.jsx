@@ -5,7 +5,7 @@ class figures extends Component {
   state = {};
   render() {
     return (     
-        <div className="row mx-auto">
+        <div className="row mx-auto mt-4">
           <div className="col-lg-4 ">    
             <div className="d-flex justify-content-center">
                 <div className="rounded-circle round color-red">

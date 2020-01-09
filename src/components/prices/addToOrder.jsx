@@ -6,9 +6,9 @@ class addToOrder extends Component {
         return (
         <div id="priceAlert">        
             <div className="row alert alert-success">
-                <div className="col-sm-8 d-sm-flex text-center">
-                    <h5 className="text-capitalize my-auto">Estimated price: £{this.props.content.price}</h5>
-                    <button className="btn btn-success mx-sm-3" onClick={()=>{this.props.addItem(this.props.content)}}>Add to Order</button>    
+                <div className="col-sm-8 d-sm-flex text-center ">
+                    <h5 className="text-capitalize my-auto pb-2 pb-sm-0">Estimated price: £{this.props.content.price}</h5>
+                    <button className="btn btn-success mx-sm-3 py-1" onClick={()=>{this.props.addItem(this.props.content)}}>Add to Order</button>    
                 </div>                
                 <div className="col-sm text-center text-sm-right pt-4 pt-sm-0">                  
                   <button className="btn btn-success" onClick={()=>{this.props.history.push('/quote')}}>View Order</button>  

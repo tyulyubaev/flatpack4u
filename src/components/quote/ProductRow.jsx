@@ -27,7 +27,7 @@ class ProductRow extends React.Component {
                 min="1"
                 className="form-control"
                 aria-label="Quantity"
-                placeholder="Quantity"
+                placeholder="Qty"
                 aria-describedby="button-addon2"
                 name="qty"                
                 id={this.props.product.id}

@@ -25,7 +25,7 @@ export default class Prices extends Component {
 
   Visibility = value => {
     const array = Object.keys(this.state.elements)    
-    const newarray = array.map(key=>(this.state.elements[key]=value))   
+    array.forEach(key=>(this.state.elements[key]=value))   
     this.setState(this.state.elements)       
   };
 
@@ -34,8 +34,7 @@ export default class Prices extends Component {
   };
 
   showType = type => {
-    this.Visibility(false);
-    console.log(type)
+    this.Visibility(false);    
     switch (type) {
       case "wardrobe":
         this.state.elements.showWardrobe = true;
@@ -56,12 +55,11 @@ export default class Prices extends Component {
     }
   };
 
-  render() {
-    this.state.elements.showHandyman = true;
+  render() {        
     return (
       <div className="container pb-5">
         <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">
-          Prices
+          Price Calculator
         </h2>
         <hr className="mt-2 mb-4" />        
           <RowButtons showType={this.showType}/>         

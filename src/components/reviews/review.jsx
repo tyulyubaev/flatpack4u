@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Stars from './stars'; 
+import {Stars} from './stars'; 
 import User from './user';
 
 

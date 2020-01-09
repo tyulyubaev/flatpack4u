@@ -1,132 +1,127 @@
 import React, { Component } from "react";
 
 class Carousel extends Component {
-  state = {};
   render() {
+    const imgMoney = require("../../assets/images/money.svg");
+    const imgRating = require("../../assets/images/satisfaction.svg");
+    const imgGuarantee = require("../../assets/images/guarantee.svg");
+
     return (
-      <div className="container d-block p-4" >
-      <div id="myCarousel" className="carousel slide" data-ride="carousel" >
-        <ol className="carousel-indicators ">
-          <li data-target="#myCarousel" data-slide-to="0" className=""></li>
-          <li data-target="#myCarousel" data-slide-to="1" className=""></li>
-          <li
-            data-target="#myCarousel"
-            data-slide-to="2"
-            className="active"
-          ></li>
-        </ol>
-        <div className="carousel-inner" >
-          <div className="carousel-item">
-            <svg
-              className="bd-placeholder-img "
-              width="100%"
-              height="330"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
+      <div className="container">
+        <div id="myCarousel" className="carousel slide" data-ride="carousel">
+          <ol className="carousel-indicators mb-0">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              className="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+
+          <div className="carousel-inner rounded">
+            {/* PRICE */}
+            <div
+              className="carousel-item active pb-3"
+              style={{ backgroundColor: "#49BBBD" }}
             >
-              <rect width="100%" fill="#C1C8E4"></rect>
-            </svg>
-            <div className="container align-middle">
-              <div className="carousel-caption text-left">
-                <h1>{this.props.content.title[0]}</h1>
-                <p>{this.props.content.content[0]}</p>
-                <p>
-                  <a
-                    className="btn btn-lg btn-primary"
-                    href="#"
-                    role="button"
-                  >
-                    Sign up today
-                  </a>
-                </p>
+              <div className="row align-items-center">
+                <div className="col col-md-4 col-lg-3 d-none d-md-block">
+                  <img height="100%" src={imgMoney} alt="" />
+                </div>
+                <div className="col-12 col-md-8 col-lg-9 text-right text-white px-4 px-sm-5">
+                  <h1>{this.props.content.title[2]}</h1>
+                  <p>{this.props.content.content[2]}</p>
+                  <p>
+                    <a
+                      className="btn btn-lg btn-primary mt-3"
+                      href="/price"
+                      role="button"
+                    >
+                      Price calculator
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="carousel-item">
-            <svg
-              className="bd-placeholder-img"
-              width="100%"
-              height="330"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
+
+            {/* RATING */}
+            <div
+              className="carousel-item pb-3"
+              style={{ backgroundColor: "#4EC3EB" }}
             >
-              <rect width="100%" height="100%" fill="#777"></rect>
-            </svg>
-            <div className="container">
-              <div className="carousel-caption">
-                <h1>{this.props.content.title[1]}</h1>
-                <p>{this.props.content.content[1]}</p>
-                <p>
-                  <a
-                    className="btn btn-lg btn-primary"
-                    href="#"
-                    role="button"
-                  >
-                    Learn more
-                  </a>
-                </p>
+              <div className="row align-items-center">
+                <div className="col col-md-4 col-lg-3 d-none d-md-block">
+                  <img height="100%" src={imgRating} alt="" />
+                </div>
+                <div className="col-12 col-md-8 col-lg-9 text-right text-white px-4 px-sm-5">
+                  <h1>{this.props.content.title[1]}</h1>
+                  <p>{this.props.content.content[1]}</p>
+                  <p>
+                    <a
+                      className="btn btn-lg btn-primary mt-3"
+                      href="/reviews"
+                      role="button"
+                    >
+                      Customer Reviews
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="carousel-item active">
-            <svg
-              className="bd-placeholder-img"
-              width="100%"
-              height="330"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="xMidYMid slice"
-              focusable="false"
-              role="img"
+
+            {/* guarantee */}
+            <div
+              className="carousel-item pb-3"
+              style={{ backgroundColor: "#7DB99B" }}
             >
-              <rect width="100%" height="100%" fill="#777"></rect>
-            </svg>
-            <div className="container">
-              <div className="carousel-caption text-right">
-                <h1>{this.props.content.title[2]}</h1>
-                <p>{this.props.content.content[2]}</p>
-                <p>
-                  <a
-                    className="btn btn-lg btn-primary"
-                    href="#"
-                    role="button"
-                  >
-                    Browse gallery
-                  </a>
-                </p>
+              <div className="row align-items-center">
+                <div className="col col-md-4 col-lg-3 d-none d-md-block">
+                  <img height="100%" src={imgGuarantee} alt="" />
+                </div>
+                <div className="col-12 col-md-8 col-lg-9 text-right text-white px-4 px-sm-5">
+                  <h1>{this.props.content.title[0]}</h1>
+                  <p>{this.props.content.content[0]}</p>
+                  <p>
+                    <a
+                      className="btn btn-lg btn-primary mt-3"
+                      href="/about"
+                      role="button"
+                    >
+                      About Us
+                    </a>
+                  </p>
+                </div>
               </div>
             </div>
+
+            <a
+            className="carousel-control-prev align-items-end pb-2"
+            href="#myCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="sr-only">Previous</span>
+          </a>
+          <a
+            className="carousel-control-next align-items-end pb-2"
+            href="#myCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="sr-only">Next</span>
+          </a>
           </div>
         </div>
-        <a
-          className="carousel-control-prev"
-          href="#myCarousel"
-          role="button"
-          data-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Previous</span>
-        </a>
-        <a
-          className="carousel-control-next"
-          href="#myCarousel"
-          role="button"
-          data-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only">Next</span>
-        </a>
       </div>
-    </div>
     );
   }
 }
