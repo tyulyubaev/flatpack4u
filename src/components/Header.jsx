@@ -12,11 +12,12 @@ class Header extends Component {
   routeChange(postcode) {
     const id="inputPostcode" 
     const valid = CheckPostcode(postcode, id);
-    if (valid){      
+    console.log(valid)
+    if (valid===true){      
       this.props.alert(false)
       this.props.updateContactsDetails("postcode", postcode)
       this.props.history.push('/quote')      
-    }else{
+    }else if (valid===false){
       this.props.alert(true)
     }
 

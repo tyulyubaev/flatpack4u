@@ -67,7 +67,7 @@ export default class About extends Component {
 </li>
               
             </ul>
-            <p className="lead">I can assemble flat pack from all the popular retailers in the UK and worldwide:<span className="font-weight-normal">
+            <p className="lead">I can assemble flat pack from all the popular retailers in the UK and worldwide: <span className="font-weight-normal">
   Argos, Asda, B&Q, Bensons for Beds, Dwell, Furniture 123, Habitat, Harveys, Heals, Homebase, Ikea, John Lewis, Mamas & Papas, Peter Jones, The Range, Tesco.</span>
 </p>
 <p className="lead">I'm ready to build your flat pack items at any day and time during the week, <span className="font-weight-normal">work from 8am till 10pm from Monday to Sunday</span> and happy to offer same day service as well.

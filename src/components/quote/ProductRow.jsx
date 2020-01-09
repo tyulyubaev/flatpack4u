@@ -5,10 +5,10 @@ class ProductRow extends React.Component {
     render() {
       return (
         <div className="form-row" >
-          <div className="form-group col-1">
+          <div className="form-group col-2 col-md-1">
             <p className="form-control">{this.props.product.id}</p>
           </div>
-          <div className="form-group col-sm-9"> 
+          <div className="form-group col-10 col-sm-7 col-md-9"> 
             <input
               type="text"
               className="form-control"
@@ -20,7 +20,7 @@ class ProductRow extends React.Component {
             //   onBlur={webValidation(this.props.product.id, this.props.product.link)}
             />
           </div>
-          <div className="form-group col-sm-2">
+          <div className="form-group col-sm-3 col-md-2">
             <div className="input-group">
               <input                
                 type="number"

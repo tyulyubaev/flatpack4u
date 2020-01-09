@@ -3,6 +3,7 @@ export function CheckPostcode(postcode, id) {
   const valid = postcodeValidation(postcode);     
   if (valid === "none") {
     redBorder(id);    
+    return "none"
   } else if (valid === false) {
     redBorder(id);
     return false;
