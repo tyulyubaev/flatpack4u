@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import encode from "./components/encode"
+import encode from "./components/encode";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,13 +14,16 @@ import Reviews from "./components/reviews/reviews";
 import Quote from "./components/quote/Quote";
 import Gallery from "./components/gallery/gallery";
 import productToString from "./components/productToString";
-import Message from "./components/Message";
+import { MessagePostcode, MessageRequest } from "./components/Messages";
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {};
-    this.state.alert = false;
+    this.state = {
+      message: false,
+      alert: false
+    };
+
     this.state.items = [];
     this.state.products = [];
     this.state.windowHeight = window.innerHeight;
@@ -44,7 +47,12 @@ class App extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.alert = this.alert.bind(this);
     this.updateScreenSize = this.updateScreenSize.bind(this);
+    this.toggleMessage = this.toggleMessage.bind(this);
   }
+  toggleMessage = value => {
+    this.setState({ message: value });
+  };
+
   alert = param => {
     this.setState({ alert: param });
   };
@@ -92,7 +100,7 @@ class App extends Component {
     const height = window.innerHeight;
     this.setState({ windowHeight: height });
   }
-  handleSubmit = () => {
+  handleSubmit = () => {    
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -101,11 +109,7 @@ class App extends Component {
         ...this.state.contacts
       })
     })
-      .then(() => {
-        alert(
-          "Thanks for choosing our furniture assembly service! We will contact you shortly."
-        );
-      })
+      .then(() => {})
       .catch(error => alert(error));
   };
 
@@ -116,7 +120,8 @@ class App extends Component {
         style={{ minHeight: this.state.windowHeight }}
       >
         <BrowserRouter>
-          {this.state.alert && <Message />}
+          {this.state.alert && <MessagePostcode />}
+          {this.state.contacts.submit && <MessageRequest />}
           <Header
             updateContactsDetails={this.updateContactsDetails}
             alert={this.alert}
@@ -156,5 +161,3 @@ class App extends Component {
   }
 }
 export default App;
-
-

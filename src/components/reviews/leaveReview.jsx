@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { Rating } from "./starRating";
-
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
+import {MessageReview} from "../Messages"
+import encode from "../encode"
 
 export default class leaveReview extends Component {
   constructor(props) {
@@ -16,19 +12,24 @@ export default class leaveReview extends Component {
       rating: 0,
       ratingVal: true,
       review: "",
-      reviewVal: true
+      reviewVal: true,
+      message: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleRating = this.handleRating.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.formValidation = this.formValidation.bind(this);
+    this.toggleMessage = this.toggleMessage.bind(this);
   }
+  toggleMessage =(value)=>{       
+    this.setState({message: value})
+  }
+
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleSubmit = () => {
-    console.log(this.state);
+  handleSubmit = () => {    
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -39,14 +40,13 @@ export default class leaveReview extends Component {
         review: this.state.review
       })
     })
-      .then(() => alert("Thank you very much for your feedback!"))
+      .then(() => {this.toggleMessage(true)})
       .catch(error => alert(error));
 
     // e.preventDefault();
   };
 
   handleRating = rating => {
-    console.log(rating);
     this.setState({ rating });
   };
 
@@ -71,15 +71,17 @@ export default class leaveReview extends Component {
 
     const data = Object.values(this.state);
     const validation = data.findIndex(param => param == false);
-    if (validation == -1) {
+    console.log(validation)
+    if (validation == 6) {
       this.handleSubmit();
     }
   };
 
   render() {
     const { name, review } = this.state;
-    return (
-      <div className="container" id="leaveReview">
+    return (      
+      <div className="container" id="leaveReview">   
+      {this.state.message && <MessageReview hide={this.toggleMessage}/>}    
         <div className="row justify-content-md-center text-center">
           <div className="col-12 pt-5 pb-3">
             <h3>Leave a Review</h3>

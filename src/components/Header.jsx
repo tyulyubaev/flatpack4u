@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { withRouter, NavLink } from "react-router-dom";
 import {CheckPostcode} from "./DataValidation";
 import logo from "../logo.png";
-import Version from "./Version"
 import tracker from "./tracker"
 
 class Header extends Component {

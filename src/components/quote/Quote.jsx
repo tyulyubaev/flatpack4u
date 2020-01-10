@@ -7,14 +7,14 @@ class Quote extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.state.products = [];        
+    this.state.products = [];
     this.handleAddEvent = this.handleAddEvent.bind(this);
     this.handleRowDel = this.handleRowDel.bind(this);
-    this.handleProductTable = this.handleProductTable.bind(this);    
+    this.handleProductTable = this.handleProductTable.bind(this);
     this.ItemsToString = this.ItemsToString.bind(this);
 
     if (this.props.data.products.length !== 0) {
-      this.state.products.unshift(...this.props.data.products);      
+      this.state.products.unshift(...this.props.data.products);
     } else {
       this.state.products = [
         {
@@ -25,14 +25,14 @@ class Quote extends React.Component {
       ];
     }
   }
-  
+
   ItemsToString = () => {
-    const link = this.state.products    
+    const link = this.state.products
       .map(product => `${product.link} - qty: ${product.qty}`)
-      .join("\r\n");    
-    this.props.updateContactsDetails("link", link)
-    this.props.updateContactsDetails("submit", true)
-  };  
+      .join("\r\n");
+    this.props.updateContactsDetails("link", link);
+    this.props.updateContactsDetails("submit", true);
+  };
 
   handleRowDel(product) {
     let index = this.state.products.indexOf(product);
@@ -51,16 +51,16 @@ class Quote extends React.Component {
       id: newId,
       link: "",
       qty: ""
-    };    
+    };
     this.state.products.push(product);
     this.setState(this.state.products);
   }
-  handleProductTable(evt) {    
+  handleProductTable(evt) {
     let item = {
       id: evt.target.id,
       name: evt.target.name,
       value: evt.target.value
-    }; 
+    };
     let products = this.state.products;
     let newProducts = products.map(product => {
       for (let key in product) {
@@ -72,7 +72,6 @@ class Quote extends React.Component {
     });
     this.setState({ products: newProducts });
   }
-  
 
   render() {
     return (
@@ -98,15 +97,18 @@ class Quote extends React.Component {
               <h4 className="pt-5 pb-3 font-weight-light">
                 Contact information
               </h4>
-              <Contacts data={this.props.data} handleContactsChange={this.props.handleContactsChange} alert={this.props.alert}/>
+              <Contacts
+                data={this.props.data}
+                handleContactsChange={this.props.handleContactsChange}
+                alert={this.props.alert}
+              />
               <div className="mx-auto pt-3 mb-5">
                 <button
                   type="submit"
                   className="btn btn-success px-5"
-                  onClick={() => {   
-                                                                    
-                    if (CheckData(this.props.data.contacts) !== false) {   
-                      this.ItemsToString();                      
+                  onClick={() => {
+                    if (CheckData(this.props.data.contacts) !== false) {
+                      this.ItemsToString();
                     }
                   }}
                 >
@@ -121,5 +123,3 @@ class Quote extends React.Component {
   }
 }
 export default Quote;
-
-
