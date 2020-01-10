@@ -17,7 +17,7 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col"
             id="inputName"
-            placeholder="Name"
+            placeholder="Please enter your name"
             name="name"
             onChange={this.props.handleContactsChange}
           />
@@ -29,7 +29,7 @@ export default class Contacts extends React.Component {
             type="email"
             className="form-control col"
             id="inputEmail"
-            placeholder="Email"
+            placeholder="Your email address"
             name="email"
             onChange={this.props.handleContactsChange}
           />
@@ -41,7 +41,7 @@ export default class Contacts extends React.Component {
             type="number"
             className="form-control col"
             id="inputPhone"
-            placeholder="Phone number"
+            placeholder="Contact phone number"
             name="phone"
             onChange={this.props.handleContactsChange}
           />
@@ -52,7 +52,7 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col"
             id="postcodeValue"
-            placeholder="Postcode"
+            placeholder="Your postcode"
             defaultValue={this.props.data.contacts.postcode}
             name="postcode"
             onChange={this.props.handleContactsChange}
@@ -66,7 +66,7 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col"
             id="inputDate"
-            placeholder="Date of visit"
+            placeholder="Prefered date of visit"
             name="date"
             onChange={this.props.handleContactsChange}
           />

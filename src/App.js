@@ -100,7 +100,11 @@ class App extends Component {
         ...this.state.contacts
       })
     })
-      .then(() => alert("Success!"))
+      .then(() => {
+        alert(
+          "Thanks for choosing our furniture assembly service! We will contact you shortly."
+        );
+      })
       .catch(error => alert(error));
   };
 

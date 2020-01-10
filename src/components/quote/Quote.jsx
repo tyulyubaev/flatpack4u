@@ -84,7 +84,7 @@ class Quote extends React.Component {
         <div className="row">
           <div
             id="modal"
-            className="col-10 mx-auto col-md-10 col-lg-10 text-center"
+            className="col-10 mx-auto col-md-10 col-lg-10 text-center px-0"
           >
             <div className="">
               <h4 className="p-3 font-weight-light">Items</h4>

@@ -39,7 +39,7 @@ export default class leaveReview extends Component {
         review: this.state.review
       })
     })
-      .then(() => alert("Success!"))
+      .then(() => alert("Thank you very much for your feedback!"))
       .catch(error => alert(error));
 
     // e.preventDefault();
