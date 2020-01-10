@@ -25,7 +25,7 @@ class ProductRow extends React.Component {
               <input                
                 type="number"
                 min="1"
-                className="form-control"
+                className="form-control px-2"
                 aria-label="Quantity"
                 placeholder="Qty"
                 aria-describedby="button-addon2"

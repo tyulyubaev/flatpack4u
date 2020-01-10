@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import encode from "./components/encode"
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -156,9 +157,4 @@ class App extends Component {
 }
 export default App;
 
-const encode = data => {
-  const message = Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-  return message;
-};
+

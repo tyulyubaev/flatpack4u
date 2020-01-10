@@ -3,6 +3,7 @@ import { withRouter, NavLink } from "react-router-dom";
 import {CheckPostcode} from "./DataValidation";
 import logo from "../logo.png";
 import Version from "./Version"
+import tracker from "./tracker"
 
 class Header extends Component {
   constructor(props) {
@@ -11,11 +12,11 @@ class Header extends Component {
   }
   routeChange(postcode) {
     const id="inputPostcode" 
-    const valid = CheckPostcode(postcode, id);
-    console.log(valid)
+    const valid = CheckPostcode(postcode, id);    
     if (valid===true){      
       this.props.alert(false)
       this.props.updateContactsDetails("postcode", postcode)
+      tracker(postcode);
       this.props.history.push('/quote')      
     }else if (valid===false){
       this.props.alert(true)
