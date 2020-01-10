@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './Popup.css'
+import "./Popup.css";
 
 export class MessagePostcode extends Component {
   render() {
@@ -16,43 +16,27 @@ export class MessagePostcode extends Component {
   }
 }
 
-export class MessageReview extends Component {
-  render() {
+export function message(value, content) {
+  if (value) {
     return (
-        <div className="overlay">
+      <div className="overlay">
         <div className="popup">
-            <h4>Dear Customer</h4>
-            <hr/>
-            <a className="close" onClick={()=>this.props.hide(false)} href="/">&times;</a>
-            <div className="content">
-            <p>Thank you so much for your valuable feedback!</p>
-            </div>
+          <h4>Dear Customer</h4>
+          <hr />
+          <a className="close" href="/">
+            &times;
+          </a>
+          <div className="content">
+            <p>{content}</p>
+          </div>
         </div>
-    </div>
+      </div>
     );
   }
 }
 
-export class MessageRequest extends Component {
-    render() {
-      return (
-          <div className="overlay">
-          <div className="popup">
-              <h4>Dear Customer</h4>
-              <hr/>
-              <a className="close" href="/">&times;</a>
-              <div className="content">
+{
+  /* <p>Thank you so much for choosing FlatPack4U furniture assembly service!</p>
               
-              <p>Thank you so much for choosing FlatPack4U furniture assembly service!</p>
-              
-              <p>You should get the final price quote shortly.</p>
-              </div>
-          </div>
-      </div>
-      );
-    }
-  };
-
-  export function message() {
-    return <MessageReview /> 
-  }
+              <p>You should get the final price quote shortly.</p> */
+}

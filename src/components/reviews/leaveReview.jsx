@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Rating } from "./starRating";
-import {MessageReview, message} from "../Messages"
-import encode from "../encode"
+import { message } from "../Messages";
+import encode from "../encode";
 
 export default class leaveReview extends Component {
   constructor(props) {
@@ -19,28 +19,24 @@ export default class leaveReview extends Component {
     this.handleRating = this.handleRating.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.formValidation = this.formValidation.bind(this);
-    this.toggleMessage = this.toggleMessage.bind(this);
-  }
-  toggleMessage =(value)=>{       
-    this.setState({message: value})
   }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleSubmit = () => {    
+  handleSubmit = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "review",        
+        "form-name": "review",
         name: this.state.name,
         rating: this.state.rating,
         review: this.state.review
       })
     })
-      .then(() => {this.toggleMessage(true)})
+      .then(this.setState({message: true}))
       .catch(error => alert(error));
 
     // e.preventDefault();
@@ -71,7 +67,7 @@ export default class leaveReview extends Component {
 
     const data = Object.values(this.state);
     const validation = data.findIndex(param => param == false);
-    console.log(validation)
+    console.log(validation);
     if (validation == 6) {
       this.handleSubmit();
     }
@@ -79,8 +75,11 @@ export default class leaveReview extends Component {
 
   render() {
     const { name, review } = this.state;
-    return (      
-      <div className="container" id="leaveReview">         
+    const content = "Thank you so much for your valuable feedback!";
+    const val = this.state.message
+    return (
+      <div className="container" id="leaveReview">        
+        {message(val, content)}
         <div className="row justify-content-md-center text-center">
           <div className="col-12 pt-5 pb-3">
             <h3>Leave a Review</h3>
@@ -135,8 +134,9 @@ export default class leaveReview extends Component {
             <div className="py-4 mx-auto col-5">
               <button
                 className="btn btn-primary btn-block"
-                // onClick={() => this.formValidation()}
-                onClick={() =>message}
+                onClick={() => {                  
+                  this.formValidation();
+                }}
               >
                 Post
               </button>

@@ -14,7 +14,7 @@ import Reviews from "./components/reviews/reviews";
 import Quote from "./components/quote/Quote";
 import Gallery from "./components/gallery/gallery";
 import productToString from "./components/productToString";
-import { MessagePostcode, MessageRequest } from "./components/Messages";
+import { MessagePostcode, Message } from "./components/Messages";
 
 class App extends Component {
   constructor() {
@@ -121,7 +121,7 @@ class App extends Component {
       >
         <BrowserRouter>
           {this.state.alert && <MessagePostcode />}
-          {this.state.contacts.submit && <MessageRequest />}
+          
           <Header
             updateContactsDetails={this.updateContactsDetails}
             alert={this.alert}
