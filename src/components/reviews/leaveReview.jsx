@@ -28,10 +28,17 @@ export default class leaveReview extends Component {
   };
 
   handleSubmit = () => {
+    console.log(this.state);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "review", ...this.state })
+      body: encode({
+        "form-name": "review",
+        subject: "Review",
+        name: this.state.name,
+        rating: this.state.rating,
+        review: this.state.review
+      })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -64,9 +71,10 @@ export default class leaveReview extends Component {
     }
 
     const data = Object.values(this.state);
-    const validation = data.findIndex(param=>param==false);
-    if (validation==-1){
-      this.handleSubmit()}
+    const validation = data.findIndex(param => param == false);
+    if (validation == -1) {
+      this.handleSubmit();
+    }
   };
 
   render() {
@@ -74,7 +82,7 @@ export default class leaveReview extends Component {
     return (
       <div className="container" id="leaveReview">
         <div className="row justify-content-md-center text-center">
-          <div className="col-6 pt-5 pb-3">
+          <div className="col-12 pt-5 pb-3">
             <h3>Leave a Review</h3>
           </div>
         </div>
