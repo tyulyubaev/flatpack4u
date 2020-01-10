@@ -33,8 +33,7 @@ export default class leaveReview extends Component {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "review",
-        subject: "Review",
+        "form-name": "review",        
         name: this.state.name,
         rating: this.state.rating,
         review: this.state.review
