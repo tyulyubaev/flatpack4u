@@ -5,13 +5,14 @@ class featuretteRight extends Component {
     const img = this.props.img;
     return (
       <div className="row featurette">
-        <div className="col-md-8 order-md-2 text-right">
+        <div className="col-sm-4 text-center">
+          <img src={img} alt="" className="img-fluid" />
+        </div>
+        <div className="col-sm-8 text-right">
           <h2 className="featurette-heading">{this.props.content.heading}</h2>
           <p className="lead">{this.props.content.lead}</p>
         </div>
-        <div className="col-md-4 order-md-1">
-          <img src={img} alt="" className="img-fluid" />
-        </div>
+        
       </div>
     );
   }

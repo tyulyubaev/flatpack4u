@@ -34,7 +34,7 @@ class Carousel extends Component {
                   <p>{this.props.content.content[2]}</p>
                   <p>
                     <a
-                      className="btn btn-lg btn-primary mt-3"
+                      className="btn btn-lg btn-primary my-3"
                       href="/price"
                       role="button"
                     >
@@ -59,7 +59,7 @@ class Carousel extends Component {
                   <p>{this.props.content.content[1]}</p>
                   <p>
                     <a
-                      className="btn btn-lg btn-primary mt-3"
+                      className="btn btn-lg btn-primary my-3"
                       href="/reviews"
                       role="button"
                     >
@@ -84,7 +84,7 @@ class Carousel extends Component {
                   <p>{this.props.content.content[0]}</p>
                   <p>
                     <a
-                      className="btn btn-lg btn-primary mt-3"
+                      className="btn btn-lg btn-primary my-3"
                       href="/about"
                       role="button"
                     >

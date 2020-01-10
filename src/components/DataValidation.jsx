@@ -30,7 +30,10 @@ function postcodeValidation(postcode) {
       "SE",
       "SW",
       "TW",
-      "W"
+      "W",
+      "E",
+      "WC",
+      "EC",      
     ];
     const index = postcode.search(/\d/);
     const half = postcode.slice(0, index).toUpperCase();

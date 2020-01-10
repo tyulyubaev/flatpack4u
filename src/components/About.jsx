@@ -13,16 +13,16 @@ export default class About extends Component {
         </h2>
         <hr className="mt-2 mb-4" />
 
-        <div className="row">
-          <div className="col-3">
+        <div className="row justify-content-center">
+          <div className="col-6 col-sm-4 col-md-3 mb-3">
             <img className="img-thumbnail rounded" src={image} alt="" />
           </div>
-          <div className="col">
+          <div className="col-12 col-sm-8 col-md-9">
             <p className="lead">
               My name is Michael and I'm furniture assembly specialist with
-              over 5 years of experience that's why I provide high quality
-              service at an affordable price and in a short time to achieve your
-              satisfaction. I can montage everything that comes flat packed and
+              over 5 years of experience. I provide high quality
+              service at an affordable price and in a short time. 
+              I can montage everything that comes flat packed and
               has an instruction.
             </p>
 

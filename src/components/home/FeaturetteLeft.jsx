@@ -9,7 +9,7 @@ class featuretteLeft extends Component {
                     <h2 className="featurette-heading">{this.props.content.heading}</h2>
                     <p className="lead">{this.props.content.lead}</p>
                 </div>
-                <div className="col-sm-4 text-right">
+                <div className="col-sm-4 order-first order-sm-last  text-center">
                     <img src={img} alt="" className="img-fluid"/>
                 </div>
             </div>
