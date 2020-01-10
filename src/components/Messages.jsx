@@ -27,7 +27,8 @@ export function message(value, content) {
             &times;
           </a>
           <div className="content">
-            <p>{content}</p>
+            <p>{content[0]}</p>
+            <p>{content[1]}</p>
           </div>
         </div>
       </div>

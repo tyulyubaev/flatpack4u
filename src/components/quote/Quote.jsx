@@ -32,6 +32,8 @@ class Quote extends React.Component {
       .join("\r\n");
     this.props.updateContactsDetails("link", link);
     this.props.updateContactsDetails("submit", true);
+    this.props.handleSubmit();
+    
   };
 
   handleRowDel(product) {

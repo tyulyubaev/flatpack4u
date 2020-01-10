@@ -75,7 +75,7 @@ export default class leaveReview extends Component {
 
   render() {
     const { name, review } = this.state;
-    const content = "Thank you so much for your valuable feedback!";
+    const content = ["Thank you so much for your valuable feedback!"];
     const val = this.state.message
     return (
       <div className="container" id="leaveReview">        

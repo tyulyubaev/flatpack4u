@@ -14,7 +14,7 @@ import Reviews from "./components/reviews/reviews";
 import Quote from "./components/quote/Quote";
 import Gallery from "./components/gallery/gallery";
 import productToString from "./components/productToString";
-import { MessagePostcode, Message } from "./components/Messages";
+import { MessagePostcode, message } from "./components/Messages";
 
 class App extends Component {
   constructor() {
@@ -47,11 +47,7 @@ class App extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.alert = this.alert.bind(this);
     this.updateScreenSize = this.updateScreenSize.bind(this);
-    this.toggleMessage = this.toggleMessage.bind(this);
   }
-  toggleMessage = value => {
-    this.setState({ message: value });
-  };
 
   alert = param => {
     this.setState({ alert: param });
@@ -85,11 +81,6 @@ class App extends Component {
     }));
   };
 
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.contacts.submit == true) {
-      this.handleSubmit();
-    }
-  }
   componentDidMount() {
     window.addEventListener("resize", this.updateScreenSize);
   }
@@ -100,7 +91,7 @@ class App extends Component {
     const height = window.innerHeight;
     this.setState({ windowHeight: height });
   }
-  handleSubmit = () => {    
+  handleSubmit = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -109,19 +100,24 @@ class App extends Component {
         ...this.state.contacts
       })
     })
-      .then(() => {})
+      .then(() => {
+        this.setState({ message: true });
+      })
       .catch(error => alert(error));
   };
 
   render() {
+    const content =['Thank you so much for choosing FlatPack4U furniture assembly service!','You should get the quote shortly.'];
+    const val = this.state.message;
     return (
       <div
         className="d-flex flex-column "
         style={{ minHeight: this.state.windowHeight }}
       >
         <BrowserRouter>
+          {message(val, content)}
           {this.state.alert && <MessagePostcode />}
-          
+
           <Header
             updateContactsDetails={this.updateContactsDetails}
             alert={this.alert}
