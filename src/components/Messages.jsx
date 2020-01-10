@@ -51,4 +51,8 @@ export class MessageRequest extends Component {
       </div>
       );
     }
+  };
+
+  export function message() {
+    return <MessageReview /> 
   }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Rating } from "./starRating";
-import {MessageReview} from "../Messages"
+import {MessageReview, message} from "../Messages"
 import encode from "../encode"
 
 export default class leaveReview extends Component {
@@ -80,8 +80,7 @@ export default class leaveReview extends Component {
   render() {
     const { name, review } = this.state;
     return (      
-      <div className="container" id="leaveReview">   
-      {this.state.message && <MessageReview hide={this.toggleMessage}/>}    
+      <div className="container" id="leaveReview">         
         <div className="row justify-content-md-center text-center">
           <div className="col-12 pt-5 pb-3">
             <h3>Leave a Review</h3>
@@ -136,7 +135,8 @@ export default class leaveReview extends Component {
             <div className="py-4 mx-auto col-5">
               <button
                 className="btn btn-primary btn-block"
-                onClick={() => this.formValidation()}
+                // onClick={() => this.formValidation()}
+                onClick={() =>message}
               >
                 Post
               </button>
