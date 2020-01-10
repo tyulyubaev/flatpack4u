@@ -22,7 +22,7 @@ class Carousel extends Component {
           <div className="carousel-inner rounded">
             {/* PRICE */}
             <div
-              className="carousel-item active pb-3"
+              className="carousel-item active p-3"
               style={{ backgroundColor: "#49BBBD" }}
             >
               <div className="row align-items-center">
@@ -47,7 +47,7 @@ class Carousel extends Component {
 
             {/* RATING */}
             <div
-              className="carousel-item pb-3"
+              className="carousel-item p-3"
               style={{ backgroundColor: "#4EC3EB" }}
             >
               <div className="row align-items-center">
@@ -72,7 +72,7 @@ class Carousel extends Component {
 
             {/* guarantee */}
             <div
-              className="carousel-item pb-3"
+              className="carousel-item p-3"
               style={{ backgroundColor: "#7DB99B" }}
             >
               <div className="row align-items-center">
