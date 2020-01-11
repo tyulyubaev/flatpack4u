@@ -35,7 +35,7 @@ class Carousel extends Component {
                   <p>
                     <a
                       className="btn btn-lg btn-primary my-3"
-                      href="/price"
+                      href="/prices"
                       role="button"
                     >
                       Price calculator
