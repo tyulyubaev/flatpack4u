@@ -1,5 +1,5 @@
 const baseNumber = (+new Date() / 100 / 60 / 60 / 24).toString().slice(3);
-const customersNumber = Math.floor(baseNumber) + 103;
+const customersNumber = Math.floor(baseNumber-156);
 const ordersNumber = Math.floor(customersNumber * 1.37);
 const furnitureNumber = Math.floor(ordersNumber * 1.22);
 

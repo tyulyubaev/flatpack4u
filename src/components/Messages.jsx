@@ -21,7 +21,7 @@ export function message(value, content) {
     return (
       <div className="overlay">
         <div className="popup">
-          <h4>Dear Customer</h4>
+          <h4>Dear Customer!</h4>
           <hr />
           <a className="close" href="/">
             &times;
