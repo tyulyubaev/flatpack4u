@@ -12,7 +12,7 @@ export default class Contacts extends React.Component {
     return (
       <div className="col-lg-6 mx-auto text-left">
         {/* Name */}
-        {/* <div className="form-group row">
+        <div className="form-group row">
           <label className="col-sm-3 col-form-label ">Name:</label>
           <input
             type="text"
@@ -22,10 +22,10 @@ export default class Contacts extends React.Component {
             name="name"
             onChange={this.props.handleContactsChange}
           />
-        </div> */}
+        </div>
 
         <div className="form-group row ">
-          <label className="col-sm-3 col-form-label">Email/Phone:</label>
+          <label className="col-sm-3 col-form-label">Email or phone:</label>
           <input
             type="text"
             className="form-control col"

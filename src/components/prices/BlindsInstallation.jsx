@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AddToOrder from "./addToOrder";
 import ButtonGetPrice from "./ButtonGetPrice";
+import tracker from "../tracker"
 const { Content } = require("../Content");
 
 export default class TVWallMounting extends Component {
@@ -67,7 +68,7 @@ export default class TVWallMounting extends Component {
     
     totalCost = Math.floor(totalCost) + 0.99
     const itemName = "Blinds";
-    this.setState({ price: totalCost, item: itemName });
+    this.setState({ price: totalCost, item: itemName }, tracker(itemName + " - £" + totalCost));
     this.showPrice = true;
   };
 

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import AddToOrder from "./addToOrder";
 import ButtonGetPrice from "./ButtonGetPrice";
+import tracker from "../tracker"
 const { Content } = require("../Content");
+
 
 export default class Hanging extends Component {
   constructor() {
@@ -89,7 +91,7 @@ export default class Hanging extends Component {
     }
     totalCost = Math.floor(totalCost) - 0.01
     const itemName = "Hanging";
-    this.setState({ price: totalCost, item: itemName });
+    this.setState({ price: totalCost, item: itemName }, tracker(itemName + " - £" + totalCost));
     this.showPrice = true;
         
   };

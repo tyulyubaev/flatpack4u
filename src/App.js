@@ -28,8 +28,8 @@ class App extends Component {
     this.state.products = [];
     this.state.windowHeight = window.innerHeight;
     this.state.contacts = {
-      subject: "Request",
-      // name: "",      
+      subject: "Quote request",
+      name: "",      
       email: "",
       // phone: "",
       postcode: "",

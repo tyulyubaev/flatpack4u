@@ -80,6 +80,21 @@ export const Content = {
 
   Reviews: [
     {
+      name: "Eunice",
+      stars: 5,
+      date: "11.01.2020",
+      content:
+        "Wonderful job by Michael. Punctual and very professional. Will highly recommend. Thank you."
+    },
+    
+    {
+      name: "Mel Barnes",
+      stars: 5,
+      date: "09.01.2020",
+      content:
+        "I highly recommend Michael, I have used his service 3 times and he is always on time polite and finishes work to a very high standard."
+    },
+    {
       name: "Alev Ibrahim",
       stars: 5,
       date: "01.11.2019",

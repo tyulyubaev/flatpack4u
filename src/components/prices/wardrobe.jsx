@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import AddToOrder from "./addToOrder";
+import tracker from "../tracker"
 const { Content } = require("../Content");
+
 
 export default class wardrobe extends Component {
   constructor(props) {
@@ -103,7 +105,7 @@ export default class wardrobe extends Component {
     const totalCost = Math.floor((totalTime * rate) / 60) + 0.99;
 
     const itemName = "Wardrobe";
-    this.setState({ price: totalCost, item: itemName });
+    this.setState({ price: totalCost, item: itemName }, tracker(itemName + " - £" + totalCost));
     this.showPrice = true;
   };
 
