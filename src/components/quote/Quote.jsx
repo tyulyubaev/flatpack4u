@@ -2,6 +2,9 @@ import React from "react";
 import { CheckData } from "../DataValidation";
 import Contacts from "./Contacts";
 import ProductTable from "./ProductTable";
+import { resolve } from "dns";
+import { reject } from "q";
+import { func } from "prop-types";
 
 class Quote extends React.Component {
   constructor(props) {
@@ -30,10 +33,23 @@ class Quote extends React.Component {
     const link = this.state.products
       .map(product => `${product.link} - qty: ${product.qty}`)
       .join("\r\n");
-    this.props.updateContactsDetails("link", link);
-    this.props.updateContactsDetails("submit", true);
-    this.props.handleSubmit();
-    
+
+    const updateData = () => {
+      return new Promise(resolve => {
+        this.props.updateContactsDetails("link", link);
+        this.props.updateContactsDetails("submit", true);
+        resolve();
+      });
+    };
+    const submit = () => {
+      this.props.handleSubmit();
+    };
+
+    async function addAsync() {
+      await updateData();
+      submit()
+    }
+    addAsync();
   };
 
   handleRowDel(product) {
