@@ -44,30 +44,30 @@ function postcodeValidation(postcode) {
 
 export function CheckData(contact) {
   // console.log(contact)
-  if (contact.name === "") {
-    redBorder("inputName");
-    return false
-  } else {
-    greenBorder("inputName");
-  }
-  if (contact.email.search("@") === -1) {
+  // if (contact.name === "") {
+  //   redBorder("inputName");
+  //   return false
+  // } else {
+  //   greenBorder("inputName");
+  // }
+  if (contact.email === "") {
     redBorder("inputEmail");
     return false
   } else {
     greenBorder("inputEmail");
   }
-  if (contact.phone === "") {
-    redBorder("inputPhone");
-    return false
-  } else {
-    greenBorder("inputPhone");
-  }
+  // if (contact.phone === "") {
+  //   redBorder("inputPhone");
+  //   return false
+  // } else {
+  //   greenBorder("inputPhone");
+  // }
   if (contact.postcode === "") {
-    redBorder("inputPhone");
+    redBorder("postcodeValue");
     return false
   } else {
     // CheckPostcode(contact.postcode)
-    greenBorder("inputPhone");
+    greenBorder("postcodeValue");
   }
 }
 

@@ -11,7 +11,8 @@ export default class Contacts extends React.Component {
     }
     return (
       <div className="col-lg-6 mx-auto text-left">
-        <div className="form-group row">
+        {/* Name */}
+        {/* <div className="form-group row">
           <label className="col-sm-3 col-form-label ">Name:</label>
           <input
             type="text"
@@ -21,21 +22,21 @@ export default class Contacts extends React.Component {
             name="name"
             onChange={this.props.handleContactsChange}
           />
-        </div>
+        </div> */}
 
         <div className="form-group row ">
-          <label className="col-sm-3 col-form-label">Email:</label>
+          <label className="col-sm-3 col-form-label">Email/Phone:</label>
           <input
-            type="email"
+            type="text"
             className="form-control col"
             id="inputEmail"
-            placeholder="Your email address"
+            placeholder="Your email address or phone number"
             name="email"
             onChange={this.props.handleContactsChange}
           />
         </div>
-
-        <div className="form-group row">
+{/* Phone */}
+        {/* <div className="form-group row">
           <label className="col-sm-3 col-form-label">Phone:</label>
           <input
             type="number"
@@ -45,7 +46,8 @@ export default class Contacts extends React.Component {
             name="phone"
             onChange={this.props.handleContactsChange}
           />
-        </div>
+        </div> */}
+
         <div className="form-group row">
           <label className="col-sm-3 col-form-label">Postcode:</label>
           <input
@@ -60,7 +62,8 @@ export default class Contacts extends React.Component {
           />
         </div>
   
-        <div className="form-group row">
+        {/*Date of visit
+         <div className="form-group row">
           <label className="col-sm-3 col-form-label">Date of visit:</label>
           <input
             type="text"
@@ -70,9 +73,11 @@ export default class Contacts extends React.Component {
             name="date"
             onChange={this.props.handleContactsChange}
           />
-        </div>
+        </div> */}
+
+
         {/* Parking */}
-        <div className="form-group row">
+        {/* <div className="form-group row">
           <label className="col-sm-8 col-form-label" htmlFor="parking">
             Parking space available:
           </label>
@@ -85,17 +90,17 @@ export default class Contacts extends React.Component {
             <option>No</option>
             <option>Yes</option>
           </select>
-          {/* (Save up to £5 an hour): */}
+          
           <label
             className="col-sm-8 alert alert-success py-0"
             htmlFor="parking"
           >
             (Save up to £5 an hour)
           </label>
-        </div>
+        </div> */}
 
         {/* Carry items */}
-        <div className="form-group row">
+        {/* <div className="form-group row">
           <label className="col-sm-8 col-form-label" htmlFor="carry">
             Need to carry items upstairs
           </label>
@@ -111,7 +116,7 @@ export default class Contacts extends React.Component {
           <label className="col-sm-8 alert alert-success py-0" htmlFor="carry">
             (Save up to £20)
           </label>
-        </div>
+        </div> */}
 
         <div className="form-group row">
           {/* <label className="col-sm-4 col-form-label">Note:</label> */}
