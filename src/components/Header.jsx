@@ -29,13 +29,13 @@ class Header extends Component {
           style={{ backgroundColor: "#84CEEB" }}
         >
           <div className="container">
-            <a className="navbar-brand" href="/">
+            <a className="navbar-brand" href="#" onClick={()=>this.props.history.push("/")}>
               <img
                 src={logo}
                 className="mr-auto"
                 alt="..."
                 width="50"
-                height="50"
+                height="50"                
               />
               FlatPack4U
             </a>
@@ -54,8 +54,9 @@ class Header extends Component {
               <ul className="navbar-nav mr-auto my-lg-0 text-center ">
                 <li
                   className="nav-item my-auto"
-                  data-toggle="collapse"
+                  // data-toggle="collapse"
                   data-target="#navbarsExample07"
+                  
                 >
                   <NavLink
                     exact
@@ -68,7 +69,7 @@ class Header extends Component {
                 </li>
                 <li
                   className="nav-item my-auto"
-                  data-toggle="collapse"
+                  // data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
                   <NavLink
@@ -82,7 +83,7 @@ class Header extends Component {
                 </li>
                 <li
                   className="nav-item my-auto"
-                  data-toggle="collapse"
+                  // data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
                   <NavLink
@@ -96,7 +97,7 @@ class Header extends Component {
                 </li>
                 <li
                   className="nav-item my-auto"
-                  data-toggle="collapse"
+                  // data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
                   <NavLink
@@ -110,7 +111,7 @@ class Header extends Component {
                 </li>
                 <li
                   className="nav-item my-auto"
-                  data-toggle="collapse"
+                  // data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
                   <NavLink
@@ -124,7 +125,7 @@ class Header extends Component {
                 </li>
                 <li
                   className="nav-item my-auto"
-                  data-toggle="collapse"
+                  // data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
                   <NavLink
