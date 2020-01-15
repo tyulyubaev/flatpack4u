@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 class Carousel extends Component {
   render() {
@@ -7,8 +8,32 @@ class Carousel extends Component {
     const imgGuarantee = require("../../assets/images/guarantee.svg");
 
     return (
-      <div className="container">
-        <div id="myCarousel" className="carousel slide" data-ride="carousel">
+      <div className="container">       
+
+        <div id="myCarousel" className="carousel slide" data-ride="carousel" >
+
+        <div className="carousel-control-prev align-items-end pb-2" style={{width: "50px"}}>
+          <a href="#myCarousel" role="button" data-slide="prev">
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="sr-only">Previous</span>
+          </a>
+        </div>
+
+        <div className="carousel-control-next align-items-end pb-2" style={{width: "50px"}}>
+          <a href="#myCarousel" role="button" data-slide="next">
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="sr-only">Next</span>
+          </a>
+        </div>
+
+
+
           <ol className="carousel-indicators mb-0">
             <li
               data-target="#carouselExampleIndicators"
@@ -34,9 +59,12 @@ class Carousel extends Component {
                   <p>{this.props.content.content[2]}</p>
                   <p>
                     <a
-                      className="btn btn-lg btn-primary my-3"                      
-                      href="/prices"
+                      className="btn btn-lg btn-primary my-3"
+                      href="#"
                       role="button"
+                      onClick={() => {
+                        this.props.history.push("/prices");
+                      }}
                     >
                       Price calculator
                     </a>
@@ -60,8 +88,11 @@ class Carousel extends Component {
                   <p>
                     <a
                       className="btn btn-lg btn-primary my-3"
-                      href="/reviews"
+                      href="#"
                       role="button"
+                      onClick={() => {
+                        this.props.history.push("/reviews");
+                      }}
                     >
                       Customer Reviews
                     </a>
@@ -85,8 +116,11 @@ class Carousel extends Component {
                   <p>
                     <a
                       className="btn btn-lg btn-primary my-3"
-                      href="/about"
+                      href="#"
                       role="button"
+                      onClick={() => {
+                        this.props.history.push("/about");
+                      }}
                     >
                       About Us
                     </a>
@@ -94,35 +128,10 @@ class Carousel extends Component {
                 </div>
               </div>
             </div>
-
-            <a
-            className="carousel-control-prev align-items-end pb-2"
-            href="#myCarousel"
-            role="button"
-            data-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a
-            className="carousel-control-next align-items-end pb-2"
-            href="#myCarousel"
-            role="button"
-            data-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="sr-only">Next</span>
-          </a>
           </div>
         </div>
       </div>
     );
   }
 }
-export default Carousel;
+export default withRouter(Carousel);
