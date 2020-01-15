@@ -90,7 +90,7 @@ export default class CompareRates extends Component {
                 ariahaspopup="true"
                 ariaexpanded="false"
                 onClick={() => this.sortCharge()}
-              >Minimum
+              >Minimum&nbsp;
               <br className="d-sm-none"/>
                 Charge
               </button>
@@ -105,7 +105,7 @@ export default class CompareRates extends Component {
                 ariahaspopup="true"
                 ariaexpanded="false"
                 onClick={() => this.sortRate()}
-              >Hourly
+              >Hourly&nbsp;
               <br className="d-sm-none"/>
                 Rate
               </button>
