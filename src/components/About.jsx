@@ -4,8 +4,7 @@ export default class About extends Component {
   render() {
     const image = require("../assets/images/ya.jpg");
     const { Content } = require("./Content");
-    const aboutUs = Content.aboutUs;
-    console.log(aboutUs);
+    const aboutUs = Content.aboutUs;    
     return (
       <div className="container">
         <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">

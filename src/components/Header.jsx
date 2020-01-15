@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { withRouter, NavLink } from "react-router-dom";
-import {CheckPostcode} from "./DataValidation";
+import { CheckPostcode } from "./DataValidation";
 import logo from "../logo.png";
-import tracker from "./tracker"
+import tracker from "./tracker";
 
 class Header extends Component {
   constructor(props) {
@@ -10,26 +10,25 @@ class Header extends Component {
     this.routeChange = this.routeChange.bind(this);
   }
   routeChange(postcode) {
-    const id="inputPostcode" 
-    const valid = CheckPostcode(postcode, id);    
-    if (valid===true){      
-      this.props.alert(false)
-      this.props.updateContactsDetails("postcode", postcode)
+    const id = "inputPostcode";
+    const valid = CheckPostcode(postcode, id);
+    if (valid === true) {
+      this.props.alert(false);
+      this.props.updateContactsDetails("postcode", postcode);
       tracker(postcode);
-      this.props.history.push('/quote')      
-    }else if (valid===false){
-      this.props.alert(true)
+      this.props.history.push("/quote");
+    } else if (valid === false) {
+      this.props.alert(true);
     }
-
   }
-  render() {    
-    return (      
-      <header className="mb-5">        
+  render() {
+    return (
+      <header className="mb-5">
         <nav
           className="navbar navbar-expand-lg navbar-light"
           style={{ backgroundColor: "#84CEEB" }}
         >
-          <div className="container">          
+          <div className="container">
             <a className="navbar-brand" href="/">
               <img
                 src={logo}
@@ -53,69 +52,92 @@ class Header extends Component {
             </button>
             <div className="collapse navbar-collapse" id="navbarsExample07">
               <ul className="navbar-nav mr-auto my-lg-0 text-center ">
-
-                <li className="nav-item my-auto">
-                    <NavLink
-                      exact
-                      activeClassName="nav-link active"
-                      className="nav-link "
-                      to="/"                                
+                <li
+                  className="nav-item my-auto"
+                  data-toggle="collapse"
+                  data-target="#navbarsExample07"
+                >
+                  <NavLink
+                    exact
+                    activeClassName="nav-link active"
+                    className="nav-link "
+                    to="/"
                   >
                     Home
-                  </NavLink>                
-                </li>                
-                <li className="nav-item my-auto">                  
-                    <NavLink
-                        exact
-                        activeClassName="nav-link active"
-                        className="nav-link"
-                        to="/prices"                                
-                  >
-                    Price Calculator 
-                    </NavLink>
+                  </NavLink>
                 </li>
-                <li className="nav-item my-auto">                  
-                    <NavLink
-                        exact
-                        activeClassName="nav-link active"
-                        className="nav-link"
-                        to="/rates"                                
-                  >
-                    Compare Rates 
-                    </NavLink>
-                </li>
-                <li className="nav-item my-auto">
+                <li
+                  className="nav-item my-auto"
+                  data-toggle="collapse"
+                  data-target="#navbarsExample07"
+                >
                   <NavLink
-                        exact
-                        activeClassName="nav-link active"
-                        className="nav-link"
-                        to="/reviews"                                
+                    exact
+                    activeClassName="nav-link active"
+                    className="nav-link"
+                    to="/prices"
                   >
-                    Reviews 
-                    </NavLink>
+                    Price Calculator
+                  </NavLink>
                 </li>
-                <li className="nav-item my-auto">                  
+                <li
+                  className="nav-item my-auto"
+                  data-toggle="collapse"
+                  data-target="#navbarsExample07"
+                >
                   <NavLink
-                        exact
-                        activeClassName="nav-link active"
-                        className="nav-link"
-                        to="/gallery"                                
+                    exact
+                    activeClassName="nav-link active"
+                    className="nav-link"
+                    to="/rates"
                   >
-                    Gallery 
-                    </NavLink>
+                    Compare Rates
+                  </NavLink>
                 </li>
-                <li className="nav-item my-auto">                  
+                <li
+                  className="nav-item my-auto"
+                  data-toggle="collapse"
+                  data-target="#navbarsExample07"
+                >
                   <NavLink
-                        exact
-                        activeClassName="nav-link active"
-                        className="nav-link"
-                        to="/about"                                
+                    exact
+                    activeClassName="nav-link active"
+                    className="nav-link"
+                    to="/reviews"
                   >
-                    About us 
-                    </NavLink>
+                    Reviews
+                  </NavLink>
+                </li>
+                <li
+                  className="nav-item my-auto"
+                  data-toggle="collapse"
+                  data-target="#navbarsExample07"
+                >
+                  <NavLink
+                    exact
+                    activeClassName="nav-link active"
+                    className="nav-link"
+                    to="/gallery"
+                  >
+                    Gallery
+                  </NavLink>
+                </li>
+                <li
+                  className="nav-item my-auto"
+                  data-toggle="collapse"
+                  data-target="#navbarsExample07"
+                >
+                  <NavLink
+                    exact
+                    activeClassName="nav-link active"
+                    className="nav-link"
+                    to="/about"
+                  >
+                    About us
+                  </NavLink>
                 </li>
               </ul>
-            </div>            
+            </div>
             <form className="form-inline mx-auto">
               <input
                 className="form-control mr-sm-1 mx-auto w-50"
@@ -139,7 +161,7 @@ class Header extends Component {
               </a>
             </form>
           </div>
-        </nav>    
+        </nav>
         {/* <div>
           <Version />
         </div>     */}
@@ -149,6 +171,3 @@ class Header extends Component {
 }
 
 export default withRouter(Header);
-
-
-
