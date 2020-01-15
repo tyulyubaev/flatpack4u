@@ -13,6 +13,7 @@ import About from "./components/About";
 import Reviews from "./components/reviews/reviews";
 import Quote from "./components/quote/Quote";
 import Gallery from "./components/gallery/gallery";
+import CompareRates from "./components/compare/CompareRates"
 import productToString from "./components/productToString";
 import { MessagePostcode, message } from "./components/Messages";
 
@@ -125,6 +126,10 @@ class App extends Component {
           />
           <Switch>
             <Route exact path={"/"} render={props => <Main {...props} />} />
+            <Route
+            path="/rates"
+            render={props => <CompareRates {...props} />}
+            />
             <Route
               path="/prices"
               render={props => <Prices {...props} addItem={this.addItem} />}

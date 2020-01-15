@@ -13,7 +13,7 @@ export default class Contacts extends React.Component {
       <div className="col-lg-6 mx-auto text-left">
         {/* Name */}
         <div className="form-group row">
-          <label className="col-sm-3 col-form-label ">Name:</label>
+          <label className="col-sm-4 col-form-label ">Name:</label>
           <input
             type="text"
             className="form-control col"
@@ -25,10 +25,10 @@ export default class Contacts extends React.Component {
         </div>
 
         <div className="form-group row ">
-          <label className="col-sm-3 col-form-label">Email or phone:</label>
+          <label className="col-sm-4 col-form-label">Email or phone:</label>
           <input
             type="text"
-            className="form-control col"
+            className="form-control col my-auto"
             id="inputEmail"
             placeholder="Your email address or phone number"
             name="email"
@@ -49,7 +49,7 @@ export default class Contacts extends React.Component {
         </div> */}
 
         <div className="form-group row">
-          <label className="col-sm-3 col-form-label">Postcode:</label>
+          <label className="col-sm-4 col-form-label">Postcode:</label>
           <input
             type="text"
             className="form-control col"
@@ -119,10 +119,10 @@ export default class Contacts extends React.Component {
         </div> */}
 
         <div className="form-group row">
-          {/* <label className="col-sm-4 col-form-label">Note:</label> */}
+          <label className="col-sm-4 col-form-label">Note:</label>
           <textarea
             placeholder="Additional information"
-            className="form-control"
+            className="form-control col"
             id="inputNote"
             rows="3"
             name="note"

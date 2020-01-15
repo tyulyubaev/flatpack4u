@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import AddToOrder from "./addToOrder";
-import tracker from "../tracker"
+import tracker from "../tracker";
 const { Content } = require("../Content");
-
 
 export default class wardrobe extends Component {
   constructor(props) {
@@ -103,10 +102,23 @@ export default class wardrobe extends Component {
 
     totalTime = unpackingTime + frameTime + doorTime + totalInternal;
     const totalCost = Math.floor((totalTime * rate) / 60) + 0.99;
-
     const itemName = "Wardrobe";
-    this.setState({ price: totalCost, item: itemName }, tracker(itemName + " - £" + totalCost));
-    this.showPrice = true;
+    // async function
+    const updateData = () => {
+      return new Promise(resolve => {        
+        this.setState({ price: totalCost, item: itemName });
+        this.showPrice = true;
+        resolve();
+      });
+    };
+    const submit = () => {
+      tracker(this.state)
+    };
+    async function addAsync() {
+      await updateData();
+      submit();
+    }
+    addAsync();
   };
 
   render() {
@@ -209,7 +221,7 @@ export default class wardrobe extends Component {
             <input
               className={`form-control ${this.state.VerQtyDoors}`}
               type="number"
-              placeholder="Quantity"              
+              placeholder="Quantity"
               name="qtyDoors"
               value={qtyDoors}
               onChange={this.handleChange}
@@ -220,7 +232,9 @@ export default class wardrobe extends Component {
           <div className="col-md-3  my-auto">
             <label>Secure to the wall</label>
           </div>
-          <div className={`col d-flex form-control border mx-3 ${this.state.VerWall}`}>
+          <div
+            className={`col d-flex form-control border mx-3 ${this.state.VerWall}`}
+          >
             <div className="col-6">
               <input
                 className="form-check-input"

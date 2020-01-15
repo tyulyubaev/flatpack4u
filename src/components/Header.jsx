@@ -52,29 +52,39 @@ class Header extends Component {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarsExample07">
-              <ul className="navbar-nav mr-auto my-lg-0">
+              <ul className="navbar-nav mr-auto my-lg-0 text-center ">
 
-                <li className="nav-item">
+                <li className="nav-item my-auto">
                     <NavLink
                       exact
                       activeClassName="nav-link active"
-                      className="nav-link"
+                      className="nav-link "
                       to="/"                                
                   >
                     Home
                   </NavLink>                
                 </li>                
-                <li className="nav-item">                  
+                <li className="nav-item my-auto">                  
                     <NavLink
                         exact
                         activeClassName="nav-link active"
                         className="nav-link"
                         to="/prices"                                
                   >
-                    Prices 
+                    Price Calculator 
                     </NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item my-auto">                  
+                    <NavLink
+                        exact
+                        activeClassName="nav-link active"
+                        className="nav-link"
+                        to="/rates"                                
+                  >
+                    Compare Rates 
+                    </NavLink>
+                </li>
+                <li className="nav-item my-auto">
                   <NavLink
                         exact
                         activeClassName="nav-link active"
@@ -84,7 +94,7 @@ class Header extends Component {
                     Reviews 
                     </NavLink>
                 </li>
-                <li className="nav-item">                  
+                <li className="nav-item my-auto">                  
                   <NavLink
                         exact
                         activeClassName="nav-link active"
@@ -94,7 +104,7 @@ class Header extends Component {
                     Gallery 
                     </NavLink>
                 </li>
-                <li className="nav-item">                  
+                <li className="nav-item my-auto">                  
                   <NavLink
                         exact
                         activeClassName="nav-link active"
