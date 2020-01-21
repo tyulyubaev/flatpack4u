@@ -80,6 +80,13 @@ export const Content = {
 
   Reviews: [
     {
+      name: "Salina Razzaque",
+      stars: 5,
+      date: "17.01.2020",
+      content:
+        "Micheal was punctual and professional and excellent at what he does. Very polite. Would definitely book him again for other jobs that I will need doing."
+    },
+    {
       name: "Eunice",
       stars: 5,
       date: "11.01.2020",
