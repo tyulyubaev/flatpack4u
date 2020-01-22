@@ -13,16 +13,22 @@ import About from "./components/About";
 import Reviews from "./components/reviews/reviews";
 import Quote from "./components/quote/Quote";
 import Gallery from "./components/gallery/gallery";
-import CompareRates from "./components/compare/CompareRates"
+import CompareRates from "./components/compare/CompareRates";
+import CookiePolicy from "./components/polices/cookiePolicy";
+import PrivacyNotice from "./components/polices/privacyNotice"
+import TermsAndConditions from "./components/polices/termsAndConditions"
 import productToString from "./components/productToString";
-import { MessagePostcode, message } from "./components/Messages";
+import { MessagePostcode, message} from "./components/Messages";
+import MessageCookies from "./components/Cookies";
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       message: false,
-      alert: false
+      alert: false,
+      cookies: true,
     };
 
     this.state.items = [];
@@ -30,7 +36,7 @@ class App extends Component {
     this.state.windowHeight = window.innerHeight;
     this.state.contacts = {
       subject: "Order Confirmation",
-      name: "",      
+      name: "",
       email: "",
       // phone: "",
       postcode: "",
@@ -47,12 +53,12 @@ class App extends Component {
     this.updateContactsDetails = this.updateContactsDetails.bind(this);
     this.handleContactsChange = this.handleContactsChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.alert = this.alert.bind(this);
+    this.messageVisibility = this.messageVisibility.bind(this);    
     this.updateScreenSize = this.updateScreenSize.bind(this);
   }
 
-  alert = param => {
-    this.setState({ alert: param });
+  messageVisibility =( param, value) => {
+    this.setState({ [param]: value });
   };
   addItem = item => {
     this.state.items.push(item);
@@ -109,7 +115,10 @@ class App extends Component {
   };
 
   render() {
-    const content =['Thank you so much for choosing FlatPack4U furniture assembly service!','You should get the quote shortly.'];
+    const content = [
+      "Thank you so much for choosing FlatPack4U furniture assembly service!",
+      "You should get the quote shortly."
+    ];
     const val = this.state.message;
     return (
       <div
@@ -119,16 +128,17 @@ class App extends Component {
         <BrowserRouter>
           {message(val, content)}
           {this.state.alert && <MessagePostcode />}
+          {this.state.cookies && <MessageCookies messageVisibility={this.messageVisibility}/>}
 
           <Header
             updateContactsDetails={this.updateContactsDetails}
-            alert={this.alert}
+            messageVisibility={this.messageVisibility}
           />
           <Switch>
             <Route exact path={"/"} render={props => <Main {...props} />} />
             <Route
-            path="/rates"
-            render={props => <CompareRates {...props} />}
+              path="/rates"
+              render={props => <CompareRates {...props} />}
             />
             <Route
               path="/prices"
@@ -154,6 +164,9 @@ class App extends Component {
             />
             <Route path="/reviews" render={props => <Reviews {...props} />} />
             <Route path="/about" render={props => <About {...props} />} />
+            <Route path="/cookies" render={props => <CookiePolicy {...props} />} />
+            <Route path="/terms-and-conditions" render={props => <TermsAndConditions {...props} />} />
+            <Route path="/privacy-notice" render={props => <PrivacyNotice {...props} />} />
             {/* <Route path="/" component={Main}/>       */}
           </Switch>
           <Footer position={this.state.footerPosition} />

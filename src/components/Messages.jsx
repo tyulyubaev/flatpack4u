@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./Popup.css";
 
 export class MessagePostcode extends Component {
@@ -34,10 +35,4 @@ export function message(value, content) {
       </div>
     );
   }
-}
-
-{
-  /* <p>Thank you so much for choosing FlatPack4U furniture assembly service!</p>
-              
-              <p>You should get the final price quote shortly.</p> */
 }

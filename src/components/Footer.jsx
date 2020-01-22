@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter} from "react-router-dom";
 class footer extends Component {
   render() {
     return (
@@ -17,25 +18,28 @@ class footer extends Component {
               </a>
             </div>
             <div className="col text-sm-right order-1 order-sm-2">
-            <a href="#" className="font-weight-light text-secondary">
-              *Terms and Conditions and minimum charges apply
-            </a>   
+              <a href="#" className="font-weight-light text-secondary" onClick={()=>{this.props.history.push("/terms-and-conditions");}}>
+                Terms and Conditions
+              </a>
             </div>
           </div>
           <div className="row">
             <div className="col-12 col-sm">
               Phone: <a href="tel:07380268355">073 8026 8355</a>
             </div>
-            <div className="col text-center text-sm-right">
-            © 2019 FlatPack4U
+            <div className="col text-sm-right order-1 order-sm-2">
+              <a href="#" className="font-weight-light text-secondary" onClick={()=>{this.props.history.push("/privacy-notice");}}>
+                Privacy Notice
+              </a>
             </div>
           </div>
-          
-          
+          <div className="row text-center">
+            <div className="col">© 2019 FlatPack4U</div>
+          </div>
         </div>
       </footer>
     );
   }
 }
 
-export default footer;
+export default withRouter(footer);

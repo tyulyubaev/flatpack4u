@@ -13,12 +13,12 @@ class Header extends Component {
     const id = "inputPostcode";
     const valid = CheckPostcode(postcode, id);
     if (valid === true) {
-      this.props.alert(false);
+      this.props.messageVisibility("alert", false);
       this.props.updateContactsDetails("postcode", postcode);
       tracker(postcode);
       this.props.history.push("/quote");
     } else if (valid === false) {
-      this.props.alert(true);
+      this.props.messageVisibility("alert", true);
     }
   }
   render() {
