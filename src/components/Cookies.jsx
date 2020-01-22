@@ -5,7 +5,7 @@ class MessageCookies extends Component {
   render() {
     return (
       <div
-        className="sticky-top alert alert-secondary text-center font-weight mb-0 justify-content-center "
+        className="fixed-bottom alert alert-secondary text-center font-weight mb-0 justify-content-center "
         role="alert"
         id="message"
       >
