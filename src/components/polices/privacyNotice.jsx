@@ -8,7 +8,7 @@ export default class privacyNotice extends Component {
           Privacy Notice
         </h2>
         <hr className="mt-2 mb-4" />
-        <div className="col-10 mx-auto py-2">
+        <div className="col-md-10 mx-auto py-2">
           <h4 className="">1. ABOUT US</h4>
           <p className="lead">
             1.1. Our company details are: Flatpack4U is a trade name registered
@@ -17,7 +17,7 @@ export default class privacyNotice extends Component {
             www.flatpack4u.co.uk
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">2. ABOUT THIS PRIVACY NOTICE</h4>
           <p className="lead">
             2.1. We are committed to protecting and respecting your personal
@@ -50,7 +50,7 @@ export default class privacyNotice extends Component {
             Authority will be the Information Commissioner’s Office).
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">3. INFORMATION WE MAY COLLECT ABOUT YOU</h4>
           <p className="lead">We may collect and process the following data:</p>
           <p className="lead">
@@ -80,7 +80,7 @@ export default class privacyNotice extends Component {
           <p className="lead"></p>
           <p className="lead"></p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">4. COOKIES</h4>
           <p className="lead">
             4.1. We use cookies to keep track of the services you're looking at
@@ -91,7 +91,7 @@ export default class privacyNotice extends Component {
             experience may be adversely affected.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">5. HOW WE USE YOUR INFORMATION</h4>
           <p className="lead">
             5.1. We use information held about you in the following ways:
@@ -117,7 +117,7 @@ export default class privacyNotice extends Component {
           </p>
           <p className="lead"></p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">6. DISCLOSURE OF YOUR INFORMATION</h4>
           <p className="lead">
             6.1. You should be aware that if we are requested by the police or
@@ -127,7 +127,7 @@ export default class privacyNotice extends Component {
             any business.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">7. STORAGE OF YOUR PERSONAL DATA</h4>
           <p className="lead">
             7.1. All information you provide to us is held on secure servers.
@@ -146,7 +146,7 @@ export default class privacyNotice extends Component {
             provided.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">8. YOUR RIGHTS</h4>
           <p className="lead">
             8.1. Even if you have accepted the processing of your personal data
@@ -161,21 +161,21 @@ export default class privacyNotice extends Component {
             personal data for such purposes.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">9. ACCESS TO INFORMATION</h4>
           <p className="lead">
             9.1. You have the right to access information held about you. You
             can exercise your rights at any time by contacting us
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">10. CHANGES TO THIS PRIVACY NOTICE</h4>
           <p className="lead">
             10.1. Please check back frequently to see any updates or changes to this
             Privacy Notice.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">11. CONTACT</h4>
           <p className="lead">
             11.1. Questions, comments and requests regarding this Privacy Notice are
@@ -183,7 +183,7 @@ export default class privacyNotice extends Component {
           </p>
         </div>
 
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">12. DEFINITIONS</h4>
           <p className="lead">
             12.1. For the purposes of this Privacy Notice, ("European Data

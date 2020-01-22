@@ -8,7 +8,7 @@ export default class cookiePolicy extends Component {
           Cookie Policy
         </h2>
         <hr className="mt-2 mb-4" />
-        <div className="col-10 mx-auto py-4">
+        <div className="col-sm-10 mx-auto py-4">
           <h4 className="">What are cookies?</h4>
           <p className="lead">
             Cookies are little text files which are stored on the browser or
@@ -25,7 +25,7 @@ export default class cookiePolicy extends Component {
             or until they reach their expiry date.
           </p>
         </div>
-        <div className="col-10 mx-auto py-4">
+        <div className="col-sm-10 mx-auto py-4">
           <h4>How do we use cookies?</h4>
           <p className="lead">
             We use cookies to enhance your browsing experience by analysing how
@@ -56,7 +56,7 @@ export default class cookiePolicy extends Component {
             alphanumeric string such as 118D132F9423).[DSID, IDE, NID, _fbp]
           </p>
         </div>
-        <div className="col-10 mx-auto py-4">
+        <div className="col-sm-10 mx-auto py-4">
           <h4 className="">How to Refuse Cookies?</h4>
           <p className="lead">
             You can usually find information about how to stop your browser from

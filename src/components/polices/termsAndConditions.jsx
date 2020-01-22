@@ -8,7 +8,7 @@ export default class termsAndConditions extends Component {
           Terms and Conditions
         </h2>
         <hr className="mt-2 mb-4" />
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">1. DEFINITIONS</h4>
           <p className="lead">
             1.1. Appointment – means the time that the booking will be carried
@@ -35,7 +35,7 @@ export default class termsAndConditions extends Component {
             through the website, app or by phone.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">2. WHO WE ARE AND HOW TO CONTACT US</h4>
           <p className="lead">
             2.1. For any queries regarding our service, please contact us by
@@ -46,7 +46,7 @@ export default class termsAndConditions extends Component {
             www.flatpack4u.co.uk
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">3. INTRODUCTION</h4>
           <p className="lead">
             3.1 These are the terms and conditions on which we arrange for an
@@ -75,7 +75,7 @@ export default class termsAndConditions extends Component {
             authority, Trading Standards Department or Citizens Advice Bureau.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">4. IDENTITY OF THE ASSEMBLY SPECIALIST</h4>
           <p className="lead">
             4.1. Your contract for the provision of the services and the booking
@@ -85,7 +85,7 @@ export default class termsAndConditions extends Component {
             Assembly Specialist).
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">5. ELIGIBILITY</h4>
           <p className="lead">
             5.1. The services on this website are only available:
@@ -106,7 +106,7 @@ export default class termsAndConditions extends Component {
             respects.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">6. BOOKING PROCESS AND APPOINTMENTS</h4>
           <p className="lead">
             6.1. You may create and place a booking by following the process set
@@ -134,7 +134,7 @@ export default class termsAndConditions extends Component {
             in other exceptional circumstances.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">
             7. YOUR RIGHTS TO CANCEL OR CHANGE AN APPOINTMENT
           </h4>
@@ -148,7 +148,7 @@ export default class termsAndConditions extends Component {
             details provided in your confirmation email.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">8. OUR RIGHTS TO CANCEL OR CHANGE AN APPOINTMENT</h4>
           <p className="lead">
             8.1. We will use reasonable endeavours to attend the agreed
@@ -163,7 +163,7 @@ export default class termsAndConditions extends Component {
             notify us by contacting us by email.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">9. PRICING AND PAYMENT</h4>
           <p className="lead">
             9.1. Pricing - any fixed price provided will be available for your
@@ -218,7 +218,7 @@ export default class termsAndConditions extends Component {
             9.9.3. Direct electronic transfer to the bank account.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">10. DAMAGE</h4>
           <p className="lead">
             10.1. In the unlikely event of any damage to the customer’s property
@@ -233,7 +233,7 @@ export default class termsAndConditions extends Component {
             time limit stipulated above.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">11. SERVICE GUARANTEE</h4>
           <p className="lead">
             11.1. We guarantee the Works for 12 months from the date carried out
@@ -306,7 +306,7 @@ export default class termsAndConditions extends Component {
             authority, Trading Standards Department or Citizens Advice Bureau.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">12. LIABILITY</h4>
           <p className="lead">
             12.1. Subject to clause 11.2:
@@ -346,7 +346,7 @@ export default class termsAndConditions extends Component {
             enforceability of the remaining provisions.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">13. PRIVACY</h4>
           <p className="lead">
             13.1. Your privacy is of the highest importance to us, and we will
@@ -364,7 +364,7 @@ export default class termsAndConditions extends Component {
             and/or phone calls and/or email address receiving the emails.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">14. COMPLAINTS</h4>
           <p className="lead">
             14.1. We make every effort to provide the services in a manner which
@@ -374,14 +374,14 @@ export default class termsAndConditions extends Component {
             contacting us by Email: quote@flatpack4u.co.uk{" "}
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">15. WAIVER</h4>
           <p className="lead">
             15.1. No waiver by us shall be construed as a waiver of any
             proceeding or succeeding breach of any provision.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">16. SEVERABILITY</h4>
           <p className="lead">
             16.1. If any part of these terms and conditions shall be deemed
@@ -391,7 +391,7 @@ export default class termsAndConditions extends Component {
             remaining provisions of these terms and conditions.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">17. INTELLECTUAL PROPERTY</h4>
           <p className="lead">
             17.1. You acknowledge and agree that all copyright, trademarks and
@@ -401,7 +401,7 @@ export default class termsAndConditions extends Component {
             material only as expressly authorised by us or our licensors.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">18. ENTIRE AGREEMENT</h4>
           <p className="lead">
             18.1. These terms and conditions govern our relationship with you.
@@ -416,7 +416,7 @@ export default class termsAndConditions extends Component {
             terms and conditions.
           </p>
         </div>
-        <div className="col-10 mx-auto py-2">
+        <div className="col-sm-10 mx-auto py-2">
           <h4 className="">19. LAW AND JURISDICTION</h4>
           <p className="lead">
             19.1. These terms and conditions shall be governed by and construed
