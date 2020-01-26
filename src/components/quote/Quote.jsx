@@ -114,7 +114,7 @@ class Quote extends React.Component {
               <Contacts
                 data={this.props.data}
                 handleContactsChange={this.props.handleContactsChange}
-                alert={this.props.alert}
+                messageVisibility={this.props.messageVisibility}
               />
               <div className="mx-auto pt-3 mb-5">
                 <button

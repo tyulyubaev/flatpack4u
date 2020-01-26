@@ -9,13 +9,12 @@ class MessageCookies extends Component {
         role="alert"
         id="message"
       >
-        <div className="col-auto my-auto" style={{"font-size": "0.9rem"}}>     
+        <div className="col-auto my-auto" style={{"fontSize": "0.9rem"}}>     
           <p className="m-0">
             We use cookies on our websites. You are free to manage this via your
             browser setting at any time. To learn more about how we use cookies,
             please see our{" "}
-            <a
-              href="#"
+            <a              
               onClick={() => {
                 this.props.history.push("/cookies");
               }}
@@ -25,8 +24,7 @@ class MessageCookies extends Component {
           </p>
         </div>
         <div className="col-auto text-center text-sm-left  my-auto">
-          <a
-            href="#"
+          <a            
             className="btn btn-outline-success btn-sm mx-4 text-touppercase"
             onClick={() => this.props.messageVisibility("cookies", false)}
           >

@@ -158,7 +158,7 @@ class App extends Component {
                   handleContactsChange={this.handleContactsChange}
                   updateContactsDetails={this.updateContactsDetails}
                   handleSubmit={this.handleSubmit}
-                  alert={this.alert}
+                  messageVisibility={this.messageVisibility}
                 />
               )}
             />

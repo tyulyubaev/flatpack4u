@@ -6,8 +6,8 @@ export default class Contacts extends React.Component {
     const postcodeValidation =  () => {      
       const valid = CheckPostcode(this.props.data.contacts.postcode, "postcodeValue")     
       if (valid===false){      
-        this.props.alert(true)   
-      } else {this.props.alert(false)}
+        this.props.messageVisibility(alert, true)   
+      } else {this.props.messageVisibility(alert, false)}
     }
     return (
       <div className="col-lg-6 mx-auto text-left">
