@@ -53,22 +53,22 @@ export default class leaveReview extends Component {
       this.setState({ nameVal: true });
     }
 
-    if (this.state.rating == 0) {
+    if (this.state.rating === 0) {
       this.setState({ ratingVal: false });
     } else {
       this.setState({ ratingVal: true });
     }
 
-    if (this.state.review == "") {
+    if (this.state.review === "") {
       this.setState({ reviewVal: false });
     } else {
       this.setState({ reviewVal: true });
     }
 
     const data = Object.values(this.state);
-    const validation = data.findIndex(param => param == false);
+    const validation = data.findIndex(param => param === false);
     console.log(validation);
-    if (validation == 6) {
+    if (validation === 6) {
       this.handleSubmit();
     }
   };

@@ -32,7 +32,7 @@ class Star extends Component {
 class StarForRating extends Component {
   render() {
     let color = "white";
-    if (this.props.rating == true) {
+    if (this.props.rating === true) {
       color = "#f1c40f";
     } else {
       color = "white";

@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import AddToOrder from "./addToOrder";
 import ButtonGetPrice from "./ButtonGetPrice";
-import tracker from "../tracker"
+import tracker from "../tracker";
 const { Content } = require("../Content");
-
 
 export default class Hanging extends Component {
   constructor() {
@@ -23,77 +22,83 @@ export default class Hanging extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
   verification = () => {
-    if (this.state.type == "") {
-        this.setState({ typeVal: false });
-      } else {
-        this.setState({ typeVal: true });
-      }
-      if (this.state.wall == "") {
-        this.setState({ wallVal: false });
-      } else {
-        this.setState({ wallVal: true });
-      }
-      if (this.state.width == "") {
-        this.setState({ widthVal: false });
-      } else {
-        this.setState({ widthVal: true });
-      }
-      if (this.state.width > 200) {
-        this.setState({ widthVal: "exceed" });
-      }
-      if (
-        this.state.type !== "" &&
-        this.state.wall !== "" &&
-        this.state.width !== ""
-      ) {
-        this.calculations();
-      }
+    if (this.state.type === "") {
+      this.setState({ typeVal: false });
+    } else {
+      this.setState({ typeVal: true });
+    }
+    if (this.state.wall === "") {
+      this.setState({ wallVal: false });
+    } else {
+      this.setState({ wallVal: true });
+    }
+    if (this.state.width === "") {
+      this.setState({ widthVal: false });
+    } else {
+      this.setState({ widthVal: true });
+    }
+    if (this.state.width > 200) {
+      this.setState({ widthVal: "exceed" });
+    }
+    if (
+      this.state.type !== "" &&
+      this.state.wall !== "" &&
+      this.state.width !== ""
+    ) {
+      this.calculations();
+    }
   };
   calculations = () => {
     const { type, width, wall } = this.state;
     let totalCost = 0;
     const itemCost = Content.Prices;
-    let holesQuantity=0;    
 
-    switch (type){
-        case "Mirror":
-                if (width < 50) {
-                    totalCost=itemCost.mirrorUpTo50cm;
-                  } else if (width < 100) {
-                    totalCost=itemCost.mirrorUpTo100cm;
-                  } else if (width <= 200) {
-                    totalCost=itemCost.mirrorUpTo200cm;
-                  };
-                if (wall=="Plasterboard"){totalCost+=5};
-                
-                
+    switch (type) {
+      case "Mirror":
+        if (width < 50) {
+          totalCost = itemCost.mirrorUpTo50cm;
+        } else if (width < 100) {
+          totalCost = itemCost.mirrorUpTo100cm;
+        } else if (width <= 200) {
+          totalCost = itemCost.mirrorUpTo200cm;
+        }
+        if (wall === "Plasterboard") {
+          totalCost += 5;
+        }
+
         break;
-        case "Shelf":
-                if (width < 50) {
-                    totalCost=itemCost.shelfUpTo50cm;
-                  } else if (width < 100) {
-                    totalCost=itemCost.shelfUpTo100cm;
-                  } else if (width <= 200) {
-                    totalCost=itemCost.shelfUpTo200cm;
-                  }
-                if (wall=="Plasterboard"){totalCost+=5};
+      case "Shelf":
+        if (width < 50) {
+          totalCost = itemCost.shelfUpTo50cm;
+        } else if (width < 100) {
+          totalCost = itemCost.shelfUpTo100cm;
+        } else if (width <= 200) {
+          totalCost = itemCost.shelfUpTo200cm;
+        }
+        if (wall === "Plasterboard") {
+          totalCost += 5;
+        }
         break;
-        case "Picture":
-                if (width < 50) {
-                    totalCost=itemCost.pictureUpTo50cm;
-                  } else if (width < 100) {
-                    totalCost=itemCost.pictureUpTo50cm;
-                  } else if (width <= 200) {
-                    totalCost=itemCost.pictureUpTo50cm;
-                  }
-                if (wall=="Brick wall"){totalCost+=5};
+      case "Picture":
+        if (width < 50) {
+          totalCost = itemCost.pictureUpTo50cm;
+        } else if (width < 100) {
+          totalCost = itemCost.pictureUpTo50cm;
+        } else if (width <= 200) {
+          totalCost = itemCost.pictureUpTo50cm;
+        }
+        if (wall === "Brick wall") {
+          totalCost += 5;
+        }
         break;
     }
-    totalCost = Math.floor(totalCost) - 0.01
+    totalCost = Math.floor(totalCost) - 0.01;
     const itemName = "Hanging";
-    this.setState({ price: totalCost, item: itemName }, tracker(itemName + " - £" + totalCost));
+    this.setState(
+      { price: totalCost, item: itemName },
+      tracker(itemName + " - £" + totalCost)
+    );
     this.showPrice = true;
-        
   };
   render() {
     return (
@@ -117,18 +122,18 @@ class ItemToHang extends Component {
     const handleChange = this.props.handleChange;
     const label = "col-6 my-auto";
     const inputType =
-      this.props.data.typeVal == false
+      this.props.data.typeVal === false
         ? "form-control col border border-danger rounded-lg"
         : "form-control col";
     const inputWidth =
-      this.props.data.widthVal == false
+      this.props.data.widthVal === false
         ? "form-control col border border-danger rounded-lg"
         : "form-control col";
 
     const inputWidthExceed = this.props.data.width <= 300 ? "d-none" : "";
 
     const inputWall =
-      this.props.data.wallVal == false
+      this.props.data.wallVal === false
         ? "form-control col border border-danger rounded-lg"
         : "form-control col";
     return (
@@ -193,9 +198,7 @@ class ItemToHang extends Component {
             <option>Brick wall</option>
           </select>
         </div>
-
       </div>
-      
     );
   }
 }

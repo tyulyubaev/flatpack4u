@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component} from "react";
 import Company from "./company";
 
 export default class CompareRates extends Component {

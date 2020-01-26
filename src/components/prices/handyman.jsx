@@ -8,8 +8,6 @@ import {
   PictureImage
 } from "../../assets/icons/FurnitureIcons";
 
-const { Content } = require("../Content");
-
 export default class handyman extends Component {
   display = (par) => {
     this.showTVMounting = par;    

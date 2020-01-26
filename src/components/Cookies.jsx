@@ -5,12 +5,12 @@ class MessageCookies extends Component {
   render() {
     return (
       <div
-        className="fixed-bottom alert alert-secondary text-center font-weight mb-0 justify-content-center "
+        className="fixed-bottom alert alert-secondary text-center font-weight mb-0 row row justify-content-center py-2"
         role="alert"
         id="message"
       >
-        <div className="col">     
-          <p className="my-auto">
+        <div className="col-auto my-auto" style={{"font-size": "0.9rem"}}>     
+          <p className="m-0">
             We use cookies on our websites. You are free to manage this via your
             browser setting at any time. To learn more about how we use cookies,
             please see our{" "}
@@ -24,13 +24,13 @@ class MessageCookies extends Component {
             </a>
           </p>
         </div>
-        <div className="col">
+        <div className="col-auto text-center text-sm-left  my-auto">
           <a
             href="#"
-            className="btn btn-outline-success mx-4 mt-2 text-touppercase"
+            className="btn btn-outline-success btn-sm mx-4 text-touppercase"
             onClick={() => this.props.messageVisibility("cookies", false)}
           >
-            Got it, thanks!
+            Agree
           </a>
         </div>
       </div>

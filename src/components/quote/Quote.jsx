@@ -2,10 +2,6 @@ import React from "react";
 import { CheckData } from "../DataValidation";
 import Contacts from "./Contacts";
 import ProductTable from "./ProductTable";
-import { resolve } from "dns";
-import { reject } from "q";
-import { func } from "prop-types";
-
 class Quote extends React.Component {
   constructor(props) {
     super(props);
@@ -47,7 +43,7 @@ class Quote extends React.Component {
 
     async function addAsync() {
       await updateData();
-      submit()
+      submit();
     }
     addAsync();
   };
@@ -60,7 +56,7 @@ class Quote extends React.Component {
   handleAddEvent() {
     const lastPosition = this.state.products.length - 1;
     let newId = "";
-    if (lastPosition == -1) {
+    if (lastPosition === -1) {
       newId = 1;
     } else {
       newId = this.state.products[lastPosition].id + 1;
@@ -82,7 +78,7 @@ class Quote extends React.Component {
     let products = this.state.products;
     let newProducts = products.map(product => {
       for (let key in product) {
-        if (key === item.name && product.id == Number(item.id)) {
+        if (key === item.name && product.id === Number(item.id)) {
           product[key] = item.value;
         }
       }

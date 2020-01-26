@@ -1,5 +1,4 @@
 import React from "react";
-import { webValidation } from "../DataValidation";
 
 class ProductRow extends React.Component {
     render() {

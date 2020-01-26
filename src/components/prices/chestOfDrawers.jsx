@@ -19,7 +19,7 @@ export default class chestOfDrawers extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
   verification = () =>{
-    if (this.state.qty ==""){this.setState({qtyVal: false})} else {this.setState({qtyVal: true})};
+    if (this.state.qty ===""){this.setState({qtyVal: false})} else {this.setState({qtyVal: true})};
     if (this.state.qty!==""){this.calculations()}
   }
   calculations = () => {    
@@ -50,7 +50,7 @@ export default class chestOfDrawers extends Component {
           <div className="col my-auto4">
             <input
               type="number"
-              className={this.state.qtyVal==false ? "form-control border border-danger" : "form-control"}
+              className={this.state.qtyVal===false ? "form-control border border-danger" : "form-control"}
               
               placeholder="Qty"
               name="qty"

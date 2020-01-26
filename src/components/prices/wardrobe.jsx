@@ -39,14 +39,14 @@ export default class wardrobe extends Component {
     param.forEach(value => {
       const valueCapitalize = value.replace(/\b\w/g, l => l.toUpperCase());
       const VerValue = `Ver${valueCapitalize}`;
-      if (this.state[value] == "") {
+      if (this.state[value] === "") {
         this.setState({ [VerValue]: "border border-danger" });
         count += 1;
       } else {
         this.setState({ [VerValue]: "" });
       }
     });
-    if (count == 0) {
+    if (count === 0) {
       this.calculations();
     }
   };
@@ -54,8 +54,7 @@ export default class wardrobe extends Component {
     const rate = Content.Prices.hourlyRate;
     const {
       height,
-      width,
-      depth,
+      width,      
       type,
       qtyDoors,
       wall,
@@ -78,15 +77,15 @@ export default class wardrobe extends Component {
     } else if (width > 200) {
       frameTime *= 3;
     }
-    if (wall == "yes") {
+    if (wall === "yes") {
       frameTime += 15;
     }
 
     //Doors
-    if (type == "sliding") {
+    if (type === "sliding") {
       frameTime += 20;
       doorTime = 30;
-    } else if (type == "hinged") {
+    } else if (type === "hinged") {
       doorTime = 10;
     }
     doorTime *= qtyDoors;
@@ -126,8 +125,7 @@ export default class wardrobe extends Component {
       height,
       width,
       depth,
-      qtyDoors,
-      wall,
+      qtyDoors,      
       drawers,
       baskets,
       rails,

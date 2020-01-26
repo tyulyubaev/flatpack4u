@@ -13,7 +13,7 @@ export default class Company extends Component {
       <div>
         <div className="row text-center my-3">
           <div className="col-2">{pos}</div>
-          <div className="col-4 "><a href={link} target="_blank">{company}</a></div>
+          <div className="col-4 "><a href={link} target="_blank" rel="noopener noreferrer">{company}</a></div>
           <div className="col-3">{minCharge}</div>
           <div className="col-3">{hourlyRate}</div>
         </div>

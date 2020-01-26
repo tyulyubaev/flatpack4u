@@ -2,9 +2,7 @@ import React, { Component } from "react";
 
 export default class About extends Component {
   render() {
-    const image = require("../assets/images/ya.jpg");
-    const { Content } = require("./Content");
-    const aboutUs = Content.aboutUs;    
+    const image = require("../assets/images/ya.jpg");       
     return (
       <div className="container">
         <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">

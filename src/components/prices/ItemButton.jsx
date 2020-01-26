@@ -10,7 +10,6 @@ export default class ItemButton extends Component {
   render() {
     const element = this.props.value;
     const name = element.name;
-    const picture = element.picture;
     const title = element.title;
     const id = element.id;    
     const ItemPicture = element.svg;

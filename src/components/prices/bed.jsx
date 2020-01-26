@@ -18,8 +18,8 @@ export default class chestOfDrawers extends Component {
     this.verification = this.verification.bind(this);
   }
   verification = () =>{
-    if (this.state.size ==""){this.setState({sizeVal: false})} else {this.setState({sizeVal: true})};
-    if (this.state.type ==""){this.setState({typeVal: false})} else {this.setState({typeVal: true})};    
+    if (this.state.size ===""){this.setState({sizeVal: false})} else {this.setState({sizeVal: true})};
+    if (this.state.type ===""){this.setState({typeVal: false})} else {this.setState({typeVal: true})};    
     if (this.state.size!=="" && this.state.type!==""){this.calculations()}
   }
   handleChange = e => {
@@ -31,7 +31,7 @@ export default class chestOfDrawers extends Component {
     const { size, type, drawers } = this.state;
     let totalTime = 0;
 
-    if (size == "single") {
+    if (size === "single") {
       switch (type) {
         case "normal":
           totalTime = 50;
@@ -44,7 +44,7 @@ export default class chestOfDrawers extends Component {
           break;
       }
     }
-    if (size == "double") {
+    if (size === "double") {
       switch (type) {
         case "normal":
           totalTime = 60;
@@ -90,7 +90,7 @@ class Size extends Component {
     render() {            
         return (
         <div className="form-group">
-            <div className={this.props.param.sizeVal==false ? 'row py-1 my-2 border border-danger rounded-lg': 'row my-2 py-1' }>
+            <div className={this.props.param.sizeVal===false ? 'row py-1 my-2 border border-danger rounded-lg': 'row my-2 py-1' }>
                 <div className="col-3">
                     <label className="">Size</label>
                 </div>
@@ -136,7 +136,7 @@ class Type extends Component {
         // console.log(this.props)
         return(            
         <div>
-            <div className={this.props.param.typeVal==false ? 'row py-1 border border-danger rounded-lg': 'row py-1' }>
+            <div className={this.props.param.typeVal===false ? 'row py-1 border border-danger rounded-lg': 'row py-1' }>
                 <div className="col-3">
                     <label className="mb-0">Type</label>
                 </div>

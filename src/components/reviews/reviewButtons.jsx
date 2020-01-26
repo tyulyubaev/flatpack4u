@@ -11,7 +11,7 @@ export default class reviewButtons extends Component {
                 <button className="btn btn-secondary text-capitalize" onClick={()=>{document.getElementById("leaveReview").scrollIntoView()}}>Leave a review here</button>
             </div>
             <div className="p-4">                
-                <a className="btn btn-secondary text-capitalize" href="https://search.google.com/local/writereview?placeid=ChIJxSlk7mICdkgRseQpkfJRxRg" role="button" target="_blank">Review us on Google</a>
+                <a className="btn btn-secondary text-capitalize" href="https://search.google.com/local/writereview?placeid=ChIJxSlk7mICdkgRseQpkfJRxRg" role="button" target="_blank" rel="noopener noreferrer">Review us on Google</a>
             </div>
         </div>
       </div>

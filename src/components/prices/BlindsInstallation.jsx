@@ -22,17 +22,17 @@ export default class TVWallMounting extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
   verification = () => {    
-    if (this.state.type == "") {
+    if (this.state.type === "") {
       this.setState({ typeVal: false });
     } else {
       this.setState({ typeVal: true });
     }
-    if (this.state.wall == "") {
+    if (this.state.wall === "") {
       this.setState({ wallVal: false });
     } else {
       this.setState({ wallVal: true });
     }
-    if (this.state.width == "") {
+    if (this.state.width === "") {
       this.setState({ widthVal: false });
     } else {
       this.setState({ widthVal: true });
@@ -63,8 +63,8 @@ export default class TVWallMounting extends Component {
     }
     totalCost += holeCost*holesQuantity
 
-    if (wall=="Brick wall"){totalCost+=9};
-    if (type=="Vertical blind"){totalCost+=14};
+    if (wall==="Brick wall"){totalCost+=9};
+    if (type==="Vertical blind"){totalCost+=14};
     
     totalCost = Math.floor(totalCost) + 0.99
     const itemName = "Blinds";
@@ -94,18 +94,18 @@ class Blinds extends Component {
     const handleChange = this.props.handleChange;
     const label = "col-6 my-auto";
     const inputWidth =
-      this.props.data.widthVal == false
+      this.props.data.widthVal === false
         ? "form-control col border border-danger rounded-lg"
         : "form-control col";
 
     const inputWidthExceed = this.props.data.width <= 300 ? "d-none" : "";
 
     const inputType =
-      this.props.data.typeVal == false
+      this.props.data.typeVal === false
         ? "form-control col border border-danger rounded-lg"
         : "form-control col";
     const inputWall =
-      this.props.data.wallVal == false
+      this.props.data.wallVal === false
         ? "form-control col border border-danger rounded-lg"
         : "form-control col";
 
