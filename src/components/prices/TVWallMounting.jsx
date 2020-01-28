@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import AddToOrder from "./addToOrder";
 import ButtonGetPrice from "./ButtonGetPrice";
 import tracker from "../tracker";
+import {Content} from "../Content"
 
 export default class TVWallMounting extends Component {
   constructor() {
@@ -36,20 +37,21 @@ export default class TVWallMounting extends Component {
   };
   calculations = () => {
     const { tvsize, wall } = this.state;
+    const TVPrices = Content.TVPrices
     let totalCost = 0;
 
-    const priceCalculation = price => {
-      const size = price.size;
-      const cost = price.price;
+    TVPrices.forEach((dimension)=> {
+      const size = dimension.size;
+      const cost = dimension.price;
       if (totalCost === 0 && tvsize < size) {
-        totalCost = cost;
+        totalCost = cost;        
       }
-    };
+    })
 
     if (wall === "Plasterboard") {
-      totalCost += 15;
+      totalCost += 10;
     }
-    totalCost += +0.99;
+    totalCost += +0.95;
 
     const itemName = "TV Mounting";
     this.setState(
