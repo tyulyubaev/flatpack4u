@@ -15,12 +15,11 @@ import Quote from "./components/quote/Quote";
 import Gallery from "./components/gallery/gallery";
 import CompareRates from "./components/compare/CompareRates";
 import CookiePolicy from "./components/polices/cookiePolicy";
-import PrivacyNotice from "./components/polices/privacyNotice"
-import TermsAndConditions from "./components/polices/termsAndConditions"
+import PrivacyNotice from "./components/polices/privacyNotice";
+import TermsAndConditions from "./components/polices/termsAndConditions";
 import productToString from "./components/productToString";
-import { MessagePostcode, message} from "./components/Messages";
+import { MessagePostcode, message } from "./components/Messages";
 import MessageCookies from "./components/Cookies";
-
 
 class App extends Component {
   constructor() {
@@ -28,7 +27,7 @@ class App extends Component {
     this.state = {
       message: false,
       alert: false,
-      cookies: true,
+      cookies: true
     };
 
     this.state.items = [];
@@ -53,11 +52,11 @@ class App extends Component {
     this.updateContactsDetails = this.updateContactsDetails.bind(this);
     this.handleContactsChange = this.handleContactsChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.messageVisibility = this.messageVisibility.bind(this);    
+    this.messageVisibility = this.messageVisibility.bind(this);
     this.updateScreenSize = this.updateScreenSize.bind(this);
   }
 
-  messageVisibility =( param, value) => {
+  messageVisibility = (param, value) => {
     this.setState({ [param]: value });
   };
   addItem = item => {
@@ -100,6 +99,7 @@ class App extends Component {
     this.setState({ windowHeight: height });
   }
   handleSubmit = () => {
+    window.gtag_report_conversion()
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -128,7 +128,9 @@ class App extends Component {
         <BrowserRouter>
           {message(val, content)}
           {this.state.alert && <MessagePostcode />}
-          {this.state.cookies && <MessageCookies messageVisibility={this.messageVisibility}/>}
+          {this.state.cookies && (
+            <MessageCookies messageVisibility={this.messageVisibility} />
+          )}
 
           <Header
             updateContactsDetails={this.updateContactsDetails}
@@ -164,9 +166,18 @@ class App extends Component {
             />
             <Route path="/reviews" render={props => <Reviews {...props} />} />
             <Route path="/about" render={props => <About {...props} />} />
-            <Route path="/cookies" render={props => <CookiePolicy {...props} />} />
-            <Route path="/terms-and-conditions" render={props => <TermsAndConditions {...props} />} />
-            <Route path="/privacy-notice" render={props => <PrivacyNotice {...props} />} />
+            <Route
+              path="/cookies"
+              render={props => <CookiePolicy {...props} />}
+            />
+            <Route
+              path="/terms-and-conditions"
+              render={props => <TermsAndConditions {...props} />}
+            />
+            <Route
+              path="/privacy-notice"
+              render={props => <PrivacyNotice {...props} />}
+            />
             {/* <Route path="/" component={Main}/>       */}
           </Switch>
           <Footer position={this.state.footerPosition} />
