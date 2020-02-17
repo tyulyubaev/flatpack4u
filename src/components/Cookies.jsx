@@ -12,8 +12,7 @@ class MessageCookies extends Component {
         <div className="col-auto my-auto" style={{"fontSize": "0.9rem"}}>     
           <p className="m-0">
             We use cookies on our websites. You are free to manage this via your
-            browser setting at any time. To learn more about how we use cookies,
-            please see our{" "}
+            browser setting.{" "}
             <a              
               onClick={() => {
                 this.props.history.push("/cookies");

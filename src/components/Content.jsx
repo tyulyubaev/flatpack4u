@@ -31,11 +31,12 @@ export const Content = {
   ],
 
   Carousel: {
-    title: ["12 Months Guarantee*", "Only 5 Stars Positive Feedbacks", "Just From £35, No Hourly Rates"],
+    title: ["12 Months Guarantee*", "Only 5 Stars Positive Feedbacks", "Just From £35, No Hourly Rates", "Build in Price Calculator"],
     content: [
       "We guarantee the quality of our work for 12 months, longer than any other flat-pack assembly provider.",
-      "It's our job to make every customer happy!",
+      "It's our job to make every customer happy!",      
       "We usually provide  fixed price quotation so you don't need to warry about real assembly time spend.",
+      "Don't want to wait the quote? Calculate the price by yourself.",
     ]
   },
 
@@ -65,7 +66,7 @@ export const Content = {
         `Public liability insurance covers us if we accidentally injure a member of the public or damage their property, e.g. if someone trips over our toolbox and hurts themselves or if we are putting up a picture frame and accidentally damage the existing fixtures and fittings. If our client makes a claim against us, the insurer will cover the legal and compensation costs we are required to pay.`
     },
     {
-      heading: "High of Quality.",
+      heading: "Good Quality.",
       muted: "2 It’ll blow your mind.",
       lead:
         `Due to the nature of assembly parts fit intact and precisely. Most homeowners simply don't have the patience or the know-how to do this themselves. So, hiring us is the best route to ensure proper assembly, timely assembly and to ensure your flat pack furniture is going to look exactly how it should look once it is fully assembled and placed in your home.`
@@ -74,7 +75,7 @@ export const Content = {
       heading: "No Hidden Fees.",
       muted: "3 It’ll blow your mind.",
       lead:
-        `A great benefit of hiring us for flat pack furniture assembly is the fact that we typically provide you the flat-rate quote. So, depending on whether it is one small sofa or chair or an entire living and dining room suite you will know beforehand how much you are going to pay when you hire us to put together the furniture you have purchased for your home.`
+        `A great benefit of hiring us for flat pack furniture assembly is the fact that we typically provide you the fixed price quote. So, depending on whether it is one small sofa or chair or an entire living and dining room suite you will know beforehand how much you are going to pay when you hire us to put together the furniture you have purchased for your home.`
     }
   ],
 

@@ -6,6 +6,7 @@ class Carousel extends Component {
     const imgMoney = require("../../assets/images/money.svg");
     const imgRating = require("../../assets/images/satisfaction.svg");
     const imgGuarantee = require("../../assets/images/guarantee.svg");
+    const imgCalculator = require("../../assets/images/calculator.svg");
 
     return (
       <div className="container">       
@@ -42,10 +43,11 @@ class Carousel extends Component {
             ></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
           </ol>
 
           <div className="carousel-inner rounded">
-            {/* PRICE */}
+            {/* Quote*/}
             <div
               className="carousel-item active p-3"
               style={{ backgroundColor: "#49BBBD" }}
@@ -63,16 +65,17 @@ class Carousel extends Component {
                       href="#"
                       role="button"
                       onClick={() => {
-                        this.props.history.push("/prices");
+                        this.props.history.push("/quote");
                       }}
                     >
-                      Price calculator
+                      Get a Quick Quote
                     </a>
                   </p>
                 </div>
               </div>
             </div>
 
+             
             {/* RATING */}
             <div
               className="carousel-item p-3"
@@ -128,6 +131,34 @@ class Carousel extends Component {
                 </div>
               </div>
             </div>
+            {/* PRICE Calculator*/}
+            <div
+              className="carousel-item p-3"
+              style={{ backgroundColor: "#49BBBD" }}
+            >
+              <div className="row align-items-center">
+                <div className="col col-md-4 col-lg-3 d-none d-md-block pl-5">
+                  <img height="100%" src={imgCalculator} alt="" />
+                </div>
+                <div className="col-12 col-md-8 col-lg-9 text-right text-white px-4 px-sm-5">
+                  <h1>{this.props.content.title[3]}</h1>
+                  <p>{this.props.content.content[3]}</p>
+                  <p>
+                    <a
+                      className="btn btn-lg btn-primary my-3"
+                      href="#"
+                      role="button"
+                      onClick={() => {
+                        this.props.history.push("/prices");
+                      }}
+                    >
+                      Price Calculator
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
