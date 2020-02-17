@@ -25,7 +25,7 @@ export default class Contacts extends React.Component {
         </div>
 
         <div className="form-group row ">
-          <label className="col-sm-4 col-form-label">Email or phone:</label>
+          <label className="col-sm-4 col-form-label">Email or phone*:</label>
           <input
             type="text"
             className="form-control col my-auto"
@@ -49,7 +49,7 @@ export default class Contacts extends React.Component {
         </div> */}
 
         <div className="form-group row">
-          <label className="col-sm-4 col-form-label">Postcode:</label>
+          <label className="col-sm-4 col-form-label">Postcode*:</label>
           <input
             type="text"
             className="form-control col"

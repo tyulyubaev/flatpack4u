@@ -9,16 +9,16 @@ export const Content = {
     holeCost: 4.8,
 
     mirrorUpTo50cm: 15,
-    mirrorUpTo100cm: 35,
-    mirrorUpTo200cm: 65,
+    mirrorUpTo100cm: 20,
+    mirrorUpTo200cm: 45,
 
-    shelfUpTo50cm: 20,
-    shelfUpTo100cm: 30,
-    shelfUpTo200cm: 35,
+    shelfUpTo50cm: 10,
+    shelfUpTo100cm: 15,
+    shelfUpTo200cm: 25,
 
-    pictureUpTo50cm: 10,
-    pictureUpTo100cm: 15,
-    pictureUpTo200cm: 20
+    pictureUpTo50cm: 5,
+    pictureUpTo100cm: 10,
+    pictureUpTo200cm: 15
   },
 
   TVPrices: [
@@ -31,7 +31,7 @@ export const Content = {
   ],
 
   Carousel: {
-    title: ["12 Months Guarantee*", "Only 5 Stars Positive Feedbacks", "Just From £35, No Hourly Rates", "Build in Price Calculator"],
+    title: ["12 Months Guarantee*", "Only 5 Stars Positive Feedbacks", "Just From £35, No Hourly Rates", "Easy to Use Price Calculator"],
     content: [
       "We guarantee the quality of our work for 12 months, longer than any other flat-pack assembly provider.",
       "It's our job to make every customer happy!",      

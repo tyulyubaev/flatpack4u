@@ -134,10 +134,10 @@ class Carousel extends Component {
             {/* PRICE Calculator*/}
             <div
               className="carousel-item p-3"
-              style={{ backgroundColor: "#49BBBD" }}
+              style={{ backgroundColor: "#c3a9ff" }}
             >
               <div className="row align-items-center">
-                <div className="col col-md-4 col-lg-3 d-none d-md-block pl-5">
+                <div className="col col-md-4 col-lg-3 d-none d-md-block pl-md-1 pl-lg-5">
                   <img height="100%" src={imgCalculator} alt="" />
                 </div>
                 <div className="col-12 col-md-8 col-lg-9 text-right text-white px-4 px-sm-5">

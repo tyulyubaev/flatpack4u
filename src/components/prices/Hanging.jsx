@@ -62,7 +62,7 @@ export default class Hanging extends Component {
         } else if (width <= 200) {
           totalCost = itemCost.mirrorUpTo200cm;
         }
-        if (wall === "Plasterboard") {
+        if (wall === "Brick wall") {
           totalCost += 5;
         }
 
