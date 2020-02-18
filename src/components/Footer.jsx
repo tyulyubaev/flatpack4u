@@ -34,7 +34,7 @@ class footer extends Component {
             </div>
           </div>
           <div className="row text-center">
-            <div className="col">© 2019 FlatPack4U</div>
+            <div className="col">© 2020 FlatPack4U</div>
           </div>
         </div>
       </footer>

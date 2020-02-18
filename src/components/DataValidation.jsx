@@ -50,7 +50,7 @@ export function CheckData(contact) {
   // } else {
   //   greenBorder("inputName");
   // }
-  if (contact.email === "") {
+  if (contact.email === "" && contact.phone === "" ) {
     redBorder("inputEmail");
     return false
   } else {

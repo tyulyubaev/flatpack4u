@@ -4,10 +4,10 @@ import { CheckPostcode } from "../DataValidation";
 export default class Contacts extends React.Component {  
   render() {    
     const postcodeValidation =  () => {      
-      const valid = CheckPostcode(this.props.data.contacts.postcode, "postcodeValue")     
+      const valid = CheckPostcode(this.props.data.contacts.postcode, "postcodeValue")          
       if (valid===false){      
-        this.props.messageVisibility(alert, true)   
-      } else {this.props.messageVisibility(alert, false)}
+        this.props.messageVisibility('alert', true)   
+      } else {this.props.messageVisibility('alert', false)}
     }
     return (
       <div className="col-lg-6 mx-auto text-left">
@@ -21,6 +21,19 @@ export default class Contacts extends React.Component {
             placeholder="Please enter your name"
             name="name"
             onChange={this.props.handleContactsChange}
+          />
+        </div>
+        <div className="form-group row">
+          <label className="col-sm-4 col-form-label">Postcode*:</label>
+          <input
+            type="text"
+            className="form-control col"
+            id="postcodeValue"
+            placeholder="Your postcode"
+            defaultValue={this.props.data.contacts.postcode}
+            name="postcode"
+            onChange={this.props.handleContactsChange}
+            onBlur={postcodeValidation}            
           />
         </div>
 
@@ -48,19 +61,7 @@ export default class Contacts extends React.Component {
           />
         </div> */}
 
-        <div className="form-group row">
-          <label className="col-sm-4 col-form-label">Postcode*:</label>
-          <input
-            type="text"
-            className="form-control col"
-            id="postcodeValue"
-            placeholder="Your postcode"
-            defaultValue={this.props.data.contacts.postcode}
-            name="postcode"
-            onChange={this.props.handleContactsChange}
-            onBlur={postcodeValidation}            
-          />
-        </div>
+        
   
         {/*Date of visit
          <div className="form-group row">

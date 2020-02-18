@@ -37,7 +37,7 @@ class App extends Component {
       subject: "Price Quote",
       name: "",
       email: "",
-      // phone: "",
+      phone: "",
       postcode: "",
       // date: "",
       link: "",
@@ -57,6 +57,7 @@ class App extends Component {
   }
 
   messageVisibility = (param, value) => {
+    // console.log(param, value)
     this.setState({ [param]: value });
   };
   addItem = item => {
@@ -80,6 +81,9 @@ class App extends Component {
   };
 
   updateContactsDetails = (name, value) => {
+    if (name === "email" && !isNaN(value)) {
+      name = "phone";
+    }
     this.setState(prevState => ({
       contacts: {
         ...prevState.contacts,
@@ -99,7 +103,7 @@ class App extends Component {
     this.setState({ windowHeight: height });
   }
   handleSubmit = () => {
-    window.gtag_report_conversion()
+    window.gtag_report_conversion();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },

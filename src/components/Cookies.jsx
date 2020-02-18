@@ -11,20 +11,20 @@ class MessageCookies extends Component {
       >
         <div className="my-auto p-0" style={{"fontSize": "0.8rem"}}>     
           <p className="m-0">
-            We use cookies on our websites.{" "}
-            <span className="d-none d-sm-inline"> You are free to manage this via your browser setting.</span>
-            <a              
+          This website uses cookies.{" "}
+            <span className="d-none d-sm-inline"> You are free to manage this via your browser setting.{" "}</span>
+            <a href="#" className=""         
               onClick={() => {
                 this.props.history.push("/cookies");
               }}
             >
-             {" "}Cookies Policy
+             Read our cookie policy
             </a>
             <a            
             className="btn btn-outline-success btn-sm mx-4 text-touppercase " style={{"fontSize": "0.8rem"}}
             onClick={() => this.props.messageVisibility("cookies", false)}
           >
-            Agree
+            Accept & Close
           </a>
           </p>
         </div>
