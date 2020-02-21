@@ -1,0 +1,31 @@
+.message {
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
+.object {
+  position: fixed;
+  animation: MoveDown 2s forwards;  
+  width: 100%;
+  left: 0;
+  bottom: 0px;
+  z-index: 999;
+}
+
+@keyframes MoveDown {
+  0% {
+    bottom: -100px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}

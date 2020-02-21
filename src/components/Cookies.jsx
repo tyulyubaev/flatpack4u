@@ -4,8 +4,9 @@ import { withRouter } from "react-router-dom";
 class MessageCookies extends Component {
   render() {
     return (
+      <div className="object">
       <div
-        className="fixed-bottom alert alert-secondary text-center font-weight mb-0"
+        className="alert alert-secondary text-center font-weight mb-0"
         role="alert"
         id="message"
       >
@@ -31,6 +32,7 @@ class MessageCookies extends Component {
         <div className="col-auto text-center text-sm-left  p-0 m-0">
           
         </div>
+      </div>
       </div>
     );
   }

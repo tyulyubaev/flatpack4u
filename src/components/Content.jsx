@@ -81,6 +81,13 @@ export const Content = {
 
   Reviews: [
     {
+      name: "Miriam",
+      stars: 5,
+      date: "20.02.2020",
+      content:
+        "Micheal was punctual and professional and excellent at what he does. He is very polite, quick, easy to book and pay. He shows me how my furnitures work as is a sofa bed, dinning table thats a glass which need to be careful while lifting up and also a storage bed. Would definitely recommended him. Thanks again Micheal."
+    },
+    {
       name: "Salina Razzaque",
       stars: 5,
       date: "17.01.2020",

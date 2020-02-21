@@ -116,14 +116,15 @@ class App extends Component {
         this.setState({ message: true });
       })
       .catch(error => alert(error));
-  };
+  };  
 
   render() {
     const content = [
       "Thank you so much for choosing FlatPack4U furniture assembly service!",
       "You should get the quote shortly."
     ];
-    const val = this.state.message;
+    const val = this.state.message;  
+    
     return (
       <div
         className="d-flex flex-column "
@@ -132,6 +133,7 @@ class App extends Component {
         <BrowserRouter>
           {message(val, content)}
           {this.state.alert && <MessagePostcode />}
+          
           {this.state.cookies && (
             <MessageCookies messageVisibility={this.messageVisibility} />
           )}
