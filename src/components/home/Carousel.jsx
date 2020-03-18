@@ -4,36 +4,39 @@ import { withRouter } from "react-router-dom";
 class Carousel extends Component {
   render() {
     const imgMoney = require("../../assets/images/money.svg");
+    const imgCorvid = require("../../assets/images/corvid.png");
     const imgRating = require("../../assets/images/satisfaction.svg");
     const imgGuarantee = require("../../assets/images/guarantee.svg");
     const imgCalculator = require("../../assets/images/calculator.svg");
 
     return (
-      <div className="container">       
+      <div className="container">
+        <div id="myCarousel" className="carousel slide" data-ride="carousel">
+          <div
+            className="carousel-control-prev align-items-end pb-2"
+            style={{ width: "50px" }}
+          >
+            <a href="#myCarousel" role="button" data-slide="prev">
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="sr-only">Previous</span>
+            </a>
+          </div>
 
-        <div id="myCarousel" className="carousel slide" data-ride="carousel" >
-
-        <div className="carousel-control-prev align-items-end pb-2" style={{width: "50px"}}>
-          <a href="#myCarousel" role="button" data-slide="prev">
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="sr-only">Previous</span>
-          </a>
-        </div>
-
-        <div className="carousel-control-next align-items-end pb-2" style={{width: "50px"}}>
-          <a href="#myCarousel" role="button" data-slide="next">
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="sr-only">Next</span>
-          </a>
-        </div>
-
-
+          <div
+            className="carousel-control-next align-items-end pb-2"
+            style={{ width: "50px" }}
+          >
+            <a href="#myCarousel" role="button" data-slide="next">
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="sr-only">Next</span>
+            </a>
+          </div>
 
           <ol className="carousel-indicators mb-0">
             <li
@@ -44,12 +47,36 @@ class Carousel extends Component {
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
           </ol>
 
           <div className="carousel-inner rounded">
-            {/* Quote*/}
+            {/* CORVID-19*/}
             <div
               className="carousel-item active p-3"
+              data-interval="20000"
+              style={{ backgroundColor: "#00546c" }}
+            >
+              <div className="row align-items-center">
+                <div className="col-12 text-center text-white">
+                  <h1>We care about our customers!</h1>
+                  <h2 className="d-none">
+                    We follow NHS advice on how to avoid catching and spreading
+                    coronavirus.
+                  </h2>
+                  <p>
+                    We follow NHS advice on how to avoid catching and spreading
+                    coronavirus.
+                  </p>
+                </div>
+                <div className="col-12 text-center">
+                  <img src={imgCorvid} className="img-fluid" alt="" />
+                </div>
+              </div>
+            </div>
+            {/* Quote*/}
+            <div
+              className="carousel-item p-3"
               style={{ backgroundColor: "#49BBBD" }}
             >
               <div className="row align-items-center">
@@ -75,7 +102,6 @@ class Carousel extends Component {
               </div>
             </div>
 
-             
             {/* RATING */}
             <div
               className="carousel-item p-3"
@@ -158,7 +184,6 @@ class Carousel extends Component {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
