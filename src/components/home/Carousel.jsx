@@ -59,14 +59,13 @@ class Carousel extends Component {
             >
               <div className="row align-items-center">
                 <div className="col-12 text-center text-white">
-                  <h1>We care about our customers!</h1>
+                  <h1>The health and safety of Customers is our priority!</h1>
                   <h2 className="d-none">
                     We follow NHS advice on how to avoid catching and spreading
                     coronavirus.
                   </h2>
                   <p>
-                    We follow NHS advice on how to avoid catching and spreading
-                    coronavirus.
+                  We are following the guidance of NHS on how to avoid catching and spreading CORONAVIRUS.
                   </p>
                 </div>
                 <div className="col-12 text-center">
