@@ -19,18 +19,11 @@ function postcodeValidation(postcode) {
     return "none";
   } else {
     const areas = [
-      "DA",
       "EN",
+      "WD",
       "HA",
-      "IG",
-      "RM",
-      "BR",
       "N",
       "NW",
-      "SE",
-      "SW",
-      "TW",
-      "W",
       "E",
       "WC",
       "EC",      

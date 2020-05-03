@@ -16,12 +16,12 @@ class Carousel extends Component {
       <div className="container">
               <div>        
         <div
-          className="alert alert-danger mb-3"
+          className="alert alert-danger row mb-3 pb-0 mx-0"
           role="alert"
           id="message"
         >
-          <span className="font-weight-bold">Coronavirus Update:</span>
-          <p>We are working as usual. Please only book us if you are not currently under quarantine or self-isolated and don't showing symptoms of Coronavirus.</p> 
+          <h4 className="text-center font-weight-bold col col-sm-4">Coronavirus Update:</h4>
+          <p className="col-sm">We are working as usual. Please only book us if you are not currently under quarantine or self-isolated and don't showing symptoms of Coronavirus.</p> 
         </div>
       </div>
 
