@@ -10,7 +10,23 @@ class Carousel extends Component {
     const imgCalculator = require("../../assets/images/calculator.svg");
 
     return (
+      
+
+
       <div className="container">
+              <div>        
+        <div
+          className="alert alert-danger mb-3"
+          role="alert"
+          id="message"
+        >
+          <span className="font-weight-bold">Coronavirus Update:</span>
+          <p>We are working as usual. Please only book us if you are not currently under quarantine or self-isolated and don't showing symptoms of Coronavirus.</p> 
+        </div>
+      </div>
+
+
+
         <div id="myCarousel" className="carousel slide" data-ride="carousel">
           <div
             className="carousel-control-prev align-items-end pb-2"
@@ -51,31 +67,10 @@ class Carousel extends Component {
           </ol>
 
           <div className="carousel-inner rounded">
-            {/* CORVID-19*/}
-            <div
-              className="carousel-item active p-3"
-              data-interval="20000"
-              style={{ backgroundColor: "#00546c" }}
-            >
-              <div className="row align-items-center">
-                <div className="col-12 text-center text-white">
-                  <h1>The health and safety of Customers is our priority!</h1>
-                  <h2 className="d-none">
-                    We follow NHS advice on how to avoid catching and spreading
-                    coronavirus.
-                  </h2>
-                  <p>
-                  We are following the guidance of NHS on how to avoid catching and spreading CORONAVIRUS.
-                  </p>
-                </div>
-                <div className="col-12 text-center">
-                  <img src={imgCorvid} className="img-fluid" alt="" />
-                </div>
-              </div>
-            </div>
+
             {/* Quote*/}
             <div
-              className="carousel-item p-3"
+              className="carousel-item active p-3"
               style={{ backgroundColor: "#49BBBD" }}
             >
               <div className="row align-items-center">

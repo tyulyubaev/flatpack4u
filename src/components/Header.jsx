@@ -23,7 +23,7 @@ class Header extends Component {
   }
   render() {
     return (
-      <header className="mb-5">
+      <header className="mb-3">
         <nav
           className="navbar navbar-expand-lg navbar-light"
           style={{ backgroundColor: "#84CEEB" }}
