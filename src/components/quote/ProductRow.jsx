@@ -11,7 +11,7 @@ class ProductRow extends React.Component {
             <input
               type="text"
               className="form-control"
-              placeholder="Web link to the item"
+              placeholder="Paste web page link here"
               name="link"
               id={this.props.product.id}
               value={this.props.product.link}
