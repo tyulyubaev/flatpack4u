@@ -16,7 +16,7 @@ class ProductTable extends React.Component {
         );
       });
       return (
-        <div className="text-center">
+        <div className="text-centre">
           {/* <div className="row" >
             <div className="col-1 mx-2">
               <p className="">ID</p>
@@ -29,15 +29,17 @@ class ProductTable extends React.Component {
             </div>
           </div> */}
           {product}
-          <button
+          <div className="col-lg-6 mx-auto text-right">
+           <button
             type="button"
             onClick={() => {
               this.props.onRowAdd();            
             }}
-            className="btn btn-outline-secondary px-3"
+            className="btn btn-outline-secondary px-3 mb-4"
           >
-            +
-          </button>
+            Add more
+            </button>
+          </div>
         </div>
       );
     }

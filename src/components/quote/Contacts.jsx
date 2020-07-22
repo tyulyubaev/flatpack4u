@@ -18,7 +18,7 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col"
             id="inputName"
-            placeholder="Please enter your name"
+            placeholder="Your name"
             name="name"
             onChange={this.props.handleContactsChange}
           />
@@ -37,29 +37,29 @@ export default class Contacts extends React.Component {
           />
         </div>
 
-        <div className="form-group row ">
-          <label className="col-sm-4 col-form-label">Email or phone*:</label>
+        {/* <div className="form-group row ">
+          <label className="col-sm-4 col-form-label">Phone number*:</label>
           <input
             type="text"
             className="form-control col my-auto"
             id="inputEmail"
-            placeholder="Your email address or phone number"
-            name="email"
+            placeholder="Your phone number"
+            name="phone"
             onChange={this.props.handleContactsChange}
           />
-        </div>
+        </div> */}
 {/* Phone */}
-        {/* <div className="form-group row">
-          <label className="col-sm-3 col-form-label">Phone:</label>
+        <div className="form-group row">
+          <label className="col-sm-4 col-form-label">Phone*:</label>
           <input
-            type="number"
+            type="text"
             className="form-control col"
             id="inputPhone"
             placeholder="Contact phone number"
             name="phone"
             onChange={this.props.handleContactsChange}
           />
-        </div> */}
+        </div>
 
         
   

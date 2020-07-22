@@ -100,7 +100,7 @@ class Quote extends React.Component {
             className="col-10 mx-auto col-md-10 col-lg-10 text-center px-0"
           >
             <div className="">
-              <h4 className="p-3 font-weight-light">Items</h4>
+              {/* <h4 className="p-3 font-weight-light">Items</h4> */}
               <ProductTable
                 onProductTableUpdate={this.handleProductTable}
                 onRowAdd={this.handleAddEvent}
@@ -108,9 +108,9 @@ class Quote extends React.Component {
                 products={this.state.products}
                 filtertext={this.state.filtertext}
               />
-              <h4 className="pt-5 pb-3 font-weight-light">
+              {/* <h4 className="pt-5 pb-3 font-weight-light">
                 Contact information
-              </h4>
+              </h4> */}
               <Contacts
                 data={this.props.data}
                 handleContactsChange={this.props.handleContactsChange}

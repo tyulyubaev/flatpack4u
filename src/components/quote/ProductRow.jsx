@@ -3,28 +3,26 @@ import React from "react";
 class ProductRow extends React.Component {
     render() {
       return (
-        <div className="form-row" >
-          <div className="form-group d-none d-sm-block col-2 col-md-1">
+        <div className="col-lg-6 mx-auto text-left" >
+          {/* <div className="form-group d-none d-sm-block col-2 col-md-1">
             <p className="form-control">{this.props.product.id}</p>
-          </div>
-          <div className="form-group col-8 col-sm-7 col-md-9"> 
+          </div> */}
+          <div className="form-group row"> 
+             <label className="col-sm-4 col-form-label ">Furniture item:</label>
             <input
               type="text"
-              className="form-control"
-              placeholder="Paste web page link here"
+              className="form-control col"
+              placeholder="Web link"
               name="link"
               id={this.props.product.id}
               value={this.props.product.link}
               onChange={this.props.onProductTableUpdate}                         
             //   onBlur={webValidation(this.props.product.id, this.props.product.link)}
             />
-          </div>
-          <div className="form-group col-4 col-sm-3 col-md-2">
-            <div className="input-group">
-              <input                
+            <input                
                 type="number"
                 min="1"
-                className="form-control px-2"
+                className="form-control col-2"
                 aria-label="Quantity"
                 placeholder="Qty"
                 aria-describedby="button-addon2"
@@ -36,7 +34,7 @@ class ProductRow extends React.Component {
               />
               <div className="input-group-append">
                 <button
-                  className="btn btn-outline-secondary"
+                  className="btn btn-outline-secondary "
                   type="button"
                   id="button-addon2"
                   onClick={() => {
@@ -46,8 +44,15 @@ class ProductRow extends React.Component {
                   X
                 </button>
               </div>
-            </div>
+
+
+
+
+
+
+
           </div>
+         
         </div>
       );
     }
