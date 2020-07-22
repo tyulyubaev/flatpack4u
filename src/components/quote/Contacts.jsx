@@ -24,7 +24,7 @@ export default class Contacts extends React.Component {
           />
         </div>
         <div className="form-group row">
-          <label className="col-sm-4 col-form-label">Postcode*:</label>
+          <label className="col-sm-4 col-form-label">Postcode:<span style={{color:"red"}}>*</span></label>
           <input
             type="text"
             className="form-control col"
@@ -50,7 +50,7 @@ export default class Contacts extends React.Component {
         </div> */}
 {/* Phone */}
         <div className="form-group row">
-          <label className="col-sm-4 col-form-label">Phone*:</label>
+          <label className="col-sm-4 col-form-label">Phone:<span style={{color:"red"}}>*</span></label>
           <input
             type="text"
             className="form-control col"
