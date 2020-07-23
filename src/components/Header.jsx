@@ -10,7 +10,7 @@ class Header extends Component {
     this.routeChange = this.routeChange.bind(this);
   }
   routeChange(postcode) {
-    ()=>tracker(postcode);
+    tracker(postcode);
     const id = "inputPostcode";
     const valid = CheckPostcode(postcode, id);
     if (valid === true) {
