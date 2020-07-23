@@ -43,18 +43,18 @@ export const Content = {
   Figures: {
     figure1: {
       number: customersNumber,
-      head: "Customers",
-      text: "trusted us to assemble their furniture items."
+      head: "Happy Customers",
+      // text: "trusted us to assemble their furniture items."
     },
     figure2: {
       number: ordersNumber,
-      head: "Orders",
-      text: "have been succesefully completed"
+      head: "Orders completed",
+      // text: "have been succesefully completed"
     },
     figure3: {
       number: furnitureNumber,
-      head: "Furniture items",
-      text: "have been assembled."
+      head: "Furniture items assembled",
+      // text: "have been assembled."
     }
   },
 

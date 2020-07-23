@@ -134,9 +134,9 @@ class App extends Component {
           {message(val, content)}
           {this.state.alert && <MessagePostcode />}
           
-          {this.state.cookies && (
+          {/* {this.state.cookies && (
             <MessageCookies messageVisibility={this.messageVisibility} />
-          )}
+          )} */}
 
           <Header
             updateContactsDetails={this.updateContactsDetails}
