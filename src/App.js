@@ -131,8 +131,7 @@ class App extends Component {
         style={{ minHeight: this.state.windowHeight }}
       >
         <BrowserRouter>
-          {message(val, content)}
-          {this.state.alert && <MessagePostcode />}
+         
           
           {/* {this.state.cookies && (
             <MessageCookies messageVisibility={this.messageVisibility} />
@@ -142,6 +141,8 @@ class App extends Component {
             updateContactsDetails={this.updateContactsDetails}
             messageVisibility={this.messageVisibility}
           />
+           {message(val, content)}
+          {this.state.alert && <MessagePostcode />}
           <Switch>
             <Route exact path={"/"} render={props => <Main {...props} />} />
             <Route
