@@ -10,12 +10,12 @@ class Header extends Component {
     this.routeChange = this.routeChange.bind(this);
   }
   routeChange(postcode) {
+    ()=>tracker(postcode);
     const id = "inputPostcode";
     const valid = CheckPostcode(postcode, id);
     if (valid === true) {
       this.props.messageVisibility("alert", false);
-      this.props.updateContactsDetails("postcode", postcode);
-      tracker(postcode);
+      this.props.updateContactsDetails("postcode", postcode);            
       this.props.history.push("/quote");
     } else if (valid === false) {
       this.props.messageVisibility("alert", true);

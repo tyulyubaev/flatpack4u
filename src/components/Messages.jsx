@@ -10,8 +10,7 @@ export class MessagePostcode extends Component {
           role="alert"
           id="message"
         >
-          Looks like you have entered wrong postcode or we do not cover your
-          area at the moment!
+          Unfortunatly we do not cover your area at the moment!
         </div>
       </div>
     );
