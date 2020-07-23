@@ -35,7 +35,7 @@ export const Content = {
     content: [
       "We guarantee the quality of our work for 12 months, longer than any other flat-pack assembly provider.",
       "It's our job to make every customer happy!",      
-      "We provide only fixed price quotation so you don't need to warry about real assembly time spend.",
+      "We provide only fixed price quotation so you don't need to worry about real assembly time spend.",
       "Don't want to wait the quote? Calculate the price by yourself.",
     ]
   },
