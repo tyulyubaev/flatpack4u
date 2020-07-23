@@ -32,7 +32,7 @@ class ProductRow extends React.Component {
                 onChange={this.props.onProductTableUpdate}
                 // onBlur={webValidation(this.props.product.id,"",this.props.product.qty)}
               />
-              {/* <div className="input-group-append">
+              <div className="input-group-append">
                 <button
                   className="btn btn-outline-secondary "
                   type="button"
@@ -43,7 +43,7 @@ class ProductRow extends React.Component {
                 >
                   X
                 </button>
-              </div> */}
+              </div>
 
 
 

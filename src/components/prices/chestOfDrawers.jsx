@@ -30,7 +30,7 @@ export default class chestOfDrawers extends Component {
     const totalCost = Math.floor((totalTime * rate) / 60) + 0.99;
     const itemName = `Chest of ${qty} drawers`;
     
-    this.setState({ price: totalCost, item: itemName }, tracker(itemName + " - £" + totalCost));
+    this.setState({ price: totalCost, item: itemName });
     this.showPrice = true;
   };
 

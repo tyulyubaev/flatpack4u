@@ -68,7 +68,7 @@ export default class TVWallMounting extends Component {
     
     totalCost = Math.floor(totalCost) + 0.99
     const itemName = "Blinds";
-    this.setState({ price: totalCost, item: itemName }, tracker(itemName + " - £" + totalCost));
+    this.setState({ price: totalCost, item: itemName });
     this.showPrice = true;
   };
 

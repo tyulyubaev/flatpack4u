@@ -35,7 +35,7 @@ export const Content = {
     content: [
       "We guarantee the quality of our work for 12 months, longer than any other flat-pack assembly provider.",
       "It's our job to make every customer happy!",      
-      "We usually provide  fixed price quotation so you don't need to warry about real assembly time spend.",
+      "We provide only fixed price quotation so you don't need to warry about real assembly time spend.",
       "Don't want to wait the quote? Calculate the price by yourself.",
     ]
   },
@@ -80,6 +80,13 @@ export const Content = {
   ],
 
   Reviews: [
+    {
+      name: "Tasnia",
+      stars: 5,
+      date: "12.07.2020",
+      content:
+        "Michael was brilliant! He was punctual and very professional. He made assembling wardrobes look super easy! I’m very happy with the end products! Thanks Michael!"
+    },
     {
       name: "Miriam",
       stars: 5,

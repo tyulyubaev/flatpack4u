@@ -69,10 +69,11 @@ class Carousel extends Component {
                   <img height="100%" src={imgMoney} alt="" />
                 </div>
                 <div className="col-12 col-md-8 col-lg-9 text-right text-white px-4 px-sm-5">
-                  <h1>{this.props.content.title[2]}</h1>
+                <h1>Professional Furniture Assembly <br/> Service in London</h1>
+                  
                   <p>{this.props.content.content[2]}</p>
-                  <p>
-                    <a
+                  {/* <h1>{this.props.content.title[2]}</h1> */}
+                    {/* <a
                       className="btn btn-lg btn-primary my-3"
                       href="#"
                       role="button"
@@ -81,8 +82,8 @@ class Carousel extends Component {
                       }}
                     >
                       Get a Quick Quote
-                    </a>
-                  </p>
+                    </a> */}
+                  
                 </div>
               </div>
             </div>
@@ -143,7 +144,7 @@ class Carousel extends Component {
               </div>
             </div>
             {/* PRICE Calculator*/}
-            <div
+            {/* <div
               className="carousel-item p-3"
               style={{ backgroundColor: "#c3a9ff" }}
             >
@@ -168,7 +169,7 @@ class Carousel extends Component {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

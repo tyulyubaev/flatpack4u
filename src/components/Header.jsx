@@ -51,9 +51,9 @@ class Header extends Component {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarsExample07">
-              <ul className="navbar-nav mr-auto my-lg-0 text-center ">
+              <ul className="navbar-nav ml-auto my-lg-0 text-center ">
                 <li
-                  className="nav-item my-auto"
+                  className="nav-item my-auto mx-3"
                   // data-toggle="collapse"
                   data-target="#navbarsExample07"
                   
@@ -67,7 +67,7 @@ class Header extends Component {
                     Home
                   </NavLink>
                 </li>
-                <li
+                {/* <li
                   className="nav-item my-auto"
                   // data-toggle="collapse"
                   data-target="#navbarsExample07"
@@ -80,8 +80,8 @@ class Header extends Component {
                   >
                     Price Calculator
                   </NavLink>
-                </li>
-                <li
+                </li> */}
+                {/* <li
                   className="nav-item my-auto"
                   // data-toggle="collapse"
                   data-target="#navbarsExample07"
@@ -94,9 +94,9 @@ class Header extends Component {
                   >
                     Compare Rates
                   </NavLink>
-                </li>
+                </li> */}
                 <li
-                  className="nav-item my-auto"
+                  className="nav-item my-auto mx-3"
                   // data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
@@ -110,7 +110,7 @@ class Header extends Component {
                   </NavLink>
                 </li>
                 <li
-                  className="nav-item my-auto"
+                  className="nav-item my-auto mx-3"
                   // data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
@@ -124,7 +124,7 @@ class Header extends Component {
                   </NavLink>
                 </li>
                 <li
-                  className="nav-item my-auto"
+                  className="nav-item my-auto mx-3"
                   // data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >

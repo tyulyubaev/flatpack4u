@@ -95,8 +95,7 @@ export default class Hanging extends Component {
     totalCost = Math.floor(totalCost) - 0.01;
     const itemName = "Hanging";
     this.setState(
-      { price: totalCost, item: itemName },
-      tracker(itemName + " - £" + totalCost)
+      { price: totalCost, item: itemName }
     );
     this.showPrice = true;
   };
