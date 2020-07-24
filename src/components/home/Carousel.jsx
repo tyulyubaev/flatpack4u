@@ -29,12 +29,12 @@ class Carousel extends Component {
     const imgCalculator = require("../../assets/images/calculator.svg");
 
     return (
-      <div className="container">
+      <div className="container" style={{ backgroundColor: "#84CEEB" }}>
         <div className="mx-auto pt-4">
           <h5 className="text-center">Furniture Assembly Service</h5>
-          <h3 className="text-center">Just from £35</h3>
+          <h2 className="text-center">Just from £35</h2>
         </div>
-        <form className="form-inline mx-auto pt-2">
+        <form className="form-inline mx-auto pt-4 pb-5">
               <input
                 className="form-control mr-sm-1 mx-auto w-50"
                 type="text"
