@@ -1,5 +1,6 @@
 import React from "react";
 import { CheckPostcode } from "../DataValidation";
+import { phoneValidation } from "../DataValidation";
 
 export default class Contacts extends React.Component {  
   render() {    
@@ -9,6 +10,7 @@ export default class Contacts extends React.Component {
         this.props.messageVisibility('alert', true)   
       } else {this.props.messageVisibility('alert', false)}
     }
+
     return (
       <div className="col-lg-6 mx-auto text-left">
         {/* Name */}
@@ -37,19 +39,20 @@ export default class Contacts extends React.Component {
           />
         </div>
 
-        {/* <div className="form-group row ">
-          <label className="col-sm-4 col-form-label">Phone number*:</label>
+        <div className="form-group row ">
+          <label className="col-sm-4 col-form-label">Phone:<span style={{color:"red"}}>*</span></label>
           <input
             type="text"
             className="form-control col my-auto"
-            id="inputEmail"
+            id="inputPhone"
             placeholder="Your phone number"
             name="phone"
             onChange={this.props.handleContactsChange}
+            onBlur={phoneValidation(this.props.data.contacts)}
           />
-        </div> */}
+        </div>
 {/* Phone */}
-        <div className="form-group row">
+        {/* <div className="form-group row">
           <label className="col-sm-4 col-form-label">Phone:<span style={{color:"red"}}>*</span></label>
           <input
             type="text"
@@ -59,7 +62,7 @@ export default class Contacts extends React.Component {
             name="phone"
             onChange={this.props.handleContactsChange}
           />
-        </div>
+        </div> */}
 
         
   

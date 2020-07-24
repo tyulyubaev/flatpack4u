@@ -76,14 +76,11 @@ class App extends Component {
     this.setState(this.state.products);
   };
 
-  handleContactsChange = e => {
-    this.updateContactsDetails(e.target.name, e.target.value);
+  handleContactsChange = e => {    
+    this.updateContactsDetails(e.target.name, e.target.value);    
   };
 
   updateContactsDetails = (name, value) => {
-    if (name === "email" && !isNaN(value)) {
-      name = "phone";
-    }
     this.setState(prevState => ({
       contacts: {
         ...prevState.contacts,
