@@ -27,7 +27,7 @@ class App extends Component {
     this.state = {
       message: false,
       alert: false,
-      cookies: true
+      cookies: true,
     };
 
     this.state.items = [];
@@ -44,7 +44,7 @@ class App extends Component {
       // parking: "No",
       // carry: "No",
       note: "",
-      submit: false
+      submit: false,
     };
 
     this.addItem = this.addItem.bind(this);
@@ -60,32 +60,32 @@ class App extends Component {
     // console.log(param, value)
     this.setState({ [param]: value });
   };
-  addItem = item => {
+  addItem = (item) => {
     this.state.items.push(item);
     this.setState(this.state.items);
     this.addProduct(item);
   };
-  addProduct = product => {
+  addProduct = (product) => {
     const productId = Object.keys(this.state.products).length + 1;
     const productToAdd = {
       id: productId,
       link: productToString(product),
-      qty: 1
+      qty: 1,
     };
     this.state.products.push(productToAdd);
     this.setState(this.state.products);
   };
 
-  handleContactsChange = e => {    
-    this.updateContactsDetails(e.target.name, e.target.value);    
+  handleContactsChange = (e) => {
+    this.updateContactsDetails(e.target.name, e.target.value);
   };
 
   updateContactsDetails = (name, value) => {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       contacts: {
         ...prevState.contacts,
-        [name]: value
-      }
+        [name]: value,
+      },
     }));
   };
 
@@ -106,30 +106,28 @@ class App extends Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
-        ...this.state.contacts
-      })
+        ...this.state.contacts,
+      }),
     })
       .then(() => {
         this.setState({ message: true });
       })
-      .catch(error => alert(error));
-  };  
+      .catch((error) => alert(error));
+  };
 
   render() {
     const content = [
       "Thank you so much for choosing FlatPack4U furniture assembly service!",
-      "You should get the quote shortly."
+      "You should get the quote shortly.",
     ];
-    const val = this.state.message;  
-    
+    const val = this.state.message;
+
     return (
       <div
         className="d-flex flex-column "
         style={{ minHeight: this.state.windowHeight }}
       >
         <BrowserRouter>
-         
-          
           {/* {this.state.cookies && (
             <MessageCookies messageVisibility={this.messageVisibility} />
           )} */}
@@ -138,25 +136,35 @@ class App extends Component {
             updateContactsDetails={this.updateContactsDetails}
             messageVisibility={this.messageVisibility}
           />
-           {message(val, content)}
+          {message(val, content)}
           {this.state.alert && <MessagePostcode />}
           <Switch>
-            <Route exact path={"/"} render={props => <Main {...props} />} />
+            <Route
+              exact
+              path={"/"}
+              render={(props) => (
+                <Main
+                  {...props}
+                  updateContactsDetails={this.updateContactsDetails}
+                  messageVisibility={this.messageVisibility}
+                />
+              )}
+            />
             <Route
               path="/rates"
-              render={props => <CompareRates {...props} />}
+              render={(props) => <CompareRates {...props} />}
             />
             <Route
               path="/prices"
-              render={props => <Prices {...props} addItem={this.addItem} />}
+              render={(props) => <Prices {...props} addItem={this.addItem} />}
             />
             <Route
               path="/gallery"
-              render={props => <Gallery {...props} component={Gallery} />}
+              render={(props) => <Gallery {...props} component={Gallery} />}
             />
             <Route
               path="/quote"
-              render={props => (
+              render={(props) => (
                 <Quote
                   {...props}
                   data={this.state}
@@ -168,19 +176,19 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/reviews" render={props => <Reviews {...props} />} />
-            <Route path="/about" render={props => <About {...props} />} />
+            <Route path="/reviews" render={(props) => <Reviews {...props} />} />
+            <Route path="/about" render={(props) => <About {...props} />} />
             <Route
               path="/cookies"
-              render={props => <CookiePolicy {...props} />}
+              render={(props) => <CookiePolicy {...props} />}
             />
             <Route
               path="/terms-and-conditions"
-              render={props => <TermsAndConditions {...props} />}
+              render={(props) => <TermsAndConditions {...props} />}
             />
             <Route
               path="/privacy-notice"
-              render={props => <PrivacyNotice {...props} />}
+              render={(props) => <PrivacyNotice {...props} />}
             />
             {/* <Route path="/" component={Main}/>       */}
           </Switch>

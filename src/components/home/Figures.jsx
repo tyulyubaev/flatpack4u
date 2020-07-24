@@ -6,7 +6,7 @@ class figures extends Component {
   render() {
     return (     
         <div className="row mx-auto ">
-          <div className="col-lg-4 pt-5">    
+          <div className="col-lg-4 pt-3">    
             <div className="d-flex justify-content-center">
                 <div className="rounded-circle round color-red">
                     <h1 className="textInCircle">{this.props.content.figure1.number}</h1>
