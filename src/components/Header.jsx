@@ -54,7 +54,7 @@ class Header extends Component {
               <ul className="navbar-nav ml-auto my-lg-0 text-center ">
                 <li
                   className="nav-item my-auto mx-3"
-                  // data-toggle="collapse"
+                  data-toggle="collapse"
                   data-target="#navbarsExample07"
                   
                 >
@@ -78,7 +78,7 @@ class Header extends Component {
                     className="nav-link"
                     to="/prices"
                   >
-                    Price Calculator
+                    Prices
                   </NavLink>
                 </li> */}
                 {/* <li
@@ -97,7 +97,7 @@ class Header extends Component {
                 </li> */}
                 <li
                   className="nav-item my-auto mx-3"
-                  // data-toggle="collapse"
+                  data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
                   <NavLink
@@ -111,7 +111,7 @@ class Header extends Component {
                 </li>
                 <li
                   className="nav-item my-auto mx-3"
-                  // data-toggle="collapse"
+                  data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
                   <NavLink
@@ -125,7 +125,7 @@ class Header extends Component {
                 </li>
                 <li
                   className="nav-item my-auto mx-3"
-                  // data-toggle="collapse"
+                  data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
                   <NavLink

@@ -7,7 +7,9 @@ export default class Contacts extends React.Component {
     const postcodeValidation =  () => {      
       const valid = CheckPostcode(this.props.data.contacts.postcode, "postcodeValue")          
       if (valid===false){      
+        
         this.props.messageVisibility('alert', true)   
+        window.scrollTo(0, 0);
       } else {this.props.messageVisibility('alert', false)}
     }
 

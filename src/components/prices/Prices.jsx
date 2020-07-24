@@ -59,7 +59,7 @@ export default class Prices extends Component {
     return (
       <div className="container pb-5">
         <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">
-          Price Calculator
+          Prices
         </h2>
         <hr className="mt-2 mb-4" />        
           <RowButtons showType={this.showType}/>         

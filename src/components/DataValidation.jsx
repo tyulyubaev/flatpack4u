@@ -25,23 +25,20 @@ function postcodeValidation(postcode) {
 }
 
 export function phoneValidation(contact) {
-  if (contact.phone.length >= 10) {      
+  if (contact.phone.length >= 10) {
     greenBorder("inputPhone");
-  } 
+  }
 }
 
 export function CheckData(contact) {
-
-
-
   if (contact.phone === "" || contact.postcode === "") {
     if (contact.postcode === "") {
       redBorder("postcodeValue");
-    } 
+    }
     if (contact.phone === "") {
       redBorder("inputPhone");
-    } 
-    return false
+    }
+    return false;
   }
 }
 
