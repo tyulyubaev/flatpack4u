@@ -30,7 +30,7 @@ class Header extends Component {
         >
           <div className="container">
             <a
-              className="navbar-brand text-white"
+              className="navbar-brand"
               href="#"
               onClick={() => this.props.history.push("/")}
             >
@@ -47,8 +47,8 @@ class Header extends Component {
               className="navbar-toggler "
               type="button"
               data-toggle="collapse"
-              data-target="#navbarsExample07"
-              aria-controls="navbarsExample07"
+              data-target="#navbarsExample01"
+              aria-controls="navbarsExample01"
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
