@@ -8,11 +8,11 @@ class ProductRow extends React.Component {
             <p className="form-control">{this.props.product.id}</p>
           </div> */}
           <div className="form-group row"> 
-             <label className="col-sm-4 col-form-label ">Furniture items:</label>
+             <label className="col-sm-4 col-form-label ">Furniture item:</label>
             <input
               type="text"
               className="form-control col"
-              placeholder="Item web link"
+              placeholder="Web link (https://www...)"
               name="link"
               id={this.props.product.id}
               value={this.props.product.link}

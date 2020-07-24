@@ -25,7 +25,7 @@ function postcodeValidation(postcode) {
 }
 
 export function phoneValidation(contact) {
-  if (contact.phone.length >= 11) {      
+  if (contact.phone.length >= 10) {      
     greenBorder("inputPhone");
   } 
 }
