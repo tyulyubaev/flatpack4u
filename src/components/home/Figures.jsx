@@ -13,7 +13,7 @@ class figures extends Component {
                 </div>
             </div>  
             <div className="text-center">
-              <h3>{this.props.content.figure1.head}</h3>
+              <h4>{this.props.content.figure1.head}</h4>
               <p>{this.props.content.figure1.text}</p>
             </div>          
 
@@ -26,7 +26,7 @@ class figures extends Component {
                 </div>
             </div>     
             <div className="text-center">
-              <h3>{this.props.content.figure2.head}</h3>
+              <h4>{this.props.content.figure2.head}</h4>
               <p>
                 {this.props.content.figure2.text}
               </p>
@@ -41,7 +41,7 @@ class figures extends Component {
                 </div>
             </div>            
             <div className="text-center">
-              <h3>{this.props.content.figure3.head}</h3>
+              <h4>{this.props.content.figure3.head}</h4>
               <p>
                 {this.props.content.figure3.text}
               </p>
