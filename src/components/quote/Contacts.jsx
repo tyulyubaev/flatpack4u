@@ -16,7 +16,7 @@ export default class Contacts extends React.Component {
     return (
       <div className="col-lg-6 mx-auto text-left">
         {/* Name */}
-        <div className="form-group row">
+        {/* <div className="form-group row">
           <label className="col-sm-4 col-form-label ">Name:</label>
           <input
             type="text"
@@ -26,8 +26,8 @@ export default class Contacts extends React.Component {
             name="name"
             onChange={this.props.handleContactsChange}
           />
-        </div>
-        <div className="form-group row">
+        </div> */}
+        {/* <div className="form-group row">
           <label className="col-sm-4 col-form-label">Postcode:<span style={{color:"red"}}>*</span></label>
           <input
             type="text"
@@ -39,7 +39,7 @@ export default class Contacts extends React.Component {
             onChange={this.props.handleContactsChange}
             onBlur={postcodeValidation}            
           />
-        </div>
+        </div> */}
 
         <div className="form-group row ">
           <label className="col-sm-4 col-form-label">Phone:<span style={{color:"red"}}>*</span></label>
@@ -125,12 +125,13 @@ export default class Contacts extends React.Component {
         </div> */}
 
         <div className="form-group row">
-          <label className="col-sm-4 col-form-label">Note:</label>
+          <label className="col-sm-4 col-form-label">Furniture details:</label>
           <textarea
-            placeholder="Additional information"
+            placeholder="Web link (https://www...) or product name"
             className="form-control col"
             id="inputNote"
-            rows="3"
+            rows="4
+            "
             name="note"
             onChange={this.props.handleContactsChange}
           ></textarea>

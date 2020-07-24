@@ -101,13 +101,13 @@ class Quote extends React.Component {
           >
             <div className="">
               {/* <h4 className="p-3 font-weight-light">Items</h4> */}
-              <ProductTable
+              {/* <ProductTable
                 onProductTableUpdate={this.handleProductTable}
                 onRowAdd={this.handleAddEvent}
                 onRowDel={this.handleRowDel}
                 products={this.state.products}
                 filtertext={this.state.filtertext}
-              />
+              /> */}
               {/* <h4 className="pt-5 pb-3 font-weight-light">
                 Contact information
               </h4> */}
