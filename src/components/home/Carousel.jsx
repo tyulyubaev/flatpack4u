@@ -29,10 +29,10 @@ class Carousel extends Component {
     const imgCalculator = require("../../assets/images/calculator.svg");
 
     return (
-      <div className="container" style={{ backgroundColor: "#84CEEB" }}>
+      <div className="container" style={{ backgroundColor: "#FFB400" }}>
         <div className="mx-auto pt-4">
-          <h5 className="text-center">Furniture Assembly Service</h5>
-          <h2 className="text-center">Just from £35</h2>
+          <h5 className="text-center">Professional Furniture Assembly Service</h5>
+          {/* <h2 className="text-center" >Just from £35</h2> */}
         </div>
         <form className="form-inline mx-auto pt-4 pb-5">
               <input
@@ -44,7 +44,8 @@ class Carousel extends Component {
               />
               <a
                 href="#"
-                className="btn btn-success my-2 my-sm-0 mx-auto"
+                className="btn my-2 my-sm-0 mx-auto px-4"
+                style={{ backgroundColor: "#7FB800" }}
                 role="button"
                 aria-pressed="true"
                 onClick={() => {
@@ -53,7 +54,7 @@ class Carousel extends Component {
                   this.routeChange(postcode);
                 }}
               >
-                Get a FREE quote
+                Get a Quote
               </a>
             </form>
       </div>

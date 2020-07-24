@@ -26,11 +26,11 @@ class Header extends Component {
       <header className="">
         <nav
           className="navbar navbar-expand-lg navbar-light"
-          style={{ backgroundColor: "#84CEEB" }}
+          style={{ backgroundColor: "#00A6ED" }}
         >
           <div className="container">
             <a
-              className="navbar-brand"
+              className="navbar-brand text-white"
               href="#"
               onClick={() => this.props.history.push("/")}
             >
@@ -44,7 +44,7 @@ class Header extends Component {
               FlatPack4U
             </a>
             <button
-              className="navbar-toggler"
+              className="navbar-toggler "
               type="button"
               data-toggle="collapse"
               data-target="#navbarsExample07"
@@ -52,7 +52,7 @@ class Header extends Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span className="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon "></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarsExample07">
               <ul className="navbar-nav ml-auto my-lg-0 text-center ">
