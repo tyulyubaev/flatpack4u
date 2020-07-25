@@ -47,8 +47,8 @@ class Header extends Component {
               className="navbar-toggler "
               type="button"
               data-toggle="collapse"
-              data-target="#navbarsExample01"
-              aria-controls="navbarsExample01"
+              data-target="#navbarsExample07"
+              aria-controls="navbarsExample07"
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
