@@ -31,8 +31,8 @@ class Carousel extends Component {
     return (
       <div className="container" style={{ backgroundColor: "#FFB400" }}>
         <div className="mx-auto pt-4">
-          <h2 className="text-center">Professional Furniture Assembly Service</h2>
-          {/* <h2 className="text-center" >Just from £35</h2> */}
+          <h4 className="text-center">Professional Furniture Assembly Service</h4>
+          {/* <h2 className="text-center" style={{ color: "red" }}>Prices just from £35</h2> */}
         </div>
         <form className="form-inline mx-auto pt-4 pb-5">
               <input

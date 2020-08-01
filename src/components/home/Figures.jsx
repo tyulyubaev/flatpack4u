@@ -6,6 +6,7 @@ class figures extends Component {
   render() {
     return (     
         <div className="row mx-auto ">
+          
           <div className="col-lg-4 pt-3">    
             <div className="d-flex justify-content-center">
                 <div className="rounded-circle round color-red">
@@ -15,8 +16,7 @@ class figures extends Component {
             <div className="text-center">
               <h4>{this.props.content.figure1.head}</h4>
               <p>{this.props.content.figure1.text}</p>
-            </div>          
-
+            </div> 
           </div>
 
           <div className="col-lg-4 pt-5">    

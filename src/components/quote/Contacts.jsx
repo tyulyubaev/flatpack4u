@@ -125,9 +125,11 @@ export default class Contacts extends React.Component {
         </div> */}
 
         <div className="form-group row">
-          <label className="col-sm-4 col-form-label">Furniture details:</label>
+          <label className="col-sm-4 col-form-label">Details:<span style={{color:"red"}}>*</span></label>
           <textarea
-            placeholder="Web link (https://www...) or product name"
+            placeholder="Name of the store and product model, or a web link to the item.
+            
+            "
             className="form-control col"
             id="inputNote"
             rows="4

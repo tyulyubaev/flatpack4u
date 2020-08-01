@@ -91,9 +91,17 @@ class Quote extends React.Component {
     return (
       <div className="container">
         <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">
-          Request Details
+          Request information
         </h2>
         <hr className="mt-2 mb-4" />
+
+        <div className="mx-auto pt-2 pb-1" style={{ backgroundColor: "#FFB400" }}>
+          <p className="text-center"><b>Great, we cover your area!</b> <br/>Please send us your request now</p>
+          {/* <h2 className="text-center" >Just from £35</h2> */}
+        </div>
+
+
+        
         <div className="row">
           <div
             id="modal"
@@ -126,7 +134,7 @@ class Quote extends React.Component {
                     }
                   }}
                 >
-                  Submit
+                  Send
                 </button>
               </div>
             </div>

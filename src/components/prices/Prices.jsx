@@ -1,73 +1,63 @@
 import React, { Component } from "react";
-import Wardrobe from "./wardrobe";
-import Chest from "./chestOfDrawers";
-import Bed from "./bed";
-import Handyman from "./handyman";
-import RowButtons from "./RowButtons"
 
-
-export default class Prices extends Component {
-  constructor() {
-    super();    
-    this.state = {};
-    this.state.color="white"
-    this.state.elements = {
-      showWardrobe: false,
-      showChest: false,
-      showBed: false,
-      showHandyman: false
-    };
-
-    this.Visibility = this.Visibility.bind(this);
-    this.addItem = this.addItem.bind(this);
-    this.showType = this.showType.bind(this);
-  }
-
-  Visibility = value => {
-    const array = Object.keys(this.state.elements)    
-    array.forEach(key=>(this.state.elements[key]=value))   
-    this.setState(this.state.elements)       
-  };
-
-  addItem = item => {
-    this.props.addItem(item);
-  };
-
-  showType = type => {
-    this.Visibility(false);    
-    switch (type) {
-      case "wardrobe":
-        this.state.elements.showWardrobe = true;
-        this.setState(this.state.elements)  
-        break;
-      case "chest":        
-        this.state.elements.showChest = true;
-        this.setState(this.state.elements)  
-        break;
-      case "bed":        
-        this.state.elements.showBed = true;
-        this.setState(this.state.elements)  
-        break;
-      case "handyman":        
-        this.state.elements.showHandyman = true;
-        this.setState(this.state.elements)  
-        break;
-    }
-  };
-
-  render() {        
+export default class About extends Component {
+  render() {
     return (
-      <div className="container pb-5">
+      <div className="container">
         <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">
           Prices
         </h2>
-        <hr className="mt-2 mb-4" />        
-          <RowButtons showType={this.showType}/>         
-        <div>
-          {this.state.elements.showWardrobe && <Wardrobe addItem={this.addItem} />}
-          {this.state.elements.showChest && <Chest addItem={this.addItem} />}
-          {this.state.elements.showBed && <Bed addItem={this.addItem} />}
-          {this.state.elements.showHandyman && <Handyman addItem={this.addItem} />}
+        <hr className="mt-2 mb-4" />
+
+        <div className="row justify-content-center">
+          <div className="col-12 col-sm-8 col-md-9">
+            <p className="lead font-weight-normal mb-0">Bed assembly prices:</p>
+            <ul className="">
+              <li className="lead">
+                standart bed (single/double) - <b>from £35</b>
+              </li>
+              <li className="lead">
+                ottoman bed (single/double) - <b>from £45</b>
+              </li>
+              <li className="lead">
+                storage bed with drawers - <b>from £50</b>
+              </li>
+              <li className="lead">
+                bunk bed - <b>from £55</b>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-12 col-sm-8 col-md-9 mt-3">
+            <p className="lead font-weight-normal mb-0">
+              Wardrobe assembly prices:
+            </p>
+            <ul className="">
+              <li className="lead">
+                Two door wardrobe - <b>from £35</b>
+              </li>
+              <li className="lead">
+                Three door wardrobe - <b>from £45</b>
+              </li>
+              <li className="lead">
+                Sliding door wardrobe - <b>from £75</b>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-12 col-sm-8 col-md-9 mt-3">
+            <p className="lead font-weight-normal mb-0">
+              Chest of drawers assembly prices:
+            </p>
+            <ul className="">
+              <li className="lead">
+                Chest of 3-4 drawers - <b>from £35</b>
+              </li>
+              <li className="lead">
+                Chest of 5-6 drawers - <b>from £45</b>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     );
