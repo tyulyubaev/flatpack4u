@@ -11,8 +11,8 @@ class MessageCookies extends Component {
         id="message"
       >
         <div className="my-auto p-0" style={{"fontSize": "0.8rem"}}>     
-          <p className="m-0">
-          This website uses cookies.{" "}
+          <p className="m-0 p-0 text-center">
+          By using this site you agree to the privacy policy
             <span className="d-none d-sm-inline"> You are free to manage this via your browser setting.{" "}</span>
             {/* <a href="#" className=""         
               onClick={() => {
@@ -22,10 +22,10 @@ class MessageCookies extends Component {
              Read our cookie policy
             </a> */}
             <a            
-            className="btn btn-outline-success btn-sm mx-4 text-touppercase " style={{"fontSize": "0.8rem"}}
+            className="btn btn-outline-secondary btn-sm px-3 ml-3" style={{"fontSize": "0.8rem"}}
             onClick={() => this.props.messageVisibility("cookies", false)}
           >
-            Accept & Close
+            OK
           </a>
           </p>
         </div>
