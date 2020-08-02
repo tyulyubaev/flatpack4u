@@ -99,14 +99,16 @@ class Quote extends React.Component {
           className="alert mx-auto pt-2 px-0 pb-1"
           style={{ backgroundColor: "#7FB800" }}
         >
-          <p className="text-center text-light">
+          <p className="text-center text-light px-2">
             {/* <b> Great news! We cover your area.</b> <br /> */}
-            <b> Great news! We cover your area.</b> <br />            
-            Please send us your furniture details now
+            Great news!
+            <br /> We cover your area and have {" "}
+            {Math.floor(Math.random() * 5) + 3} available time slots within the
+            next 7 days.
           </p>
           {/* <h2 className="text-center" >Just from £35</h2> */}
         </div>
-
+        {/* <p className="text-dark text-center">Please provide us your task details below. More info means more accurate price estimates</p> */}
         <div className="row">
           <div
             id="modal"

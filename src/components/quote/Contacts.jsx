@@ -45,7 +45,6 @@ export default class Contacts extends React.Component {
           />
         </div> */}
 
-        
         {/* Phone */}
         {/* <div className="form-group row">
           <label className="col-sm-4 col-form-label">Phone:<span style={{color:"red"}}>*</span></label>
@@ -114,12 +113,12 @@ export default class Contacts extends React.Component {
           </label>
         </div> */}
 
-        <div className="form-group row">
+        <div className="form-group row mb-0">
           {/* <label className="col-sm-4 col-form-label">
             Details:<span style={{ color: "red" }}>*</span>
           </label> */}
           <textarea
-            placeholder="The product name and product code or a website link (URL)"
+            placeholder="Please paste here a website link (URL) or list the make and model of the furniture you would like assembled"
             className="form-control col"
             id="inputNote"
             rows="4"
@@ -127,8 +126,13 @@ export default class Contacts extends React.Component {
             onChange={this.props.handleContactsChange}
           ></textarea>
         </div>
+        <div classname="form-group row"style={{ fontSize: "0.8rem" }}>
+          <p className="text-danger">
+            More info means more accurate price estimates
+          </p>
+        </div>
 
-        <div className="form-group row ">
+        <div className="form-group row pt-2">
           {/* <label className="col-sm-4 col-form-label">
             Phone Number:<span style={{ color: "red" }}>*</span>
           </label> */}
@@ -136,7 +140,7 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col my-auto"
             id="inputPhone"
-            placeholder="Phone Number"
+            placeholder="Your Phone Number"
             name="phone"
             onChange={this.props.handleContactsChange}
             onBlur={phoneValidation(this.props.data.contacts)}
