@@ -16,7 +16,23 @@ function postcodeValidation(postcode) {
   if (postcode === "") {
     return "none";
   } else {
-    const areas = ["EN", "WD", "HA", "N", "NW", "E", "WC", "EC"];
+    const areas = [
+      "EN",
+      "WD",
+      "HA",
+      "N",
+      "NW",
+      "W",
+      "AL",
+      "SG",
+      "CM",
+      "E",
+      "WC",
+      "EC",
+      "IG",
+      "RM",
+      "UB",
+    ];
     const index = postcode.search(/\d/);
     const half = postcode.slice(0, index).toUpperCase();
     const postcodeValid = areas.includes(half);

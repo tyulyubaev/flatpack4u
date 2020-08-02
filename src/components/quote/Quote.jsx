@@ -100,7 +100,8 @@ class Quote extends React.Component {
           style={{ backgroundColor: "#7FB800" }}
         >
           <p className="text-center text-light">
-            <b> Great news! We cover your area.</b> <br />
+            {/* <b> Great news! We cover your area.</b> <br /> */}
+            <b> Great news! We cover your area.</b> <br />            
             Please send us your furniture details now
           </p>
           {/* <h2 className="text-center" >Just from £35</h2> */}
