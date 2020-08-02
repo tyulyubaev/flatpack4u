@@ -2,19 +2,23 @@ import React from "react";
 import { CheckPostcode } from "../DataValidation";
 import { phoneValidation } from "../DataValidation";
 
-export default class Contacts extends React.Component {  
-  render() {    
-    const postcodeValidation =  () => {      
-      const valid = CheckPostcode(this.props.data.contacts.postcode, "postcodeValue")          
-      if (valid===false){      
-        
-        this.props.messageVisibility('alert', true)   
+export default class Contacts extends React.Component {
+  render() {
+    const postcodeValidation = () => {
+      const valid = CheckPostcode(
+        this.props.data.contacts.postcode,
+        "postcodeValue"
+      );
+      if (valid === false) {
+        this.props.messageVisibility("alert", true);
         window.scrollTo(0, 0);
-      } else {this.props.messageVisibility('alert', false)}
-    }
+      } else {
+        this.props.messageVisibility("alert", false);
+      }
+    };
 
     return (
-      <div className="col-lg-6 mx-auto text-left">
+      <div className="col-lg-6 mx-auto text-left mt-3">
         {/* Name */}
         {/* <div className="form-group row">
           <label className="col-sm-4 col-form-label ">Name:</label>
@@ -41,19 +45,8 @@ export default class Contacts extends React.Component {
           />
         </div> */}
 
-        <div className="form-group row ">
-          <label className="col-sm-4 col-form-label">Phone:<span style={{color:"red"}}>*</span></label>
-          <input
-            type="text"
-            className="form-control col my-auto"
-            id="inputPhone"
-            placeholder="Your phone number"
-            name="phone"
-            onChange={this.props.handleContactsChange}
-            onBlur={phoneValidation(this.props.data.contacts)}
-          />
-        </div>
-{/* Phone */}
+        
+        {/* Phone */}
         {/* <div className="form-group row">
           <label className="col-sm-4 col-form-label">Phone:<span style={{color:"red"}}>*</span></label>
           <input
@@ -66,8 +59,6 @@ export default class Contacts extends React.Component {
           />
         </div> */}
 
-        
-  
         {/*Date of visit
          <div className="form-group row">
           <label className="col-sm-3 col-form-label">Date of visit:</label>
@@ -80,7 +71,6 @@ export default class Contacts extends React.Component {
             onChange={this.props.handleContactsChange}
           />
         </div> */}
-
 
         {/* Parking */}
         {/* <div className="form-group row">
@@ -125,18 +115,32 @@ export default class Contacts extends React.Component {
         </div> */}
 
         <div className="form-group row">
-          <label className="col-sm-4 col-form-label">Details:<span style={{color:"red"}}>*</span></label>
+          {/* <label className="col-sm-4 col-form-label">
+            Details:<span style={{ color: "red" }}>*</span>
+          </label> */}
           <textarea
-            placeholder="Name of the store and product model, or a web link to the item.
-            
-            "
+            placeholder="The product name and product code or a website link (URL)"
             className="form-control col"
             id="inputNote"
-            rows="4
-            "
+            rows="4"
             name="note"
             onChange={this.props.handleContactsChange}
           ></textarea>
+        </div>
+
+        <div className="form-group row ">
+          {/* <label className="col-sm-4 col-form-label">
+            Phone Number:<span style={{ color: "red" }}>*</span>
+          </label> */}
+          <input
+            type="text"
+            className="form-control col my-auto"
+            id="inputPhone"
+            placeholder="Phone Number"
+            name="phone"
+            onChange={this.props.handleContactsChange}
+            onBlur={phoneValidation(this.props.data.contacts)}
+          />
         </div>
       </div>
     );

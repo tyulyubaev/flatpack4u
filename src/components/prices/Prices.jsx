@@ -51,7 +51,7 @@ export default class About extends Component {
             </p>
             <ul className="">
               <li className="lead">
-                Chest of 3-4 drawers - <b>from £35</b>
+                Chest of 1-4 drawers - <b>from £25</b>
               </li>
               <li className="lead">
                 Chest of 5-6 drawers - <b>from £45</b>

@@ -19,19 +19,19 @@ class Quote extends React.Component {
         {
           id: 1,
           link: "",
-          qty: ""
-        }
+          qty: "",
+        },
       ];
     }
   }
 
   ItemsToString = () => {
     const link = this.state.products
-      .map(product => `${product.link} - qty: ${product.qty}`)
+      .map((product) => `${product.link} - qty: ${product.qty}`)
       .join("\r\n");
 
     const updateData = () => {
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         this.props.updateContactsDetails("link", link);
         this.props.updateContactsDetails("submit", true);
         resolve();
@@ -64,7 +64,7 @@ class Quote extends React.Component {
     let product = {
       id: newId,
       link: "",
-      qty: ""
+      qty: "",
     };
     this.state.products.push(product);
     this.setState(this.state.products);
@@ -73,10 +73,10 @@ class Quote extends React.Component {
     let item = {
       id: evt.target.id,
       name: evt.target.name,
-      value: evt.target.value
+      value: evt.target.value,
     };
     let products = this.state.products;
-    let newProducts = products.map(product => {
+    let newProducts = products.map((product) => {
       for (let key in product) {
         if (key === item.name && product.id === Number(item.id)) {
           product[key] = item.value;
@@ -95,13 +95,17 @@ class Quote extends React.Component {
         </h2>
         <hr className="mt-2 mb-4" />
 
-        <div className="mx-auto pt-2 pb-1" style={{ backgroundColor: "#FFB400" }}>
-          <p className="text-center"><b>Great, we cover your area!</b> <br/>Please send us your request now</p>
+        <div
+          className="alert mx-auto pt-2 px-0 pb-1"
+          style={{ backgroundColor: "#7FB800" }}
+        >
+          <p className="text-center text-light">
+            <b> Great news! We cover your area.</b> <br />
+            Please send us your furniture details now
+          </p>
           {/* <h2 className="text-center" >Just from £35</h2> */}
         </div>
 
-
-        
         <div className="row">
           <div
             id="modal"
@@ -127,7 +131,7 @@ class Quote extends React.Component {
               <div className="mx-auto pt-3 mb-5">
                 <button
                   type="submit"
-                  className="btn btn-success px-5"
+                  className="btn btn-secondary px-5"
                   onClick={() => {
                     if (CheckData(this.props.data.contacts) !== false) {
                       this.ItemsToString();
