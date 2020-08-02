@@ -72,7 +72,7 @@ class Header extends Component {
                 </li>
                 <li
                   className="nav-item my-auto"
-                  // data-toggle="collapse"
+                  data-toggle="collapse"
                   data-target="#navbarsExample07"
                 >
                   <NavLink
