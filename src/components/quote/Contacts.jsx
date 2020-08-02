@@ -118,7 +118,7 @@ export default class Contacts extends React.Component {
             Details:<span style={{ color: "red" }}>*</span>
           </label> */}
           <textarea
-            placeholder="Please paste here a website link (URL) or list the make and model of the furniture you would like assembled"
+            placeholder="Please paste here a website link (URL) or list the make and model of the furniture you would like assembled*"
             className="form-control col"
             id="inputNote"
             rows="4"
@@ -127,8 +127,8 @@ export default class Contacts extends React.Component {
           ></textarea>
         </div>
         <div classname="form-group row"style={{ fontSize: "0.8rem" }}>
-          <p className="text-danger">
-            More info means more accurate price estimates
+          <p className="text-muted">
+            *More info means more accurate price estimates
           </p>
         </div>
 
