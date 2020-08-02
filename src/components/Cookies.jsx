@@ -14,13 +14,13 @@ class MessageCookies extends Component {
           <p className="m-0">
           This website uses cookies.{" "}
             <span className="d-none d-sm-inline"> You are free to manage this via your browser setting.{" "}</span>
-            <a href="#" className=""         
+            {/* <a href="#" className=""         
               onClick={() => {
                 this.props.history.push("/cookies");
               }}
             >
              Read our cookie policy
-            </a>
+            </a> */}
             <a            
             className="btn btn-outline-success btn-sm mx-4 text-touppercase " style={{"fontSize": "0.8rem"}}
             onClick={() => this.props.messageVisibility("cookies", false)}

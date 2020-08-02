@@ -14,13 +14,13 @@ export default class About extends Component {
             <p className="lead font-weight-normal mb-0">Bed assembly prices:</p>
             <ul className="">
               <li className="lead">
-                standart bed (single/double) - <b>from £35</b>
+                standart bed - <b>from £35</b>
               </li>
               <li className="lead">
-                ottoman bed (single/double) - <b>from £45</b>
+                ottoman bed - <b>from £45</b>
               </li>
               <li className="lead">
-                storage bed with drawers - <b>from £50</b>
+                bed with drawers - <b>from £45</b>
               </li>
               <li className="lead">
                 bunk bed - <b>from £55</b>
@@ -51,7 +51,7 @@ export default class About extends Component {
             </p>
             <ul className="">
               <li className="lead">
-                Chest of 1-4 drawers - <b>from £25</b>
+                Chest of 1-4 drawers - <b>from £15</b>
               </li>
               <li className="lead">
                 Chest of 5-6 drawers - <b>from £45</b>

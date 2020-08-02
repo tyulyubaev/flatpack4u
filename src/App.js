@@ -27,7 +27,7 @@ class App extends Component {
     this.state = {
       message: false,
       alert: false,
-      cookies: false,
+      cookies: true,
     };
 
     this.state.items = [];
@@ -127,9 +127,9 @@ class App extends Component {
         style={{ minHeight: this.state.windowHeight }}
       >
         <BrowserRouter>
-          {/* {this.state.cookies && (
+          {this.state.cookies && (
             <MessageCookies messageVisibility={this.messageVisibility} />
-          )} */}
+          )}
 
           <Header
             updateContactsDetails={this.updateContactsDetails}
