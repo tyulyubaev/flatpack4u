@@ -27,7 +27,7 @@ class App extends Component {
     this.state = {
       message: false,
       alert: false,
-      cookies: true,
+      cookies: false,
     };
 
     this.state.items = [];
@@ -117,8 +117,7 @@ class App extends Component {
 
   render() {
     const content = [
-      "Thank you so much for choosing FlatPack4U furniture assembly service!",
-      "You should get the quote shortly.",
+      "Thank you for choosing FlatPack4U, you should receive SMS with the fixed price quote shortly."  
     ];
     const val = this.state.message;
 

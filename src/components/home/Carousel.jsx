@@ -38,7 +38,7 @@ class Carousel extends Component {
         </div>
 
         <div
-          className="alert text-dark text-center mx-5"          
+          className="alert text-center mx-5"          
           role="alert"
         >
           Fixed Price Quotes Only
@@ -50,7 +50,7 @@ class Carousel extends Component {
           <input
             type="text"
             className="form-control"
-            placeholder="Your postcode"
+            placeholder="Your Postcode"
             id="inputPostcode"
             aria-label="My Postcode"
             aria-describedby="basic-addon2"

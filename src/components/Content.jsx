@@ -48,12 +48,12 @@ export const Content = {
     },
     figure2: {
       number: ordersNumber,
-      head: "Orders completed",
+      head: "Orders Completed",
       // text: "have been succesefully completed"
     },
     figure3: {
       number: furnitureNumber,
-      head: "Furniture items assembled",
+      head: "Furniture Items Assembled",
       // text: "have been assembled."
     }
   },
