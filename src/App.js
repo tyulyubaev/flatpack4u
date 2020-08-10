@@ -191,6 +191,7 @@ class App extends Component {
             />
             {/* <Route path="/" component={Main}/>       */}
           </Switch>
+         
           <Footer position={this.state.footerPosition} />
         </BrowserRouter>
       </div>
