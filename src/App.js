@@ -20,6 +20,8 @@ import TermsAndConditions from "./components/polices/termsAndConditions";
 import productToString from "./components/productToString";
 import { MessagePostcode, message } from "./components/Messages";
 import MessageCookies from "./components/Cookies";
+import Whatsapp from "./components/whatsapp";
+
 
 class App extends Component {
   constructor() {
@@ -117,7 +119,7 @@ class App extends Component {
 
   render() {
     const content = [
-      "Thank you for choosing FlatPack4U, you should receive SMS with the fixed price quote shortly."  
+      "Thank you for choosing FlatPack4U, you should receive SMS with the quote shortly."  
     ];
     const val = this.state.message;
 
@@ -130,6 +132,7 @@ class App extends Component {
           {this.state.cookies && (
             <MessageCookies messageVisibility={this.messageVisibility} />
           )}
+          <Whatsapp/>
 
           <Header
             updateContactsDetails={this.updateContactsDetails}
