@@ -102,9 +102,7 @@ class Quote extends React.Component {
           <p className="text-center text-light px-2">
             {/* <b> Great news! We cover your area.</b> <br /> */}
             Great news!
-            <br /> We cover your area and have {" "}
-            {Math.floor(Math.random() * 5) + 3} available time slots within the
-            next 7 days.
+            <br /> We have available time slots in your area.
           </p>
           {/* <h2 className="text-center" >Just from £35</h2> */}
         </div>
