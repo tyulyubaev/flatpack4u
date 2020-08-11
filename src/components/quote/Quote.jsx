@@ -109,30 +109,36 @@ class Quote extends React.Component {
 
         <div class="alert alert-info container pb-0" role="alert">
           <div className="row">
-          <div className="col-4 text-center p-0">
-            <p><b>Our prices:</b></p>
-          </div>
-          <div className="col-8 p-0 pl-1">
-            <div className="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <p>Beds - from £35</p>
-                </div>
-                <div class="carousel-item">
-                  <p>Wardrobes - from £45</p>
-                </div>
-                <div class="carousel-item">
-                  <p>Chests of drawers - from £15</p>
-                </div>
-                <div class="carousel-item">
-                  <p>TV units - from £40</p>
-                </div>
-                <div class="carousel-item">
-                  <p>Desks - from £15</p>
+            <div className="col-4 text-center p-0">
+              <p>
+                <b>Our prices:</b>
+              </p>
+            </div>
+            <div className="col-8 p-0 pl-1">
+              <div
+                className="carousel slide"
+                data-interval="2000"
+                data-ride="carousel"
+              >
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <p>Beds - from £35</p>
+                  </div>
+                  <div className="carousel-item">
+                    <p>Wardrobes - from £45</p>
+                  </div>
+                  <div className="carousel-item">
+                    <p>Chests of drawers - from £15</p>
+                  </div>
+                  <div className="carousel-item">
+                    <p>TV units - from £40</p>
+                  </div>
+                  <div className="carousel-item">
+                    <p>Desks - from £15</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
 
