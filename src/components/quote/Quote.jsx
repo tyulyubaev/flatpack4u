@@ -117,7 +117,7 @@ class Quote extends React.Component {
             <div className="col-8 p-0 pl-1">
               <div
                 className="carousel slide"
-                data-interval="3000"
+                data-interval="4000"
                 data-ride="carousel"
               >
                 <div className="carousel-inner">
