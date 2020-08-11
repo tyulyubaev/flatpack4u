@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Popup.css";
 import "./Animation.css";
+
 export class MessagePostcode extends Component {
   render() {
     return (

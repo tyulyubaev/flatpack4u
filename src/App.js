@@ -119,7 +119,7 @@ class App extends Component {
 
   render() {
     const content = [
-      "Thank you for choosing FlatPack4U, you should receive SMS with the quote shortly."  
+      "Thank you for choosing FlatPack4U, you should receive the quote shortly."  
     ];
     const val = this.state.message;
 
