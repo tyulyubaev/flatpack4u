@@ -15,7 +15,7 @@
   .sticky {
     position: fixed;
     z-index: 999;
-    bottom: 2%;
+    bottom: 28px;
     right: 0;
     visibility: visible;
     opacity: 1;
