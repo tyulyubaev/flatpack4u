@@ -90,13 +90,10 @@ class Quote extends React.Component {
   render() {
     return (
       <div className="container">
-        <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">
-          Request information
-        </h2>
-        <hr className="mt-2 mb-4" />
+        
 
         <div
-          className="alert mx-auto pt-2 pb-0"
+          className="alert mx-auto mt-3 pt-2 pb-0"
           style={{ backgroundColor: "#7FB800" }}
         >
           <p className="text-center text-light px-2 pb-0">
@@ -131,16 +128,30 @@ class Quote extends React.Component {
                     <p>Chests of drawers - from £15</p>
                   </div>
                   <div className="carousel-item">
+                    <p>Bookcases - from £25</p>
+                  </div>
+                  <div className="carousel-item">
                     <p>TV units - from £40</p>
                   </div>
                   <div className="carousel-item">
                     <p>Desks - from £15</p>
+                  </div>
+                  <div className="carousel-item">
+                    <p>Dining sets - from £45</p>
+                  </div>
+                  <div className="carousel-item">
+                    <p>Storage units- from £25</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">
+          Request information
+        </h2>
+        <hr className="mt-1 mb-2" />
 
         <div className="row">
           <div
