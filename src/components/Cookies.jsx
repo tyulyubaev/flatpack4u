@@ -11,8 +11,6 @@ class MessageCookies extends Component {
           id="message"
         >
           <div className="row my-auto p-0" style={{ fontSize: "0.8rem" }}>
-            
-            
             <button
               type="button"
               className="close col-1"
@@ -25,7 +23,6 @@ class MessageCookies extends Component {
               By using this site you agree to the privacy policy
             </p>
           </div>
-          
         </div>
       </div>
     );
