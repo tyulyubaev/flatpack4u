@@ -146,7 +146,7 @@ export default class Contacts extends React.Component {
           />
         </div>
 
-        <div className="form-group row">
+        <div className="form-group row mb-0">
           {/* <label className="col-sm-4 col-form-label">
             Phone Number:<span style={{ color: "red" }}>*</span>
           </label> */}
@@ -159,12 +159,13 @@ export default class Contacts extends React.Component {
             onChange={this.props.handleContactsChange}
             onBlur={phoneValidation(this.props.data.contacts)}
           />
-        </div>
-        {/* <div classname="form-group row"style={{ fontSize: "0.8rem" }}>
-          <p className="text-secondary">
-            More info means more accurate price estimates
+         
+          <p className="text-muted" style={{ fontSize: "0.8rem" }}>
+         Please check your <b>Junk/Spam</b> folder just in case our price quote got delivered there. 
           </p>
-        </div> */}
+        
+        </div>
+        
       </div>
     );
   }
