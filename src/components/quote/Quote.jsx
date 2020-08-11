@@ -88,7 +88,6 @@ class Quote extends React.Component {
   }
 
   render() {
-    
     return (
       <div className="container">
         <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">
@@ -97,17 +96,46 @@ class Quote extends React.Component {
         <hr className="mt-2 mb-4" />
 
         <div
-          className="alert mx-auto pt-2 px-0 pb-1"
+          className="alert mx-auto pt-2 pb-0"
           style={{ backgroundColor: "#7FB800" }}
         >
-          <p className="text-center text-light px-2">
+          <p className="text-center text-light px-2 pb-0">
             {/* <b> Great news! We cover your area.</b> <br /> */}
-            Great news!
-            <br /> We have available time slots in your area.
+            Great news! We cover your area.
           </p>
           {/* <h2 className="text-center" >Just from £35</h2> */}
         </div>
         {/* <p className="text-dark text-center">Please provide us your task details below. More info means more accurate price estimates</p> */}
+
+        <div class="alert alert-info container pb-0" role="alert">
+          <div className="row">
+          <div className="col-4 text-center p-0">
+            <p><b>Our prices:</b></p>
+          </div>
+          <div className="col-8 p-0 pl-1">
+            <div className="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <p>Beds - from £35</p>
+                </div>
+                <div class="carousel-item">
+                  <p>Wardrobes - from £45</p>
+                </div>
+                <div class="carousel-item">
+                  <p>Chests of drawers - from £15</p>
+                </div>
+                <div class="carousel-item">
+                  <p>TV units - from £40</p>
+                </div>
+                <div class="carousel-item">
+                  <p>Desks - from £15</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
         <div className="row">
           <div
             id="modal"
@@ -146,7 +174,6 @@ class Quote extends React.Component {
             </div>
           </div>
         </div>
-        
       </div>
     );
   }

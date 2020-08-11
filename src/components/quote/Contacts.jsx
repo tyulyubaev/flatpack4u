@@ -19,6 +19,8 @@ export default class Contacts extends React.Component {
 
     return (
       <div className="col-lg-6 mx-auto text-left mt-3">
+        
+
         {/* Name */}
         {/* <div className="form-group row">
           <label className="col-sm-4 col-form-label ">Name:</label>
@@ -118,7 +120,7 @@ export default class Contacts extends React.Component {
             Details:<span style={{ color: "red" }}>*</span>
           </label> */}
           <textarea
-            placeholder="For more accurate pricing please provide a website link to the furniture you would like assembled"
+            placeholder="Please provide us your task details here. More info means more accurate price estimates."
             className="form-control col"
             id="inputNote"
             rows="4"
@@ -132,7 +134,19 @@ export default class Contacts extends React.Component {
           </p>
         </div> */}
 
-        <div className="form-group row mt-3 mb-2">
+        {/* Name */}
+        <div className="form-group row mt-4">
+          <input
+            type="text"
+            className="form-control col"
+            id="inputName"
+            placeholder="Your name"
+            name="name"
+            onChange={this.props.handleContactsChange}
+          />
+        </div>
+
+        <div className="form-group row">
           {/* <label className="col-sm-4 col-form-label">
             Phone Number:<span style={{ color: "red" }}>*</span>
           </label> */}
@@ -146,7 +160,7 @@ export default class Contacts extends React.Component {
             onBlur={phoneValidation(this.props.data.contacts)}
           />
         </div>
-         {/* <div classname="form-group row"style={{ fontSize: "0.8rem" }}>
+        {/* <div classname="form-group row"style={{ fontSize: "0.8rem" }}>
           <p className="text-secondary">
             More info means more accurate price estimates
           </p>
