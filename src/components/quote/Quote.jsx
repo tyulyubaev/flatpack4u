@@ -90,19 +90,17 @@ class Quote extends React.Component {
   render() {
     return (
       <div className="container">
-        <div
+        {/* <div
           className="alert mx-auto mt-3 pt-2 pb-0"
           style={{ backgroundColor: "#7FB800" }}
         >
           <p className="text-center text-light px-2 pb-0">
-            {/* <b> Great news! We cover your area.</b> <br /> */}
             Great news! We cover your area.
           </p>
-          {/* <h2 className="text-center" >Just from £35</h2> */}
-        </div>
+        </div> */}
         {/* <p className="text-dark text-center">Please provide us your task details below. More info means more accurate price estimates</p> */}
 
-        <div class="alert alert-secondary container pb-0" role="alert">
+        <div class="alert alert-secondary container pb-0 mt-3" role="alert">
           <div className="row">
             {/* <div className="col-4 text-center p-0">
               <p>
@@ -143,7 +141,7 @@ class Quote extends React.Component {
                 </div>
               </div>
             </div> */}
-            <div className="col-4 text-center my-auto p-0 background-black">
+            <div className="col-4 text-center text-light my-auto p-0 background-black alert" style={{ backgroundColor: "#7FB800" }}> 
               <h2>7</h2>
               <p className="">
                 <b>Reasons why you should choose our service:</b>
