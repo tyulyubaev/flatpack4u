@@ -90,8 +90,6 @@ class Quote extends React.Component {
   render() {
     return (
       <div className="container">
-        
-
         <div
           className="alert mx-auto mt-3 pt-2 pb-0"
           style={{ backgroundColor: "#7FB800" }}
@@ -106,12 +104,12 @@ class Quote extends React.Component {
 
         <div class="alert alert-info container pb-0" role="alert">
           <div className="row">
-            <div className="col-4 text-center p-0">
+            {/* <div className="col-4 text-center p-0">
               <p>
                 <b>Our prices:</b>
               </p>
-            </div>
-            <div className="col-8 p-0 pl-1">
+            </div> */}
+            {/* <div className="col-8 p-0 pl-1">
               <div
                 className="carousel slide"
                 data-interval="4000"
@@ -144,7 +142,22 @@ class Quote extends React.Component {
                   </div>
                 </div>
               </div>
+            </div> */}
+            <div className="col-4 text-center my-auto p-0">
+              <p>
+                <b>7 Reasons why you should choose our service:</b>
+              </p>
             </div>
+
+            <ol>
+              <li className=""> Only Positive Feedbacks</li>
+              <li className="">Affordable Prices</li>
+              <li className="">No Hidden Fees</li>
+              <li className="">Fully Insured</li>
+              <li className="">One Year Guarantee</li>
+              <li className="">Accept Card Payments</li>
+              <li className="">Short Time Notice</li>
+            </ol>
           </div>
         </div>
 
