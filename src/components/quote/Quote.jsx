@@ -102,7 +102,7 @@ class Quote extends React.Component {
         </div>
         {/* <p className="text-dark text-center">Please provide us your task details below. More info means more accurate price estimates</p> */}
 
-        <div class="alert alert-info container pb-0" role="alert">
+        <div class="alert alert-secondary container pb-0" role="alert">
           <div className="row">
             {/* <div className="col-4 text-center p-0">
               <p>
@@ -143,9 +143,10 @@ class Quote extends React.Component {
                 </div>
               </div>
             </div> */}
-            <div className="col-4 text-center my-auto p-0">
-              <p>
-                <b>7 Reasons why you should choose our service:</b>
+            <div className="col-4 text-center my-auto p-0 background-black">
+              <h2>7</h2>
+              <p className="">
+                <b>Reasons why you should choose our service:</b>
               </p>
             </div>
 
