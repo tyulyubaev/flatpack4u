@@ -142,14 +142,14 @@ class Quote extends React.Component {
               </div>
             </div> */}
             <div className="col-4 text-center text-light my-auto p-0 background-black alert" style={{ backgroundColor: "#7FB800" }}> 
-              <h2>7</h2>
-              <p className="">
+              <h1 className="m-0">7</h1>
+              <p >
                 <b>Reasons why you should choose our service:</b>
               </p>
             </div>
 
             <ol>
-              <li className=""> Only Positive Feedbacks</li>
+              <li className="">Positive Feedbacks</li>
               <li className="">Affordable Prices</li>
               <li className="">No Hidden Fees</li>
               <li className="">Fully Insured</li>
