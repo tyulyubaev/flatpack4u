@@ -90,24 +90,24 @@ class Quote extends React.Component {
   render() {
     return (
       <div className="container">
-        {/* <div
+        <div
           className="alert mx-auto mt-3 pt-2 pb-0"
           style={{ backgroundColor: "#7FB800" }}
         >
           <p className="text-center text-light px-2 pb-0">
             Great news! We cover your area.
           </p>
-        </div> */}
+        </div>
         {/* <p className="text-dark text-center">Please provide us your task details below. More info means more accurate price estimates</p> */}
 
         <div class="alert alert-secondary container pb-0 mt-3" role="alert">
           <div className="row">
-            {/* <div className="col-4 text-center p-0">
+            <div className="col-5 text-center p-0">
               <p>
-                <b>Our prices:</b>
+                <b>Assembly prices:</b>
               </p>
-            </div> */}
-            {/* <div className="col-8 p-0 pl-1">
+            </div>
+            <div className="col-7 p-0 pl-1">
               <div
                 className="carousel slide"
                 data-interval="4000"
@@ -140,8 +140,8 @@ class Quote extends React.Component {
                   </div>
                 </div>
               </div>
-            </div> */}
-            <div className="col-4 text-center text-light my-auto p-0 background-black alert" style={{ backgroundColor: "#7FB800" }}> 
+            </div>
+            {/* <div className="col-4 text-center text-light my-auto p-0 background-black alert" style={{ backgroundColor: "#7FB800" }}> 
               <h1 className="m-0">7</h1>
               <p >
                 <b>Reasons why you should choose our service:</b>
@@ -156,7 +156,7 @@ class Quote extends React.Component {
               <li className="">One Year Guarantee</li>
               <li className="">Accept Card Payments</li>
               <li className="">Short Time Notice</li>
-            </ol>
+            </ol> */}
           </div>
         </div>
 

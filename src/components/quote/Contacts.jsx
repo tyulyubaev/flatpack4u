@@ -160,9 +160,9 @@ export default class Contacts extends React.Component {
             onBlur={phoneValidation(this.props.data.contacts)}
           />
          
-          <p className="text-muted px-2" style={{ fontSize: "0.7rem" }}>
+          {/* <p className="text-muted px-2" style={{ fontSize: "0.7rem" }}>
          Please check your <b>Junk/Spam</b> folder just in case our price quote got delivered there. 
-          </p>
+          </p> */}
         
         </div>
         
