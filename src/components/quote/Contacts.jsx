@@ -120,7 +120,7 @@ export default class Contacts extends React.Component {
             Details:<span style={{ color: "red" }}>*</span>
           </label> */}
           <textarea
-            placeholder="Please provide us your task details here. More info means more accurate price estimates."
+            placeholder="Please provide us your task details here (more info means more accurate price estimates)"
             className="form-control col"
             id="inputNote"
             rows="4"
