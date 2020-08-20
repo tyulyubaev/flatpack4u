@@ -1,6 +1,7 @@
 import React from "react";
 import { CheckPostcode } from "../DataValidation";
 import { phoneValidation } from "../DataValidation";
+import { emailValidation } from "../DataValidation";
 
 export default class Contacts extends React.Component {
   render() {
@@ -154,7 +155,7 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col my-auto"
             id="inputPhone"
-            placeholder="Your phone number"
+            placeholder="Phone number"
             name="phone"
             onChange={this.props.handleContactsChange}
             onBlur={phoneValidation(this.props.data.contacts)}
@@ -173,10 +174,10 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col my-auto"
             id="inputEmail"
-            placeholder="Your email address"
+            placeholder="Email address"
             name="email"
             onChange={this.props.handleContactsChange}
-            onBlur={phoneValidation(this.props.data.contacts)}
+            onBlur={emailValidation(this.props.data.contacts)}
           />
          
           {/* <p className="text-muted px-2" style={{ fontSize: "0.7rem" }}>

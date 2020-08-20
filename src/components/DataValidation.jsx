@@ -46,13 +46,22 @@ export function phoneValidation(contact) {
   }
 }
 
+export function emailValidation(contact) {
+  if (contact.email.indexOf("@") > 0) {
+    greenBorder("inputEmail");
+  }
+}
+
 export function CheckData(contact) {
-  if (contact.phone === "" || contact.postcode === "") {
+  if (contact.phone === "" || contact.email === "" || contact.postcode === "") {
     if (contact.postcode === "") {
       redBorder("postcodeValue");
     }
     if (contact.phone === "") {
       redBorder("inputPhone");
+    }
+    if (contact.email === "") {
+      redBorder("inputEmail");
     }
     return false;
   }
