@@ -154,7 +154,7 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col my-auto"
             id="inputPhone"
-            placeholder="Phone number"
+            placeholder="Your phone number"
             name="phone"
             onChange={this.props.handleContactsChange}
             onBlur={phoneValidation(this.props.data.contacts)}
@@ -173,7 +173,7 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col my-auto"
             id="inputEmail"
-            placeholder="Email address"
+            placeholder="Your email address"
             name="email"
             onChange={this.props.handleContactsChange}
             onBlur={phoneValidation(this.props.data.contacts)}

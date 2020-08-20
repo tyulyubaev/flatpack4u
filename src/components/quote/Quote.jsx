@@ -100,7 +100,7 @@ class Quote extends React.Component {
         </div>
         {/* <p className="text-dark text-center">Please provide us your task details below. More info means more accurate price estimates</p> */}
 
-        <div class="alert alert-secondary text-center py-1" role="alert">       
+        <div class="alert alert-secondary text-center py-1 px-0" role="alert">       
         <div
           id="carouselExampleInterval"
           class="carousel slide"

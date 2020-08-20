@@ -45,7 +45,7 @@ class Carousel extends Component {
         </div>
 
         <div className="input-group mt-4 w-75 mx-auto pb-5">
-          <input
+          <input          
             type="text"
             className="form-control"
             placeholder="Your Postcode"
