@@ -18,15 +18,33 @@ class main extends Component {
           updateContactsDetails={this.props.updateContactsDetails}
           messageVisibility={this.props.messageVisibility}
         />
-        
-        <div className="container marketing p-4 mx-auto mt-lg-5">
-          <Figures content={Content.Figures} />
 
-          {/* <FeaturetteLeft img={img1} content={Content.Featurette[0]} /> */}
-                    {/* <hr className="featurette-divider my-5"></hr>
-                    <FeaturetteRight img={img2} content={Content.Featurette[1]} />
-                    <hr className="featurette-divider my-5"></hr>
-                    <FeaturetteLeft img={img3} content={Content.Featurette[2]} />              */}
+        <div className="container marketing mx-auto">
+          <br/>
+          <div className="py-5" style={{ backgroundColor: "#7FB800" }}>
+         
+            <div
+              className="col text-center text-light my-auto p-0 background-black alert"
+              style={{ backgroundColor: "#7FB800" }}
+            >
+              <h2>
+                <b>7 Reasons why you should choose our service:</b>
+              </h2>
+            </div>
+            <div className="ml-5 text-light" style={{ fontSize: " 1.2rem" }}>
+              <ol>
+                <li className="py-1">Only Positive Feedbacks</li>
+                <li className="py-1">Affordable Prices</li>
+                <li className="py-1">No Hidden Fees</li>
+                <li className="py-1">Fully Insured</li>
+                <li className="py-1">One Year Guarantee</li>
+                <li className="py-1">Accept Card Payments</li>
+                <li className="py-1">Short Time Notice</li>
+              </ol>
+            </div>
+          </div>
+          <br/>
+          <Figures content={Content.Figures} />
         </div>
       </main>
     );

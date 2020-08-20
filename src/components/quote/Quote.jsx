@@ -114,7 +114,7 @@ class Quote extends React.Component {
                 data-ride="carousel"
               >
                 <div className="carousel-inner">
-                  <div className="carousel-item active">
+                  <div className="carousel-item active" data-interval="2000">
                     <p>Beds - from £35</p>
                   </div>
                   <div className="carousel-item">
@@ -139,24 +139,20 @@ class Quote extends React.Component {
                     <p>Storage units- from £25</p>
                   </div>
                 </div>
+                <a
+                  class="carousel-control-next pb-2"
+                  href="#carouselExampleControls"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
               </div>
             </div>
-            {/* <div className="col-4 text-center text-light my-auto p-0 background-black alert" style={{ backgroundColor: "#7FB800" }}> 
-              <h1 className="m-0">7</h1>
-              <p >
-                <b>Reasons why you should choose our service:</b>
-              </p>
-            </div>
-
-            <ol>
-              <li className="">Positive Feedbacks</li>
-              <li className="">Affordable Prices</li>
-              <li className="">No Hidden Fees</li>
-              <li className="">Fully Insured</li>
-              <li className="">One Year Guarantee</li>
-              <li className="">Accept Card Payments</li>
-              <li className="">Short Time Notice</li>
-            </ol> */}
           </div>
         </div>
 
