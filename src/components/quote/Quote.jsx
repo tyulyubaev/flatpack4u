@@ -100,60 +100,58 @@ class Quote extends React.Component {
         </div>
         {/* <p className="text-dark text-center">Please provide us your task details below. More info means more accurate price estimates</p> */}
 
-        <div class="alert alert-secondary container pb-0 mt-3" role="alert">
-          <div className="row">
-            <div className="col-5 text-center p-0">
-              <p>
-                <b>Assembly prices:</b>
-              </p>
+        <div class="alert alert-secondary text-center py-1" role="alert">       
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-ride="carousel"
+          data-interval="3000"
+        >
+          <div class="carousel-inner pt-3">
+            <div className="carousel-item active" >
+              <p><b>Assembly prices:</b> Beds - from £35</p>
             </div>
-            <div className="col-7 p-0 pl-1">
-              <div
-                className="carousel slide"
-                data-interval="4000"
-                data-ride="carousel"
-              >
-                <div className="carousel-inner">
-                  <div className="carousel-item active" data-interval="2000">
-                    <p>Beds - from £35</p>
-                  </div>
-                  <div className="carousel-item">
-                    <p>Wardrobes - from £45</p>
-                  </div>
-                  <div className="carousel-item">
-                    <p>Chests of drawers - from £15</p>
-                  </div>
-                  <div className="carousel-item">
-                    <p>Bookcases - from £25</p>
-                  </div>
-                  <div className="carousel-item">
-                    <p>TV units - from £40</p>
-                  </div>
-                  <div className="carousel-item">
-                    <p>Desks - from £15</p>
-                  </div>
-                  <div className="carousel-item">
-                    <p>Dining sets - from £45</p>
-                  </div>
-                  <div className="carousel-item">
-                    <p>Storage units- from £25</p>
-                  </div>
-                </div>
-                <a
-                  class="carousel-control-next pb-2"
-                  href="#carouselExampleControls"
-                  role="button"
-                  data-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
+            <div className="carousel-item">
+              <p>Wardrobes - from £45</p>
+            </div>
+            <div className="carousel-item">
+              <p>Chests of drawers - from £15</p>
+            </div>
+            <div className="carousel-item">
+              <p>Bookcases - from £25</p>
+            </div>
+            <div className="carousel-item">
+              <p>TV units - from £40</p>
+            </div>
+            <div className="carousel-item">
+              <p>Desks - from £15</p>
+            </div>
+            <div className="carousel-item">
+              <p>Dining sets - from £45</p>
+            </div>
+            <div className="carousel-item">
+              <p>Storage units- from £25</p>
             </div>
           </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleInterval"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleInterval"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
         </div>
 
         <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">
