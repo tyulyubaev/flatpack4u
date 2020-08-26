@@ -36,7 +36,7 @@ class App extends Component {
     this.state.products = [];
     this.state.windowHeight = window.innerHeight;
     this.state.contacts = {
-      subject: "Price Quote",
+      subject: "Thank you for your request",
       name: "",
       email: "",
       phone: "",

@@ -18,8 +18,9 @@ class main extends Component {
           updateContactsDetails={this.props.updateContactsDetails}
           messageVisibility={this.props.messageVisibility}
         />
+        <Figures content={Content.Figures} />
 
-        <div className="container marketing mx-auto">
+        <div className="container">
           <br/>
           <div className="py-5" style={{ backgroundColor: "#7FB800" }}>
          
@@ -28,7 +29,7 @@ class main extends Component {
               style={{ backgroundColor: "#7FB800" }}
             >
               <h2>
-                <b>7 Reasons why you should choose our service:</b>
+                7 Reasons Why People Choose Our Service:
               </h2>
             </div>
             <div className="ml-5 text-light" style={{ fontSize: " 1.2rem" }}>
@@ -44,7 +45,7 @@ class main extends Component {
             </div>
           </div>
           <br/>
-          <Figures content={Content.Figures} />
+          
         </div>
       </main>
     );
