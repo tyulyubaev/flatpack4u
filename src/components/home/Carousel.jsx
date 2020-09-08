@@ -37,11 +37,11 @@ class Carousel extends Component {
           {/* <p className="text-center">just from £35 </p> */}
         </div>
 
-        <div className="my-3">
-          <h5 className="text-center mx-5" role="alert">
-            Fixed Price Quotes Only
-            <br />
-            Starting <b>from £35</b>
+        <div className="my-3 alert mx-5" style={{ backgroundColor: "#0057a3" }}>
+          <h5 className="text-center  text-white" role="alert">
+            IKEA Pickup, Delivery and Assembly 
+            <br/>
+            Starting <b className="text-warning">from £35</b>
           </h5>
         </div>
 
