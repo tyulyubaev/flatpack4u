@@ -31,19 +31,22 @@ class Carousel extends Component {
     return (
       <div className="container" style={{ backgroundColor: "#FFB400" }}>
         <div className="mx-auto pt-4 pb-2">
-          <h3 className="text-center">Professional</h3>
-          <h4 className="text-center">Furniture Assembly Service in London</h4>
           <h4 className="text-center"></h4>
-          {/* <p className="text-center">just from £35 </p> */}
+          <h5 className="text-center">Professional Furniture Assembly Service in London</h5>
+          <h4 className="text-center"></h4>
+          <br/>
+          <h3 className="text-center">Starting from £35 </h3>
         </div>
 
-        <div className="my-3 alert mx-5" style={{ backgroundColor: "#0057a3" }}>
+        {/* <div className="my-3 alert mx-5" style={{ backgroundColor: "white" }}>
+
+        <h3 className="text-center">Starting from £35 </h3>
           <h5 className="text-center  text-white" role="alert">
             IKEA Pickup, Delivery and Assembly 
             <br/>
             Starting <b className="text-warning">from £35</b>
           </h5>
-        </div>
+        </div> */}
 
         <div className="input-group mt-4 w-75 mx-auto pb-5">
           <input          
