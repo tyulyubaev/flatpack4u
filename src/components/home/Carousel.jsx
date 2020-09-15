@@ -29,10 +29,10 @@ class Carousel extends Component {
     const imgCalculator = require("../../assets/images/calculator.svg");
 
     return (
-      <div className="container" style={{ backgroundColor: "#FFB400" }}>
+      <div className="container py-5" style={{ backgroundColor: "#FFB400" }}>
         <div className="mx-auto pt-4 pb-2">
           <h4 className="text-center"></h4>
-          <h5 className="text-center">Professional Furniture Assembly Service in London</h5>
+          <h4 className="text-center">Professional Furniture Assembly Service in London</h4>
           <h4 className="text-center"></h4>
           <br/>
           <h3 className="text-center">Starting from £35 </h3>
