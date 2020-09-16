@@ -6,7 +6,7 @@ class footer extends Component {
       <footer
         className="mt-auto py-2"
         style={{
-          backgroundColor: "#F2F2F2"
+          backgroundColor: "#C8CDD0"
         }}
       >
         <div className="container" id="footer">

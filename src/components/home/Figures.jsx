@@ -5,11 +5,11 @@ class figures extends Component {
   state = {};
   render() {
     return (     
-        <div className="row mx-auto ">
+        <div className="row mx-auto mb-5">
           
           <div className="col-lg-4 pt-3">    
             <div className="d-flex justify-content-center">
-                <div className="rounded-circle round color-red">
+                <div className="rounded-circle round" style={{ backgroundColor: "#0057a3", color: "white" }}>
                     <h1 className="textInCircle">{this.props.content.figure1.number}</h1>
                 </div>
             </div>  
@@ -21,7 +21,7 @@ class figures extends Component {
 
           <div className="col-lg-4 pt-5">    
             <div className="d-flex justify-content-center">
-                <div className="rounded-circle round color-yellow">
+                <div className="rounded-circle round "style={{ backgroundColor: "#0057a3", color: "white" }}>
                     <h1 className="textInCircle">{this.props.content.figure2.number}</h1>
                 </div>
             </div>     
@@ -36,7 +36,7 @@ class figures extends Component {
 
           <div className="col-lg-4 pt-5">    
             <div className="d-flex justify-content-center">
-                <div className="rounded-circle round color-purpur">
+                <div className="rounded-circle round "style={{ backgroundColor: "#0057a3", color: "white" }}>
                     <h1 className="textInCircle">{this.props.content.figure3.number}</h1>
                 </div>
             </div>            

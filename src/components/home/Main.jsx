@@ -20,19 +20,18 @@ class main extends Component {
         />
         <Figures content={Content.Figures} />
 
-        <div className="container">
-          <br/>
-          <div className="py-5" style={{ backgroundColor: "#7FB800" }}>
+        <div className="container" style={{ backgroundColor: "#F2F2F3" }}>          
+          <div className="py-5" >
          
             <div
-              className="col text-center text-light my-auto p-0 background-black alert"
-              style={{ backgroundColor: "#7FB800" }}
+              className="col text-center text-red my-auto p-0 background-black alert"
+              style={{ backgroundColor: "#F2F2F3" }}
             >
               <h2>
                 7 Reasons Why People Choose Our Service:
               </h2>
             </div>
-            <div className="ml-5 text-light" style={{ fontSize: " 1.2rem" }}>
+            <div className="ml-5" style={{ fontSize: " 1.2rem" }}>
               <ol>
                 <li className="py-1">Only Positive Feedbacks</li>
                 <li className="py-1">Affordable Prices</li>
