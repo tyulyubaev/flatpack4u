@@ -20,6 +20,15 @@
   opacity: 1;
 }
 
+.cookies {
+  position: fixed;
+  z-index: 999;
+  bottom: -5px;
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
 .popup {
   top: 25%;
   margin: 70px auto;

@@ -4,9 +4,9 @@ import { withRouter } from "react-router-dom";
 class MessageCookies extends Component {
   render() {
     return (
-      <div className="object">
+      <div className="cookies">
         <div
-          className="alert alert-secondary text-center font-weight my-0 py-0"
+          className="alert alert-secondary text-center font-weight m-0"
           role="alert"
           id="message"
         >

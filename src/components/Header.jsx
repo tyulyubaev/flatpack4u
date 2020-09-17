@@ -44,7 +44,7 @@ class Header extends Component {
               FlatPack4U
             </a>
             <button
-              className="navbar-toggler "
+              className="navbar-toggler navbar-light"
               type="button"
               data-toggle="collapse"
               data-target="#navbarsExample07"
