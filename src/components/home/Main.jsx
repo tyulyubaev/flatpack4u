@@ -4,7 +4,6 @@ import Figures from "./Figures";
 import FeaturetteLeft from "./FeaturetteLeft";
 import FeaturetteRight from "./FeaturetteRight";
 
-
 const { Content } = require("../Content");
 
 class main extends Component {
@@ -21,17 +20,16 @@ class main extends Component {
         />
         <Figures content={Content.Figures} />
 
-        <div
-          className="container"
-          // style={{ backgroundImage: "url(" + { Background } + ")" }}
-        >
+        <div className="container" style={{ backgroundColor: "#F2F2F3" }}>          
+          <div className="py-5" >
          
-          <div className="py-5">
             <div
               className="col text-center text-red my-auto p-0 background-black alert"
-              style={{ backgroundColor: "#F2F2F3" }}
+              style={{ backgroundColor: "#F2F2F3", color: "#0057a3" }}
             >
-              <h2>7 Reasons Why People Choose Our Service:</h2>
+              <h2>
+                7 Reasons Why People Choose Our Service:
+              </h2>
             </div>
             <div className="ml-5" style={{ fontSize: " 1.2rem" }}>
               <ol>
@@ -45,7 +43,8 @@ class main extends Component {
               </ol>
             </div>
           </div>
-          <br />
+          <br/>
+          
         </div>
       </main>
     );

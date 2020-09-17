@@ -25,7 +25,7 @@ class Header extends Component {
     return (
       <header className="">
         <nav
-          className="navbar navbar-expand-lg navbar-light"
+          className="navbar navbar-expand-lg navbar-light my-0 py-0"
           style={{ backgroundColor: "#b69674" }}
         >
           <div className="container">
@@ -38,8 +38,8 @@ class Header extends Component {
                 src={logo}
                 className="mr-auto"
                 alt="..."
-                width="50"
-                height="50"
+                width="40"
+                height="40"
               />
               FlatPack4U
             </a>
