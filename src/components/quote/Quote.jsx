@@ -109,7 +109,7 @@ class Quote extends React.Component {
         >
           <div class="carousel-inner pt-3">
             <div className="carousel-item active" >
-              <p><b>Assembly prices:</b> Beds - from £35</p>
+              <p>Beds - from £35</p>
             </div>
             <div className="carousel-item">
               <p>Wardrobes - from £45</p>
