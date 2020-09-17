@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { CheckPostcode } from "../DataValidation";
 import tracker from "../tracker";
+import Background from "../../assets/images/main1.jpg";
 
 class Carousel extends Component {
   constructor(props) {
@@ -29,24 +30,41 @@ class Carousel extends Component {
     const imgCalculator = require("../../assets/images/calculator.svg");
 
     return (
-      <div className="container pt-2 pb-5" style={{ backgroundColor: "#F2F2F3" }}>
-        <div className="mx-auto pt-4 pb-2">
-          <h3 className="text-center">Professional </h3>
-          <h4 className="text-center">Furniture Assembly Service in London</h4>
-          <h4 className="text-center"></h4>        
-          {/* <h3 className="text-center">Starting from £35 </h3> */}
-        </div>
+      <div
+        className="container pt-2 pb-5"
+        style={{
+          height: "500px",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "800px 500px",
+          backgroundImage: "url(" + Background + ")",
+        }}
+      >
+        {/* <div className="mx-auto pt-4 pb-2">
+          <h3 className="text-center text-white">Professional </h3>
+          <h4 className="text-center text-white">Furniture Assembly Service in London</h4>
+          <h4 className="text-center"></h4>                
+        </div> */}
 
-        <div className="my-3 alert mx-5 mb-5" style={{ backgroundColor: "#0057a3" }}>        
+        <div
+          className="mx-auto p-3"
+          style={{
+            position: "relative",
+            height: "200px",
+            backgroundColor: "#0057a390",
+            top: "150px",
+          }}
+        >
           <h5 className="text-center  text-white" role="alert">
-            IKEA Pickup, Delivery and Assembly 
-            <br/>
-            Starting <b className="text-warning">from £35</b>
+            Furniture Assembly Service in London
           </h5>
-        </div>
+          
+          <h4 className="text-center text-white" role="alert">
+          Starting from £35
+          </h4>       
 
-        <div className="input-group mt-4 w-75 mx-auto pb-5">
-          <input          
+          <div className="input-group p-3"> 
+          <input
             type="text"
             className="form-control"
             placeholder="Your Postcode"
@@ -58,7 +76,7 @@ class Carousel extends Component {
             {/* <button className="btn btn-outline-secondary" type="button">Get a Quote</button> */}
             <a
               href="#"
-              className="btn text-light"
+              className="form-control btn text-light"
               style={{ backgroundColor: "#7FB800" }}
               role="button"
               aria-pressed="true"
@@ -69,6 +87,7 @@ class Carousel extends Component {
             >
               Get a Quote
             </a>
+          </div>
           </div>
         </div>
       </div>

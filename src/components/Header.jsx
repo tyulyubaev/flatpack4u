@@ -26,7 +26,7 @@ class Header extends Component {
       <header className="">
         <nav
           className="navbar navbar-expand-lg navbar-light"
-          style={{ backgroundColor: "#F2F2F3" }}
+          style={{ backgroundColor: "#b69674" }}
         >
           <div className="container">
             <a
