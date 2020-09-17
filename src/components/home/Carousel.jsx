@@ -50,18 +50,18 @@ class Carousel extends Component {
           className="mx-auto p-3"
           style={{
             position: "relative",
-            height: "200px",
+            height: "170px",
             backgroundColor: "#0057a390",
             top: "150px",
           }}
         >
-          <h5 className="text-center  text-white" role="alert">
-            Furniture Assembly Service in London
-          </h5>
+          <h4 className="text-center  text-white mt-1" role="alert">
+            Professional Furniture Assembly Service in London
+          </h4>
           
-          <h4 className="text-center text-white" role="alert">
+          {/* <h4 className="text-center text-white" role="alert">
           Starting from £35
-          </h4>       
+          </h4>        */}
 
           <div className="input-group p-3"> 
           <input
