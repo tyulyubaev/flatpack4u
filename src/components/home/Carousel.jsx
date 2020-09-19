@@ -51,7 +51,7 @@ class Carousel extends Component {
           style={{
             position: "relative",
             height: "170px",
-            backgroundColor: "#0057a390",
+            backgroundColor: "#2e2c3690",
             top: "150px",
           }}
         >
