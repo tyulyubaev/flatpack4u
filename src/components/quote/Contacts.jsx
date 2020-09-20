@@ -116,19 +116,7 @@ export default class Contacts extends React.Component {
           </label>
         </div> */}
 
-        <div className="form-group row mb-0">
-          {/* <label className="col-sm-4 col-form-label">
-            Details:<span style={{ color: "red" }}>*</span>
-          </label> */}
-          <textarea
-            placeholder="Please provide us your task details here (more info means more accurate price estimates)"
-            className="form-control col"
-            id="inputNote"
-            rows="4"
-            name="note"
-            onChange={this.props.handleContactsChange}
-          ></textarea>
-        </div>
+        
         {/* <div classname="form-group row"style={{ fontSize: "0.8rem" }}>
           <p className="">
             More info means more accurate price estimates
@@ -166,7 +154,7 @@ export default class Contacts extends React.Component {
           </p> */}
         
         </div>
-        <div className="form-group row mb-0">
+        <div className="form-group row mb-3">
           {/* <label className="col-sm-4 col-form-label">
             Phone Number:<span style={{ color: "red" }}>*</span>
           </label> */}
@@ -184,6 +172,19 @@ export default class Contacts extends React.Component {
          Please check your <b>Junk/Spam</b> folder just in case our price quote got delivered there. 
           </p> */}
         
+        </div>
+        <div className="form-group row mb-0">
+          {/* <label className="col-sm-4 col-form-label">
+            Details:<span style={{ color: "red" }}>*</span>
+          </label> */}
+          <textarea
+            placeholder="Your task details"
+            className="form-control col"
+            id="inputNote"
+            rows="4"
+            name="note"
+            onChange={this.props.handleContactsChange}
+          ></textarea>
         </div>
         
       </div>

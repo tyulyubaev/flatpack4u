@@ -56,12 +56,12 @@ class Carousel extends Component {
           }}
         >
           <h4 className="text-center  text-white mt-1" role="alert">
-            Professional Furniture Assembly Service in London
+            Furniture Assembly Service
           </h4>
           
-          {/* <h4 className="text-center text-white" role="alert">
+          <h4 className="text-center text-white" role="alert">
           Starting from £35
-          </h4>        */}
+          </h4>       
 
           <div className="input-group p-3"> 
           <input
