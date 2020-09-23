@@ -178,7 +178,7 @@ export default class Contacts extends React.Component {
             Details:<span style={{ color: "red" }}>*</span>
           </label> */}
           <textarea
-            placeholder="Your task details"
+            placeholder="Web link to your furniture item or make and model"
             className="form-control col"
             id="inputNote"
             rows="4"
