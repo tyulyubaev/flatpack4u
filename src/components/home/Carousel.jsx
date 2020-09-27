@@ -58,36 +58,41 @@ class Carousel extends Component {
           <h4 className="text-center  text-white mt-1" role="alert">
             Furniture Assembly Service
           </h4>
-          
-          <h4 className="text-center text-white" role="alert">
-          Starting from £35
-          </h4>       
 
-          <div className="input-group p-3"> 
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Your Postcode"
-            id="inputPostcode"
-            aria-label="My Postcode"
-            aria-describedby="basic-addon2"
-          />
-          <div className="input-group-append">
-            {/* <button className="btn btn-outline-secondary" type="button">Get a Quote</button> */}
-            <a
-              href="#"
-              className="form-control btn text-light"
-              style={{ backgroundColor: "#7FB800" }}
-              role="button"
-              aria-pressed="true"
-              onClick={() => {
-                const postcode = document.getElementById("inputPostcode").value;
-                this.routeChange(postcode);
-              }}
-            >
-              Get a Quote
-            </a>
-          </div>
+          <h3
+            className="text-center text-white"
+            role="alert"
+           
+          >
+            Starting from £35
+          </h3>
+
+          <div className="input-group p-3">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Your Postcode"
+              id="inputPostcode"
+              aria-label="My Postcode"
+              aria-describedby="basic-addon2"
+            />
+            <div className="input-group-append">
+              {/* <button className="btn btn-outline-secondary" type="button">Get a Quote</button> */}
+              <a
+                href="#"
+                className="form-control btn text-light"
+                style={{ backgroundColor: "#7FB800" }}
+                role="button"
+                aria-pressed="true"
+                onClick={() => {
+                  const postcode = document.getElementById("inputPostcode")
+                    .value;
+                  this.routeChange(postcode);
+                }}
+              >
+                Get a Quote
+              </a>
+            </div>
           </div>
         </div>
       </div>
