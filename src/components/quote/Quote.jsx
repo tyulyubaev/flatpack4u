@@ -90,17 +90,17 @@ class Quote extends React.Component {
   render() {
     return (
       <div className="container">
-        <div
+        {/* <div
           className="alert mx-auto mt-3 pt-2 pb-0"
           style={{ backgroundColor: "#7FB800" }}
         >
           <p className="text-center text-light px-2 pb-0">
             Great news! We cover your area.
           </p>
-        </div>
+        </div> */}
         {/* <p className="text-dark text-center">Please provide us your task details below. More info means more accurate price estimates</p> */}
 
-        <div class="alert alert-secondary text-center py-1 px-0" role="alert">       
+        <div class="alert alert-secondary text-center mt-4 py-1 px-0" role="alert">       
         <div
           id="carouselExampleInterval"
           class="carousel slide"
@@ -184,7 +184,7 @@ class Quote extends React.Component {
               <div className="mx-auto pt-3 mb-5">
                 <button
                   type="submit"
-                  className="btn btn-secondary px-5"
+                  className="btn btn-primary px-5"
                   onClick={() => {
                     if (CheckData(this.props.data.contacts) !== false) {
                       this.ItemsToString();
