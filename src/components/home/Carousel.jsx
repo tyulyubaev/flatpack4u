@@ -36,7 +36,7 @@ class Carousel extends Component {
           height: "500px",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "800px 500px",
+          backgroundSize: "650px 500px",
           backgroundImage: "url(" + Background + ")",
         }}
       >
@@ -50,11 +50,12 @@ class Carousel extends Component {
           className="mx-auto p-3"
           style={{
             position: "relative",
-            height: "170px",
+            // height: "170px",
             backgroundColor: "#2e2c3690",
             top: "150px",
           }}
         >
+        
           <h4 className="text-center  text-white mt-1" role="alert">
             Furniture Assembly Service
           </h4>
@@ -64,10 +65,10 @@ class Carousel extends Component {
             role="alert"
            
           >
-            Starting from £35
+            JUST FROM £35
           </h3>
 
-          <div className="input-group p-3">
+          <div className="input-group p-2">
             <input
               type="text"
               className="form-control"
@@ -80,8 +81,8 @@ class Carousel extends Component {
               {/* <button className="btn btn-outline-secondary" type="button">Get a Quote</button> */}
               <a
                 href="#"
-                className="form-control btn text-light"
-                style={{ backgroundColor: "#7FB800" }}
+                className="form-control btn btn-primary text-light"
+                // style={{ backgroundColor: "#7FB800" }}
                 role="button"
                 aria-pressed="true"
                 onClick={() => {

@@ -99,7 +99,10 @@ class Quote extends React.Component {
           </p>
         </div> */}
         {/* <p className="text-dark text-center">Please provide us your task details below. More info means more accurate price estimates</p> */}
-
+        <h3 className="font-weight-light text-center text-lg-left mt-4 mb-0">
+          Assembly Prices
+        </h3>
+        <hr className="mt-1 mb-2" />
         <div class="alert alert-secondary text-center mt-4 py-1 px-0" role="alert">       
         <div
           id="carouselExampleInterval"
@@ -154,9 +157,9 @@ class Quote extends React.Component {
         </div>
         </div>
 
-        <h2 className="font-weight-light text-center text-lg-left mt-4 mb-0">
-          Request information
-        </h2>
+        <h3 className="font-weight-light text-center text-lg-left mt-4 mb-0">
+          Request Information
+        </h3>
         <hr className="mt-1 mb-2" />
 
         <div className="row">
