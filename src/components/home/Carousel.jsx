@@ -55,18 +55,12 @@ class Carousel extends Component {
             top: "150px",
           }}
         >
-        
           <h4 className="text-center  text-white mt-1" role="alert">
             Furniture Assembly Service
           </h4>
 
-          <h3
-            className="text-center text-white"
-            role="alert"
-           
-          >
-            JUST FROM £35
-          </h3>
+          <h3 className="text-center text-white pt-3" role="alert">
+            FROM £15 PER ITEM          </h3>
 
           <div className="input-group p-2">
             <input
@@ -95,6 +89,9 @@ class Carousel extends Component {
               </a>
             </div>
           </div>
+          <h6 className="text-center text-white pt-2" role="alert">
+            COVID-19 SAFE SERVICE PROVIDER
+          </h6>
         </div>
       </div>
     );
