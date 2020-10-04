@@ -47,7 +47,7 @@ class Carousel extends Component {
         </div> */}
 
         <div
-          className="mx-auto p-3"
+          className="text-center p-3 mx-auto"
           style={{
             position: "relative",
             // height: "170px",
@@ -55,13 +55,16 @@ class Carousel extends Component {
             top: "150px",
           }}
         >
-          <h4 className="text-center  text-white mt-1" role="alert">
-            Furniture Assembly Service
-          </h4>
+          <h5 className="text-center  text-white mt-1" role="alert">
+            Furniture Assembly Service in North London
+          </h5>
 
-          <h3 className="text-center text-white" role="alert">
-            FROM £15 PER ITEM          </h3>
+          <h4 className="text-center text-white" role="alert">
+            FROM £15 PER ITEM          </h4>
 
+          <div className="text-center mx-auto"
+                    style={{width: "260px"}}
+          >
           <div className="input-group p-2">
             <input
               type="text"
@@ -88,6 +91,7 @@ class Carousel extends Component {
                 Get a Quote
               </a>
             </div>
+          </div>
           </div>
           <h6 className="text-center text-white pt-2" role="alert">
             COVID-19 SAFE SERVICE PROVIDER
