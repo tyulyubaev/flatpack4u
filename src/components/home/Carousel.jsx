@@ -59,7 +59,7 @@ class Carousel extends Component {
             Furniture Assembly Service
           </h4>
 
-          <h3 className="text-center text-white pt-3" role="alert">
+          <h3 className="text-center text-white" role="alert">
             FROM £15 PER ITEM          </h3>
 
           <div className="input-group p-2">

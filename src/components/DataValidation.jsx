@@ -17,6 +17,7 @@ function postcodeValidation(postcode) {
     return "none";
   } else {
     const areas = [
+      "SW",
       "EN",
       "WD",
       "HA",
