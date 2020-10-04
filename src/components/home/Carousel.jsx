@@ -55,12 +55,12 @@ class Carousel extends Component {
             top: "150px",
           }}
         >
-          <h5 className="text-center  text-white mt-1" role="alert">
+          {/* <h5 className="text-center  text-white mt-1" role="alert">
             Furniture Assembly Service in North London
-          </h5>
+          </h5> */}
 
           <h4 className="text-center text-white" role="alert">
-            FROM £15 PER ITEM          </h4>
+            Fixed Price Quotes Starting From Just £15 per Item          </h4>
 
           <div className="text-center mx-auto"
                     style={{width: "260px"}}
