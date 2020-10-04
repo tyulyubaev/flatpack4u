@@ -60,38 +60,40 @@ class Carousel extends Component {
           </h5> */}
 
           <h4 className="text-center text-white" role="alert">
-            Fixed Price Quotes Starting From Just £15 per Item          </h4>
+            Fixed Price Quotes
+          </h4>
+          <h4 className="text-center text-white" role="alert">
+            Just From £15 per Item
+          </h4>
 
-          <div className="text-center mx-auto"
-                    style={{width: "260px"}}
-          >
-          <div className="input-group p-2">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Your Postcode"
-              id="inputPostcode"
-              aria-label="My Postcode"
-              aria-describedby="basic-addon2"
-            />
-            <div className="input-group-append">
-              {/* <button className="btn btn-outline-secondary" type="button">Get a Quote</button> */}
-              <a
-                href="#"
-                className="form-control btn btn-primary text-light"
-                // style={{ backgroundColor: "#7FB800" }}
-                role="button"
-                aria-pressed="true"
-                onClick={() => {
-                  const postcode = document.getElementById("inputPostcode")
-                    .value;
-                  this.routeChange(postcode);
-                }}
-              >
-                Get a Quote
-              </a>
+          <div className="text-center mx-auto" style={{ width: "260px" }}>
+            <div className="input-group p-2">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Your Postcode"
+                id="inputPostcode"
+                aria-label="My Postcode"
+                aria-describedby="basic-addon2"
+              />
+              <div className="input-group-append">
+                {/* <button className="btn btn-outline-secondary" type="button">Get a Quote</button> */}
+                <a
+                  href="#"
+                  className="form-control btn btn-primary text-light"
+                  // style={{ backgroundColor: "#7FB800" }}
+                  role="button"
+                  aria-pressed="true"
+                  onClick={() => {
+                    const postcode = document.getElementById("inputPostcode")
+                      .value;
+                    this.routeChange(postcode);
+                  }}
+                >
+                  Get a Quote
+                </a>
+              </div>
             </div>
-          </div>
           </div>
           <h6 className="text-center text-white pt-2" role="alert">
             COVID-19 SAFE SERVICE PROVIDER
