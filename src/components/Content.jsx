@@ -81,6 +81,13 @@ export const Content = {
 
   Reviews: [
     {
+      name: "Anna AE",
+      stars: 5,
+      date: "11.10.2020",
+      content:
+        "I would highly recommend Michael. He was very professional, timely and efficient. He assembled our furniture to a very high standard. He would be our first call if we need anything assembled."
+    },
+    {
       name: "Tasnia",
       stars: 5,
       date: "12.07.2020",
