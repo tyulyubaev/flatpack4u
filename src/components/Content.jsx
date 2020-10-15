@@ -81,6 +81,13 @@ export const Content = {
 
   Reviews: [
     {
+      name: "Lase",
+      stars: 5,
+      date: "15.10.2020",
+      content:
+        "Michael was very professional, Personable, on time and super efficient. I never thought a wardrobe could be assembled that quickly! He offers multiple payment options which is super convenient. I strongly recommend his services."
+    },
+    {
       name: "Anna AE",
       stars: 5,
       date: "11.10.2020",
