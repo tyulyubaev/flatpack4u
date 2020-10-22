@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Carousel from "./Carousel";
 import Figures from "./Figures";
-import FeaturetteLeft from "./FeaturetteLeft";
-import FeaturetteRight from "./FeaturetteRight";
+import RevCarousel from "./RevCarousel.jsx";
+
 
 const { Content } = require("../Content");
 
@@ -19,6 +19,8 @@ class main extends Component {
           messageVisibility={this.props.messageVisibility}
         />
         <Figures content={Content.Figures} />
+        <RevCarousel/>
+        
 
         <div className="container" style={{ backgroundColor: "#e6e3d9" }}>          
           <div className="py-5" >
