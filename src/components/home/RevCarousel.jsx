@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import {Stars} from '../reviews/stars'; 
 const imgQuotation = require("../../assets/images/quotation.svg");
+
 
 class reviewesCarousel extends Component {
     render() {   
@@ -13,7 +15,10 @@ class reviewesCarousel extends Component {
                 width="100"
                 height="100"
               /> 
+    <br/>
+    
     </div>
+    
    
   <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
   <ol className="carousel-indicators">
@@ -26,6 +31,9 @@ class reviewesCarousel extends Component {
   <div className="carousel-inner bg-secondary text-light">
   <div className="carousel-item active" data-interval="15000">
       <div className="text-center m-4 px-4" >  
+      <div className="d-inline-flex mb-3">
+        <Stars qty={5}/>
+      </div>
         <p>    
         "I highly recommend Michael, I have used his service 3 times and he is always on time polite and finishes work to a very high standard."
         </p>
@@ -37,6 +45,9 @@ class reviewesCarousel extends Component {
   
     <div className="carousel-item" data-interval="15000">       
       <div className="text-center m-4 px-4" >  
+      <div className="d-inline-flex mb-3">
+        <Stars qty={5}/>
+      </div>
         <p>    
           "Michael was very professional, Personable, on time and super efficient. I never thought a wardrobe could be assembled that quickly! He offers multiple payment options which is super convenient. I strongly recommend his services."
         </p>
@@ -47,6 +58,9 @@ class reviewesCarousel extends Component {
     </div>
     <div className="carousel-item" data-interval="15000">
     <div className="text-center m-4 px-4" >  
+    <div className="d-inline-flex mb-3">
+        <Stars qty={5}/>
+      </div>
         <p>    
         "I would highly recommend Michael. He was very professional, timely and efficient. He assembled our furniture to a very high standard. He would be our first call if we need anything assembled."
         </p>
@@ -57,6 +71,9 @@ class reviewesCarousel extends Component {
     </div>
     <div className="carousel-item" data-interval="15000">
       <div className="text-center m-4 px-4" >  
+      <div className="d-inline-flex mb-3">
+        <Stars qty={5}/>
+      </div>
         <p>    
         "Michael was brilliant! He was punctual and very professional. He made assembling wardrobes look super easy! I’m very happy with the end products! Thanks Michael!"
         </p>
@@ -67,6 +84,9 @@ class reviewesCarousel extends Component {
     </div>
     <div className="carousel-item" data-interval="15000">
       <div className="text-center m-4 px-4" >  
+      <div className="d-inline-flex mb-3">
+        <Stars qty={5}/>
+      </div>
         <p>    
         "Micheal was punctual and professional and excellent at what he does. He is very polite, quick, easy to book and pay. He shows me how my furnitures work as is a sofa bed, dinning table thats a glass which need to be careful while lifting up and also a storage bed. Would definitely recommended him. Thanks again Micheal."
         </p>
