@@ -126,7 +126,7 @@ class App extends Component {
     return (
       <div
         className="d-flex flex-column "
-        style={{ minHeight: this.state.windowHeight }}
+        style={{ minHeight: this.state.windowHeight}}
       >
         <BrowserRouter>
           {this.state.cookies && (

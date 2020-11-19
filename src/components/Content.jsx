@@ -81,6 +81,13 @@ export const Content = {
 
   Reviews: [
     {
+      name: "Mimi",
+      stars: 5,
+      date: "18.11.2020",
+      content:
+        "Really impressed with michael. The wardrobe was very heavy and he managed to do everything by himself. Punctual, polite and gets on with the job. Definitely would recommend. Happy with his service. Would definitely use him again."
+    },
+    {
       name: "Lase",
       stars: 5,
       date: "15.10.2020",

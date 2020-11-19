@@ -26,10 +26,26 @@ class reviewesCarousel extends Component {
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>    
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>  
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>   
   </ol>
   <div className="carousel-inner bg-secondary text-light">
+
   <div className="carousel-item active" data-interval="15000">
+      <div className="text-center m-4 px-4" >  
+      <div className="d-inline-flex mb-3">
+        <Stars qty={5}/>
+      </div>
+        <p>    
+        "Really impressed with Michael. The wardrobe was very heavy and he managed to do everything by himself. Punctual, polite and gets on with the job. Definitely would recommend. Happy with his service. Would definitely use him again."
+        </p>
+        <br/>
+        <h5>Mimi, Tottenham</h5>
+        <br/>
+      </div> 
+    </div>
+
+  <div className="carousel-item" data-interval="15000">
       <div className="text-center m-4 px-4" >  
       <div className="d-inline-flex mb-3">
         <Stars qty={5}/>
