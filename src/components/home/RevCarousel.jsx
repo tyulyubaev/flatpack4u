@@ -1,23 +1,24 @@
 import React, { Component } from "react";
 import {Stars} from '../reviews/stars'; 
+import {Content} from '../Content';
 const imgQuotation = require("../../assets/images/quotation.svg");
 
-
+console.log(Content.Reviews[1].name);
 class reviewesCarousel extends Component {
-    render() {   
-      
+  
+  
+    render() {         
         return(          
   <div className="container p-0">
-    <div className="bg-secondary text-center mt-5">
+    <div className="bg-secondary text-center mt-5 pt-5">
     <img
                 className="m-3"
                 src={imgQuotation}
                 width="100"
                 height="100"
               /> 
-    <br/>
-    
-    </div>
+    <br/> 
+  </div>
     
    
   <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
@@ -37,10 +38,10 @@ class reviewesCarousel extends Component {
         <Stars qty={5}/>
       </div>
         <p>    
-        "Really impressed with Michael. The wardrobe was very heavy and he managed to do everything by himself. Punctual, polite and gets on with the job. Definitely would recommend. Happy with his service. Would definitely use him again."
+        "{Content.Reviews[0].content}"
         </p>
         <br/>
-        <h5>Mimi, Tottenham</h5>
+        <h5>{Content.Reviews[0].name}, {Content.Reviews[0].location}</h5>
         <br/>
       </div> 
     </div>
@@ -50,11 +51,11 @@ class reviewesCarousel extends Component {
       <div className="d-inline-flex mb-3">
         <Stars qty={5}/>
       </div>
-        <p>    
-        "I highly recommend Michael, I have used his service 3 times and he is always on time polite and finishes work to a very high standard."
+      <p>    
+        "{Content.Reviews[1].content}"
         </p>
         <br/>
-        <h5>Mel, Hackney</h5>
+        <h5>{Content.Reviews[1].name}, {Content.Reviews[1].location}</h5>
         <br/>
       </div> 
     </div>
@@ -64,11 +65,11 @@ class reviewesCarousel extends Component {
       <div className="d-inline-flex mb-3">
         <Stars qty={5}/>
       </div>
-        <p>    
-          "Michael was very professional, Personable, on time and super efficient. I never thought a wardrobe could be assembled that quickly! He offers multiple payment options which is super convenient. I strongly recommend his services."
+      <p>    
+        "{Content.Reviews[2].content}"
         </p>
         <br/>
-        <h5>Lase, Edgware</h5>
+        <h5>{Content.Reviews[2].name}, {Content.Reviews[2].location}</h5>
         <br/>
       </div>    
     </div>
@@ -77,11 +78,11 @@ class reviewesCarousel extends Component {
     <div className="d-inline-flex mb-3">
         <Stars qty={5}/>
       </div>
-        <p>    
-        "I would highly recommend Michael. He was very professional, timely and efficient. He assembled our furniture to a very high standard. He would be our first call if we need anything assembled."
+      <p>    
+        "{Content.Reviews[3].content}"
         </p>
         <br/>
-        <h5>Anna, Enfield</h5>
+        <h5>{Content.Reviews[3].name}, {Content.Reviews[3].location}</h5>
         <br/>
       </div>       
     </div>
@@ -90,11 +91,11 @@ class reviewesCarousel extends Component {
       <div className="d-inline-flex mb-3">
         <Stars qty={5}/>
       </div>
-        <p>    
-        "Michael was brilliant! He was punctual and very professional. He made assembling wardrobes look super easy! I’m very happy with the end products! Thanks Michael!"
+      <p>    
+        "{Content.Reviews[4].content}"
         </p>
         <br/>
-        <h5>Tasnia, Ilford</h5>
+        <h5>{Content.Reviews[4].name}, {Content.Reviews[4].location}</h5>
         <br/>
       </div> 
     </div>
@@ -103,11 +104,11 @@ class reviewesCarousel extends Component {
       <div className="d-inline-flex mb-3">
         <Stars qty={5}/>
       </div>
-        <p>    
-        "Micheal was punctual and professional and excellent at what he does. He is very polite, quick, easy to book and pay. He shows me how my furnitures work as is a sofa bed, dinning table thats a glass which need to be careful while lifting up and also a storage bed. Would definitely recommended him. Thanks again Micheal."
+      <p>    
+        "{Content.Reviews[5].content}"
         </p>
         <br/>
-        <h5>Miriam, Bexleyheath</h5>
+        <h5>{Content.Reviews[5].name}, {Content.Reviews[5].location}</h5>
         <br/>
       </div> 
     </div>
@@ -122,6 +123,7 @@ class reviewesCarousel extends Component {
     <span className="carousel-control-next-icon" aria-hidden="true"></span>
     <span className="sr-only">Next</span>
   </a>
+  
 </div>
 </div>
         )
