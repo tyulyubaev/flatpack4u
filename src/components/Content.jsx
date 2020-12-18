@@ -81,6 +81,14 @@ export const Content = {
 
   Reviews: [
     {
+      name: "Amin",
+      location: "Leyton",
+      stars: 5,
+      date: "16.12.2020",
+      content:
+        "Michael was great..panctual and very efficient..he knows exactly what he is doing.. Focused on work and finished on time..Very knowledgeable and polite as well..As a flat pack Pro..I will call him always for any job for myself and will recommend to my friends as well..THANKS Michael."
+    },
+    {
       name: "Marjan",
       location: "Edgware",
       stars: 5,
