@@ -29,8 +29,9 @@ class main extends Component {
               className="col text-center my-auto p-0 background-black alert"
               
             >
+               
               <h3>
-                7 Reasons Why People Choose Our Service:
+                7 Reasons Why People Choose Flatpack4U:
               </h3>
             </div>
             <div className="ml-5" style={{ fontSize: " 1.2rem" }}>
