@@ -188,11 +188,12 @@ export default class Contacts extends React.Component {
         </div>
         {/* Price */}
         <div className="form-group row">
+        <span className="input-group-text" id="basic-addon1">£</span>
           <input
             type="number"
             className="form-control col"
             id="inputName"
-            placeholder="What is your budget"
+            placeholder="What is your budget?"
             name="price"
             onChange={this.props.handleContactsChange}
           />                   
