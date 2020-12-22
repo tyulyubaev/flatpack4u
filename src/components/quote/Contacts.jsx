@@ -143,7 +143,7 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col my-auto"
             id="inputPhone"
-            placeholder="Phone number"
+            placeholder="Phone number*"
             name="phone"
             onChange={this.props.handleContactsChange}
             onBlur={phoneValidation(this.props.data.contacts)}
@@ -154,7 +154,7 @@ export default class Contacts extends React.Component {
           </p> */}
         
         </div>
-        <div className="form-group row mb-3">
+        <div className="form-group row">
           {/* <label className="col-sm-4 col-form-label">
             Phone Number:<span style={{ color: "red" }}>*</span>
           </label> */}
@@ -162,18 +162,18 @@ export default class Contacts extends React.Component {
             type="text"
             className="form-control col my-auto"
             id="inputEmail"
-            placeholder="Email address"
+            placeholder="Email address*"
             name="email"
             onChange={this.props.handleContactsChange}
             onBlur={emailValidation(this.props.data.contacts)}
           />
          
-          {/* <p className="text-muted px-2" style={{ fontSize: "0.7rem" }}>
+          <p className="text-muted px-2 my-0" style={{ fontSize: "0.7rem" }}>
          Please check your <b>Junk/Spam</b> folder just in case our price quote got delivered there. 
-          </p> */}
+          </p>
         
         </div>
-        <div className="form-group row mb-0">
+        <div className="form-group row">
           {/* <label className="col-sm-4 col-form-label">
             Details:<span style={{ color: "red" }}>*</span>
           </label> */}
@@ -185,6 +185,17 @@ export default class Contacts extends React.Component {
             name="note"
             onChange={this.props.handleContactsChange}
           ></textarea>
+        </div>
+        {/* Price */}
+        <div className="form-group row">
+          <input
+            type="text"
+            className="form-control col"
+            id="inputName"
+            placeholder="What is your budget?"
+            name="price"
+            onChange={this.props.handleContactsChange}
+          />
         </div>
         
       </div>

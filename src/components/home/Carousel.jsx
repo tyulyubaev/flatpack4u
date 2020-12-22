@@ -31,7 +31,7 @@ class Carousel extends Component {
 
     return (
       <div
-        className="container pt-2 pb-5"
+        className="container pt-2"
         style={{
           height: "500px",
           backgroundPosition: "center",

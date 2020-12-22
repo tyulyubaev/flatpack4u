@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Carousel from "./Carousel";
 import Figures from "./Figures";
 import RevCarousel from "./RevCarousel.jsx";
+import Prices from "./Prices.jsx"
 
 
 const { Content } = require("../Content");
@@ -11,6 +12,7 @@ class main extends Component {
     const img1 = require("../../assets/images/zurich.jpg");
     const img2 = require("../../assets/images/quality.svg");
     const img3 = require("../../assets/images/fees.svg");
+    const image = require("../../assets/images/ya.jpg"); 
     return (
       <main role="main">
         <Carousel
@@ -18,6 +20,7 @@ class main extends Component {
           updateContactsDetails={this.props.updateContactsDetails}
           messageVisibility={this.props.messageVisibility}
         />
+        <Prices/>
         <Figures content={Content.Figures} />
         <RevCarousel/>
         
@@ -27,14 +30,16 @@ class main extends Component {
          
             <div
               className="col text-center my-auto p-0 background-black alert"
-              
             >
+               <div className="py-3">
+                <img className="img-thumbnail rounded-circle mx-auto" src={image} alt=""  style={{width:"150px"}}/>
+              </div>
                
-              <h3>
-                7 Reasons Why People Choose Flatpack4U:
-              </h3>
+              <h4>
+               7 Reasons why people choose my service:
+              </h4>
             </div>
-            <div className="ml-5" style={{ fontSize: " 1.2rem" }}>
+            <div className="ml-5" style={{ fontSize: " 1.1rem" }}>
               <ol>
                 <li className="py-1">Only Positive Feedbacks</li>
                 <li className="py-1">Affordable Prices</li>
