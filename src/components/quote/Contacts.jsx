@@ -189,13 +189,13 @@ export default class Contacts extends React.Component {
         {/* Price */}
         <div className="form-group row">
           <input
-            type="text"
+            type="number"
             className="form-control col"
             id="inputName"
-            placeholder="What is your budget?"
+            placeholder="What is your budget"
             name="price"
             onChange={this.props.handleContactsChange}
-          />
+          />                   
         </div>
         
       </div>
