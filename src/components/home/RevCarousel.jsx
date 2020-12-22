@@ -22,15 +22,15 @@ class reviewesCarousel extends Component {
     
    
   <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-  <ol className="carousel-indicators">
+  {/* <ol className="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>  
     <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>   
-  </ol>
-  <div className="carousel-inner bg-secondary text-light">
+  </ol> */}
+  <div className="carousel-inner bg-secondary text-light" style={{height: "350px"}}>
 
   <div className="carousel-item active" data-interval="15000">
       <div className="text-center m-4 px-4" >  
@@ -112,8 +112,8 @@ class reviewesCarousel extends Component {
         <br/>
       </div> 
     </div>
-    
   </div>
+
   
   <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
