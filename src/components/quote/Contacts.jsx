@@ -140,11 +140,12 @@ export default class Contacts extends React.Component {
             Phone Number:<span style={{ color: "red" }}>*</span>
           </label> */}
           <input
-            type="text"
+            type="number"
             className="form-control col my-auto"
-            id="inputPhone"
+            id="tel"
             placeholder="Phone number*"
-            name="phone"
+            name="tel"
+            autocomplete="on"
             onChange={this.props.handleContactsChange}
             onBlur={phoneValidation(this.props.data.contacts)}
           />
@@ -161,9 +162,10 @@ export default class Contacts extends React.Component {
           <input
             type="text"
             className="form-control col my-auto"
-            id="inputEmail"
+            id="email"
             placeholder="Email address*"
             name="email"
+            autocomplete="on"
             onChange={this.props.handleContactsChange}
             onBlur={emailValidation(this.props.data.contacts)}
           />

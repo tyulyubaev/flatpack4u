@@ -42,14 +42,14 @@ function postcodeValidation(postcode) {
 }
 
 export function phoneValidation(contact) {
-  if (contact.phone.length >= 10) {
-    greenBorder("inputPhone");
+  if (contact.tel.length >= 10) {
+    greenBorder("tel");
   }
 }
 
 export function emailValidation(contact) {
   if (contact.email.indexOf("@") > 0) {
-    greenBorder("inputEmail");
+    greenBorder("email");
   }
 }
 
@@ -59,10 +59,10 @@ export function CheckData(contact) {
       redBorder("postcodeValue");
     }
     if (contact.phone === "") {
-      redBorder("inputPhone");
+      redBorder("tel");
     }
     if (contact.email === "") {
-      redBorder("inputEmail");
+      redBorder("email");
     }
     return false;
   }

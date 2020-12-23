@@ -39,7 +39,7 @@ class App extends Component {
       subject: "Thank you for your request",
       name: "",
       email: "",
-      phone: "",
+      tel: "",
       postcode: "",
       price: "",
       //link: "",
