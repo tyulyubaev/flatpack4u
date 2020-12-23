@@ -71,7 +71,7 @@ class Carousel extends Component {
               <input
                 type="text"
                 name="postal-code"
-                autocomplete="on"
+                autocomplete="postal-code"
                 className="form-control"
                 placeholder="Your Postcode"
                 id="inputPostcode"
