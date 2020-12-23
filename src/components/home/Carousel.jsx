@@ -70,6 +70,8 @@ class Carousel extends Component {
             <div className="input-group p-2">
               <input
                 type="text"
+                name="postal-code"
+                autocomplete="on"
                 className="form-control"
                 placeholder="Your Postcode"
                 id="inputPostcode"

@@ -131,6 +131,7 @@ export default class Contacts extends React.Component {
             id="inputName"
             placeholder="Your name"
             name="name"
+            autocomplete="on"
             onChange={this.props.handleContactsChange}
           />
         </div>
