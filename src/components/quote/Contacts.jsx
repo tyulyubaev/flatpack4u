@@ -131,7 +131,7 @@ export default class Contacts extends React.Component {
             id="inputName"
             placeholder="Your name"
             name="name"
-            autocomplete="on"
+            autocomplete="name"
             onChange={this.props.handleContactsChange}
           />
         </div>
@@ -141,12 +141,12 @@ export default class Contacts extends React.Component {
             Phone Number:<span style={{ color: "red" }}>*</span>
           </label> */}
           <input
-            type="number"
+            type="tel"
             className="form-control col my-auto"
             id="tel"
             placeholder="Phone number*"
             name="tel"
-            autocomplete="on"
+            autocomplete="tel"
             onChange={this.props.handleContactsChange}
             onBlur={phoneValidation(this.props.data.contacts)}
           />
@@ -166,7 +166,7 @@ export default class Contacts extends React.Component {
             id="email"
             placeholder="Email address*"
             name="email"
-            autocomplete="on"
+            autocomplete="email"
             onChange={this.props.handleContactsChange}
             onBlur={emailValidation(this.props.data.contacts)}
           />
